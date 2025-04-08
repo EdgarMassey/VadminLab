@@ -38,7 +38,7 @@ Public Class Foretag
             SparaCB.Checked = True
         End If
         checkmeny = hamptaversion("VadminMENY")
-        vernr = "20240711a"
+        vernr = "20250408a"
         Labdatabasnamn = "NMLab"
         'If odbcsource <> "VadminODBC" Then
         '    LabODBC = "VadminODBC"
@@ -50,7 +50,7 @@ Public Class Foretag
 
         My.Computer.FileSystem.WriteAllText(sokvag + "LabVersion.cfg", "Labversion=" + vernr + Space(40) + vbCrLf, False)
         myip = "90.231.192.137"
-        Prognamn = "Vadmin 2024 "
+        Prognamn = "Vadmin 2025 "
         Ver.Text = "Version: " + vernr
         Huvud.Text = Prognamn + " - Lab  Behörighetskontroll"
         today = Format(Now, "yyyy-MM-dd")

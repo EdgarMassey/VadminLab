@@ -1,29 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "Z:\\VadminLab\\",
+  "WorkspaceRootPath": "C:\\Github\\VadminLab\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|z:\\vadminlab\\produktreg.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|c:\\github\\vadminlab\\foretag.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|solutionrelative:foretag.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|c:\\github\\vadminlab\\foretag.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|solutionrelative:foretag.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|c:\\github\\vadminlab\\produktreg.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|solutionrelative:produktreg.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|z:\\vadminlab\\produktreg.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|C:\\Github\\VadminLab\\produktreg.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|solutionrelative:produktreg.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|Z:\\VadminLab\\inleverans.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|C:\\Github\\VadminLab\\inleverans.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|solutionrelative:inleverans.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|z:\\vadminlab\\mdlib.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|C:\\Github\\VadminLab\\mdlib.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|solutionrelative:mdlib.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|Z:\\VadminLab\\inleverans.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|C:\\Github\\VadminLab\\inleverans.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|solutionrelative:inleverans.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|Z:\\VadminLab\\labtester.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|C:\\Github\\VadminLab\\labtester.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|solutionrelative:labtester.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
@@ -34,86 +42,105 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProduktReg.vb",
-              "DocumentMoniker": "Z:\\VadminLab\\ProduktReg.vb",
-              "RelativeDocumentMoniker": "ProduktReg.vb",
-              "ToolTip": "Z:\\VadminLab\\ProduktReg.vb",
-              "RelativeToolTip": "ProduktReg.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-11-26T17:21:22.452Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProduktReg.vb [Design]",
-              "DocumentMoniker": "Z:\\VadminLab\\ProduktReg.vb",
-              "RelativeDocumentMoniker": "ProduktReg.vb",
-              "ToolTip": "Z:\\VadminLab\\ProduktReg.vb [Design]",
-              "RelativeToolTip": "ProduktReg.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-11-26T17:21:20.028Z",
-              "EditorCaption": " [Design]"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MDLib.vb",
-              "DocumentMoniker": "Z:\\VadminLab\\MDLib.vb",
-              "RelativeDocumentMoniker": "MDLib.vb",
-              "ToolTip": "Z:\\VadminLab\\MDLib.vb",
-              "RelativeToolTip": "MDLib.vb",
-              "ViewState": "AgIAACsDAAAAAAAAAAAuwI4DAAAQAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Foretag.vb",
+              "DocumentMoniker": "C:\\Github\\VadminLab\\Foretag.vb",
+              "RelativeDocumentMoniker": "Foretag.vb",
+              "ToolTip": "C:\\Github\\VadminLab\\Foretag.vb",
+              "RelativeToolTip": "Foretag.vb",
+              "ViewState": "AgIAACQAAAAAAAAAAAAUwC4AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-09-30T09:59:26.213Z",
+              "WhenOpened": "2025-04-08T16:03:26.222Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Inleverans.vb",
-              "DocumentMoniker": "Z:\\VadminLab\\Inleverans.vb",
-              "RelativeDocumentMoniker": "Inleverans.vb",
-              "ToolTip": "Z:\\VadminLab\\Inleverans.vb",
-              "RelativeToolTip": "Inleverans.vb",
-              "ViewState": "AgIAAKwCAAAAAAAAAAAAAN4CAAAOAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Foretag.vb [Design]",
+              "DocumentMoniker": "C:\\Github\\VadminLab\\Foretag.vb",
+              "RelativeDocumentMoniker": "Foretag.vb",
+              "ToolTip": "C:\\Github\\VadminLab\\Foretag.vb [Design]",
+              "RelativeToolTip": "Foretag.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-09-30T09:53:48.655Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Inleverans.vb [Design]",
-              "DocumentMoniker": "Z:\\VadminLab\\Inleverans.vb",
-              "RelativeDocumentMoniker": "Inleverans.vb",
-              "ToolTip": "Z:\\VadminLab\\Inleverans.vb [Design]",
-              "RelativeToolTip": "Inleverans.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-09-30T09:53:44.3Z",
+              "WhenOpened": "2025-04-08T16:03:23.442Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProduktReg.vb",
+              "DocumentMoniker": "C:\\Github\\VadminLab\\ProduktReg.vb",
+              "RelativeDocumentMoniker": "ProduktReg.vb",
+              "ToolTip": "C:\\Github\\VadminLab\\ProduktReg.vb",
+              "RelativeToolTip": "ProduktReg.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-11-26T17:21:22.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProduktReg.vb [Design]",
+              "DocumentMoniker": "C:\\Github\\VadminLab\\ProduktReg.vb",
+              "RelativeDocumentMoniker": "ProduktReg.vb",
+              "ToolTip": "Z:\\VadminLab\\ProduktReg.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-11-26T17:21:20.028Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "MDLib.vb",
+              "DocumentMoniker": "C:\\Github\\VadminLab\\MDLib.vb",
+              "RelativeDocumentMoniker": "MDLib.vb",
+              "ToolTip": "C:\\Github\\VadminLab\\MDLib.vb",
+              "RelativeToolTip": "MDLib.vb",
+              "ViewState": "AgIAACsDAAAAAAAAAAAuwI4DAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-09-30T09:59:26.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Inleverans.vb",
+              "DocumentMoniker": "C:\\Github\\VadminLab\\Inleverans.vb",
+              "RelativeDocumentMoniker": "Inleverans.vb",
+              "ToolTip": "C:\\Github\\VadminLab\\Inleverans.vb",
+              "RelativeToolTip": "Inleverans.vb",
+              "ViewState": "AgIAAKwCAAAAAAAAAAAAAN4CAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-09-30T09:53:48.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Inleverans.vb [Design]",
+              "DocumentMoniker": "C:\\Github\\VadminLab\\Inleverans.vb",
+              "RelativeDocumentMoniker": "Inleverans.vb",
+              "ToolTip": "Z:\\VadminLab\\Inleverans.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-09-30T09:53:44.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Labtester.vb",
-              "DocumentMoniker": "Z:\\VadminLab\\Labtester.vb",
+              "DocumentMoniker": "C:\\Github\\VadminLab\\Labtester.vb",
               "RelativeDocumentMoniker": "Labtester.vb",
-              "ToolTip": "Z:\\VadminLab\\Labtester.vb",
+              "ToolTip": "C:\\Github\\VadminLab\\Labtester.vb",
               "RelativeToolTip": "Labtester.vb",
               "ViewState": "AgIAAGIFAAAAAAAAAAAQwHMFAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",

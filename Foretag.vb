@@ -38,13 +38,8 @@ Public Class Foretag
             SparaCB.Checked = True
         End If
         checkmeny = hamptaversion("VadminMENY")
-        vernr = "20250408a"
+        vernr = "20251208b"
         Labdatabasnamn = "NMLab"
-        'If odbcsource <> "VadminODBC" Then
-        '    LabODBC = "VadminODBC"
-        'Else
-        '    LabODBC = odbcsource
-        'End If
 
         lasmenyversion()
 
@@ -516,10 +511,6 @@ slut:
 
     Function hamptapersonligID(ByVal clientid As String)
         hamptapersonligID = ""
-        'If Len(nullhantering(odbcsource, "S")) < 2 Then
-        '    odbcsource = "VadminODBC"
-        '    odbcsourcer = odbcsource
-        'End If
 
         'On Error GoTo nocon
         Dim cn As OdbcConnection, mySQL As String

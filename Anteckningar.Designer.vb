@@ -39,6 +39,10 @@ Partial Class AnteckningarF
         Me.Label2 = New System.Windows.Forms.Label()
         Me.NyB = New System.Windows.Forms.Button()
         Me.RaderaB = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.SoktextTB = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
         Me.Ver.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -63,7 +67,7 @@ Partial Class AnteckningarF
         Me.Ver.Controls.Add(Me.datum)
         Me.Ver.Controls.Add(Me.Versionl)
         Me.Ver.ForeColor = System.Drawing.Color.Gray
-        Me.Ver.Location = New System.Drawing.Point(22, 484)
+        Me.Ver.Location = New System.Drawing.Point(15, 620)
         Me.Ver.Name = "Ver"
         Me.Ver.Size = New System.Drawing.Size(197, 73)
         Me.Ver.TabIndex = 324
@@ -127,7 +131,7 @@ Partial Class AnteckningarF
         '
         Me.SparaB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SparaB.ForeColor = System.Drawing.Color.Maroon
-        Me.SparaB.Location = New System.Drawing.Point(902, 472)
+        Me.SparaB.Location = New System.Drawing.Point(954, 580)
         Me.SparaB.Name = "SparaB"
         Me.SparaB.Size = New System.Drawing.Size(98, 25)
         Me.SparaB.TabIndex = 377
@@ -138,7 +142,7 @@ Partial Class AnteckningarF
         '
         Me.AvslutaK.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AvslutaK.ForeColor = System.Drawing.Color.Maroon
-        Me.AvslutaK.Location = New System.Drawing.Point(902, 541)
+        Me.AvslutaK.Location = New System.Drawing.Point(954, 649)
         Me.AvslutaK.Name = "AvslutaK"
         Me.AvslutaK.Size = New System.Drawing.Size(98, 25)
         Me.AvslutaK.TabIndex = 376
@@ -148,8 +152,9 @@ Partial Class AnteckningarF
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(22, 54)
+        Me.DataGridView1.Location = New System.Drawing.Point(89, 87)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.Size = New System.Drawing.Size(978, 151)
         Me.DataGridView1.TabIndex = 378
@@ -158,7 +163,7 @@ Partial Class AnteckningarF
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(279, 219)
+        Me.Label3.Location = New System.Drawing.Point(338, 241)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(91, 17)
         Me.Label3.TabIndex = 382
@@ -166,16 +171,16 @@ Partial Class AnteckningarF
         '
         'AnteckningarTB
         '
-        Me.AnteckningarTB.Location = New System.Drawing.Point(272, 239)
+        Me.AnteckningarTB.Location = New System.Drawing.Point(331, 261)
         Me.AnteckningarTB.Multiline = True
         Me.AnteckningarTB.Name = "AnteckningarTB"
         Me.AnteckningarTB.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.AnteckningarTB.Size = New System.Drawing.Size(736, 213)
+        Me.AnteckningarTB.Size = New System.Drawing.Size(736, 296)
         Me.AnteckningarTB.TabIndex = 381
         '
         'DatumTB
         '
-        Me.DatumTB.Location = New System.Drawing.Point(22, 245)
+        Me.DatumTB.Location = New System.Drawing.Point(89, 267)
         Me.DatumTB.Name = "DatumTB"
         Me.DatumTB.Size = New System.Drawing.Size(142, 20)
         Me.DatumTB.TabIndex = 380
@@ -184,7 +189,7 @@ Partial Class AnteckningarF
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(19, 219)
+        Me.Label2.Location = New System.Drawing.Point(86, 241)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(79, 17)
         Me.Label2.TabIndex = 379
@@ -194,7 +199,7 @@ Partial Class AnteckningarF
         '
         Me.NyB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NyB.ForeColor = System.Drawing.Color.Maroon
-        Me.NyB.Location = New System.Drawing.Point(683, 541)
+        Me.NyB.Location = New System.Drawing.Point(735, 649)
         Me.NyB.Name = "NyB"
         Me.NyB.Size = New System.Drawing.Size(98, 25)
         Me.NyB.TabIndex = 383
@@ -205,18 +210,60 @@ Partial Class AnteckningarF
         '
         Me.RaderaB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RaderaB.ForeColor = System.Drawing.Color.Maroon
-        Me.RaderaB.Location = New System.Drawing.Point(760, 472)
+        Me.RaderaB.Location = New System.Drawing.Point(812, 580)
         Me.RaderaB.Name = "RaderaB"
         Me.RaderaB.Size = New System.Drawing.Size(98, 25)
         Me.RaderaB.TabIndex = 384
         Me.RaderaB.Text = "Radera"
         Me.RaderaB.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Maroon
+        Me.Button1.Location = New System.Drawing.Point(13, 87)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(70, 25)
+        Me.Button1.TabIndex = 385
+        Me.Button1.Text = "Välj"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'SoktextTB
+        '
+        Me.SoktextTB.Location = New System.Drawing.Point(15, 61)
+        Me.SoktextTB.Name = "SoktextTB"
+        Me.SoktextTB.Size = New System.Drawing.Size(196, 20)
+        Me.SoktextTB.TabIndex = 387
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(12, 41)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(62, 16)
+        Me.Label1.TabIndex = 386
+        Me.Label1.Text = "Sök text"
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Font = New System.Drawing.Font("Wingdings 3", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
+        Me.Label35.Location = New System.Drawing.Point(217, 66)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(20, 15)
+        Me.Label35.TabIndex = 388
+        Me.Label35.Text = "8"
+        '
         'AnteckningarF
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1032, 569)
+        Me.ClientSize = New System.Drawing.Size(1079, 696)
+        Me.Controls.Add(Me.Label35)
+        Me.Controls.Add(Me.SoktextTB)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.RaderaB)
         Me.Controls.Add(Me.NyB)
         Me.Controls.Add(Me.Label3)
@@ -255,4 +302,8 @@ Partial Class AnteckningarF
     Friend WithEvents Label2 As Label
     Friend WithEvents NyB As Button
     Friend WithEvents RaderaB As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents SoktextTB As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label35 As Label
 End Class

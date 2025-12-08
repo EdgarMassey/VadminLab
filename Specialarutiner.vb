@@ -1,27 +1,8 @@
 ﻿Imports System.Data.Odbc
 
 Public Class SpecrutinerF
-    Private Sub TomTestArkivB_Click(sender As Object, e As EventArgs) Handles TomTestArkivB.Click
-        Dim cn As OdbcConnection, mySQL As String
-        Dim connStr As String
-        Dim response
-        response = MsgBox("Vill du verkligen radera hela Testarkivet? ", 1, "OBS")
-        If response = 1 Then    ' User chose Yes.
-            connStr = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
-            cn = New OdbcConnection(connStr)
-            cn.Open()
-            mySQL = "DELETE FROM Provarkiv "
-            'mySQL = mySQL + " Where MyTimeStamp = '" + Timestamp + "' "
-
-            Dim myCmd As New OdbcCommand(mySQL, cn)
-            myCmd.ExecuteNonQuery()
-
-        Else
-
-        End If
 
 
-    End Sub
 
     Private Sub TomLabProdukterB_Click(sender As Object, e As EventArgs) Handles TomLabProdukterB.Click
         Dim cn As OdbcConnection, mySQL As String
@@ -83,4 +64,71 @@ Public Class SpecrutinerF
     Private Sub Label22_Click(sender As Object, e As EventArgs) Handles Label22.Click
 
     End Sub
+
+    Private Sub HämtaNotesB_Click(sender As Object, e As EventArgs) Handles HämtaNotesB.Click
+        Me.Cursor = Cursors.WaitCursor
+        Dim mysql As String, sConnectionString As String
+        Dim mytimestamp As String, datum As String, text As String
+
+        'On Error GoTo sluthampt
+        mysql = "Select * FROM Notes"
+
+
+        sConnectionString = "Provider=SQLOLEDB;Data Source=" + "sql.vadmin.net" + ",1433;Network Library=DBMSSOCN;Initial Catalog=" + "NMLab" + ";User ID=v2000;Password=" + odbclosen + ";"
+
+        Dim conn As New System.Data.OleDb.OleDbConnection(sConnectionString)
+        Dim cmd As New System.Data.OleDb.OleDbCommand(mysql, conn)
+        Dim dr As System.Data.OleDb.OleDbDataReader
+        conn.Open()
+        dr = cmd.ExecuteReader()
+
+
+        Do While dr.Read()
+            mytimestamp = (dr.Item("Timestamp"))
+            datum = (dr.Item("Datum"))
+            text = (dr.Item("Text"))
+            savepost(mytimestamp, datum, text)
+
+        Loop
+        dr.Close()
+        conn.Close()
+sluthampt:
+
+        Me.Cursor = Cursors.Default
+    End Sub
+    Function savepost(ts As String, dat As String, tx As String)
+
+
+
+        Dim cn As OdbcConnection, mySQL As String
+        Dim connStr As String, falt As String, varden As String
+        connStr = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        cn = New OdbcConnection(connStr)
+        cn.Open()
+        mySQL = "DELETE FROM Notes "
+        mySQL = mySQL + " Where TimeStamp = '" + ts + "' "
+
+        Dim myCmd As New OdbcCommand(mySQL, cn)
+        myCmd.ExecuteNonQuery()
+
+        falt = "" : varden = ""
+        mySQL = "INSERT INTO  Notes "
+        falt = falt + "Timestamp,"
+        varden = varden + "'" + kommatillpunkt(ts) + "',"
+        falt = falt + "Datum,"
+        varden = varden + "'" + kommatillpunkt(dat) + "',"
+        falt = falt + "Text "
+
+        varden = varden + "'" + kommatillpunkt(tx) + "'  "
+
+        mySQL = mySQL & "(" & falt & ") VALUES (" & varden & ");"
+        myCmd = New OdbcCommand(mySQL, cn)
+        myCmd.ExecuteNonQuery()
+        cn.Close()
+
+        savepost = ""
+
+
+
+    End Function
 End Class

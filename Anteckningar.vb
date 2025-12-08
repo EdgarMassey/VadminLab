@@ -1,6 +1,7 @@
 ﻿Imports System.Data.Common
 Imports System.Data.Odbc
 Imports System.Runtime.ConstrainedExecution
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class AnteckningarF
     Dim objConn As New System.Data.Odbc.OdbcConnection
@@ -9,15 +10,11 @@ Public Class AnteckningarF
     Dim ds As New DataSet, r As Integer, c As Integer, utskrifttyp As String
     Dim Mytimestamp As String
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
-    End Sub
 
     Dim builder As OdbcCommandBuilder = New OdbcCommandBuilder(dtAdapter)
 
     Private Sub SparaB_Click(sender As Object, e As EventArgs) Handles SparaB.Click
-
-
         Dim cn As OdbcConnection, mySQL As String
         Dim connStr As String, falt As String, varden As String
         connStr = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
@@ -82,6 +79,10 @@ Public Class AnteckningarF
         AnteckningarTB.Text = ""
     End Sub
 
+    Private Sub SoktextTB_TextChanged(sender As Object, e As EventArgs) Handles SoktextTB.TextChanged
+
+    End Sub
+
     Private Sub AnteckningarF_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim rect As Rectangle = Screen.PrimaryScreen.WorkingArea
         Me.Top = (rect.Height / 2) - (Me.Height / 2)
@@ -111,6 +112,11 @@ Public Class AnteckningarF
         Dim strConnString, strSQL As String
         strConnString = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
         strSQL = "SELECT * FROM Notes "
+        If SoktextTB.Text <> "" Then
+            strSQL = strSQL + " Where CHARINDEX('" + SoktextTB.Text + "', Text) > 0 "
+            ' WHERE CHARINDEX('shortstring', LongTextColumn) > 0
+        End If
+
         strSQL = strSQL + "  order by Datum desc"
 
         objConn.ConnectionString = strConnString
@@ -125,6 +131,10 @@ Public Class AnteckningarF
         dtAdapter = Nothing
     End Function
 
+    Private Sub AvslutaK_Click(sender As Object, e As EventArgs) Handles AvslutaK.Click
+        Me.Close()
+    End Sub
+
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         Dim r2 As Integer, c2 As Integer, dummy As String
         r2 = Me.DataGridView1.CurrentRow.Index
@@ -135,5 +145,17 @@ Public Class AnteckningarF
         dummy = nullhantering(DataGridView1.Item(2, r2).Value, "S")
         dummy = dummy.Replace(Chr(10), vbCrLf)
         AnteckningarTB.Text = dummy
+    End Sub
+
+    Private Sub SoktextTB_KeyUp(sender As Object, e As KeyEventArgs) Handles SoktextTB.KeyUp
+        If e.KeyCode = Keys.Enter Then
+            CreateDataSet()
+            DataGridView1.DataSource.Table.Rows.Clear()
+            DataGridView1.DataSource = CreateDataSet.Tables(0).DefaultView
+        End If
+    End Sub
+
+    Private Sub SoktextTB_KeyPress(sender As Object, e As KeyPressEventArgs) Handles SoktextTB.KeyPress
+
     End Sub
 End Class

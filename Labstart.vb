@@ -59,4 +59,11 @@ Public Class LabstartF
         CalenderF.Show()
 
     End Sub
+
+    Private Sub AnteckB_Click(sender As Object, e As EventArgs) Handles AnteckB.Click
+        AnteckningarF.Show()
+        AnteckningarF.BringToFront()
+        AnteckningarF.Activate()
+        AnteckningarF.WindowState = FormWindowState.Normal
+    End Sub
 End Class

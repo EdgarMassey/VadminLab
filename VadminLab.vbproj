@@ -117,6 +117,12 @@
     <Compile Include="AboutBox1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Anteckningar.Designer.vb">
+      <DependentUpon>Anteckningar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Anteckningar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Batchreporter.Designer.vb">
       <DependentUpon>Batchreporter.vb</DependentUpon>
@@ -260,6 +266,9 @@
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Anteckningar.resx">
+      <DependentUpon>Anteckningar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Batchreporter.resx">
       <DependentUpon>Batchreporter.vb</DependentUpon>

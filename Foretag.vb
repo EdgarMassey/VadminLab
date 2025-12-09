@@ -38,7 +38,7 @@ Public Class Foretag
             SparaCB.Checked = True
         End If
         checkmeny = hamptaversion("VadminMENY")
-        vernr = "20251208b"
+        vernr = "20251209a"
         Labdatabasnamn = "NMLab"
 
         lasmenyversion()
@@ -271,6 +271,7 @@ nocon:
             SparaCB.Checked = False
         End If
         hamptaforetag(KlientID)
+        ReadClientfil(sokvag + KlientID + ".cfg")
         If KlientID = "MD" Or KlientID = "NM" Then
             sakerhet = 0
             hamptapersonligID(KlientID)
@@ -320,7 +321,7 @@ nocon:
                 My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "" + vbCrLf, False)
 
             End If
-
+            ReadClientfil(sokvag + KlientID + ".cfg")
             Me.SendToBack()
             LabStartF.Show()
 
@@ -537,5 +538,49 @@ nocon:
         If Err.Number <> 0 Then
             MessageBox.Show("ODBC förbindelse saknas")
         End If
+    End Function
+    Function ReadClientfil(fil As String)
+        For Each line As String In System.IO.File.ReadLines(fil)
+            Console.WriteLine(line)
+            If Strings.Left$(line, 11) = "MenyVersion" Then menuversion = BLANKBORT(Mid$(line, 13, 50))
+            If Strings.Left$(line, 7) = "Invoice" Then invoicepr = BLANKBORT(Mid$(line, 9, 50))
+            If Strings.Left$(line, 8) = "Standard" Then standardpr = BLANKBORT(Mid$(line, 10, 50))
+            If Strings.Left$(line, 4) = "Pack" Then packpr = BLANKBORT(Mid$(line, 6, 50))
+            If Strings.Left$(line, 8) = "Delivery" Then deliverypr = BLANKBORT(Mid$(line, 10, 50))
+            If Strings.Left$(line, 4) = "Bill" Then billpr = BLANKBORT(Mid$(line, 6, 50))
+            If Strings.Left$(line, 3) = "PDF" Then pdfpr = BLANKBORT(Mid$(line, 5, 50))
+            If Strings.Left$(line, 7) = "PostPak" Then postpr = BLANKBORT(Mid$(line, 9, 50))
+            If Strings.Left$(line, 8) = "Reminder" Then paminpr = BLANKBORT(Mid$(line, 10, 50))
+            If Strings.Left$(line, 8) = "Wagespec" Then lonbeskpr = BLANKBORT(Mid$(line, 10, 50))
+            If Strings.Left$(line, 7) = "Telefax" Then telefaxpr = BLANKBORT(Mid$(line, 9, 50))
+            If Strings.Left$(line, 7) = "Bestskr" Then bestpr = BLANKBORT(Mid$(line, 9, 50))
+            If Strings.Left$(line, 8) = "Timecard" Then timecardpr = BLANKBORT(Mid$(line, 10, 50))
+            If Strings.Left$(line, 10) = "DefaultRef" Then defaultref = BLANKBORT(Mid$(line, 12, 50))
+            If Strings.Left$(line, 10) = "DefaultDoc" Then defaultDoc = BLANKBORT(Mid$(line, 12, 50))
+            If Strings.Left$(line, 11) = "StationType" Then stationtype = BLANKBORT(Mid$(line, 13, 50))
+            If Strings.Left$(line, 8) = "Calender" Then calbok = BLANKBORT(Mid$(line, 10, 20))
+            If Strings.Left$(line, 10) = "Kvittorems" Then kvittorems = BLANKBORT(Mid$(line, 12, 50))
+            If Strings.Left$(line, 9) = "Startutsk" Then startutsk = BLANKBORT(Mid$(line, 11, 50))
+            If Strings.Left$(line, 10) = "Fraktsedel" Then fraktsedpr = BLANKBORT(Mid$(line, 12, 50))
+            If Strings.Left$(line, 11) = "Kolliadress" Then kolliadrpr = BLANKBORT(Mid$(line, 13, 50))
+            If Strings.Left$(line, 10) = "Farliggods" Then farliggodspr = BLANKBORT(Mid$(line, 12, 50))
+            If Strings.Left$(line, 7) = "Stdmoms" Then stdmoms = BLANKBORT(Mid$(line, 9, 1))
+            If Strings.Left$(line, 12) = "Databasename" Then databasnamn = BLANKBORT(Mid$(line, 14, 50))
+            If Strings.Left$(line, 11) = "KundDokMapp" Then KundDokMapp = BLANKBORT(Mid$(line, 13, 50))
+            If Strings.Left$(line, 10) = "LevDokMapp" Then levdokmapp = BLANKBORT(Mid$(line, 12, 50))
+            If Strings.Left$(line, 6) = "Offert" Then offertpr = BLANKBORT(Mid$(line, 8, 50))
+            If Strings.Left$(line, 10) = "ODBCSource" Then
+                odbcsourcer = BLANKBORT(Mid$(line, 12, 50))
+                odbcsourcerr = odbcsourcer
+                odbcsource = odbcsourcer
+            End If
+            If Strings.Left$(line, 10) = "StationsID" Then stationsid = BLANKBORT(Mid$(line, 12, 50))
+            If Strings.Left$(line, Len("ClientID")) = "ClientID" Then KlientID = BLANKBORT(Mid$(line, Len("ClientID") + 2, 50))
+            If Strings.Left$(line, 2) = "Lö" Then losen = BLANKBORT(Mid$(line, Len("Lösen") + 2, 50))
+            If Strings.Left$(line, 6) = "PersID" Then PersonligID = BLANKBORT(Mid$(line, Len("PersID") + 2, 50))
+            If Strings.Left$(line, Len("Tid")) = "Tid" Then tid = BLANKBORT(Mid$(line, Len("Tid") + 2, 20))
+            If Strings.Left$(line, Len("Spar")) = "Spar" Then spar = BLANKBORT(Mid$(line, Len("Spar") + 3, 4))
+        Next
+        ReadClientfil = "1"
     End Function
 End Class

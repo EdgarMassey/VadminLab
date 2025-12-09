@@ -72,8 +72,7 @@ Module MDlib
     Public innetyper(200) As String, typerklar As String, altlevstatus As String, altlevprodukt As String
     Public rabmall(201, 10) As String
     Public rkontonummer As String, rkontonamn As String, ringaendebalans As Double
-
-
+    Public KundDokMapp As String
     'kundreskontra
     Public krfakturanummer As String, krFakturadatum As String, krForfallodatum As String, krAntalpaminnelser As Integer
     Public krKundnamn As String, krKundnummer As String, krAdress1 As String, krAdress2 As String, krPostnummer As String, krOrt As String

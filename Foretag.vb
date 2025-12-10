@@ -3,6 +3,7 @@
 Imports System.Data.Odbc
 Imports System.IO
 Imports System.Net
+Imports Microsoft.VisualBasic.ApplicationServices
 
 Public Class Foretag
     Dim Labversion As String = "", dummy As String
@@ -25,7 +26,7 @@ Public Class Foretag
         LasVersion(sokvag + "LabVersion.cfg")
         LasMenyVersion()
 
-        If KlientID = "NM" Or KlientID = "MD" Then
+        If KlientID = "NM" Or KlientID = "MD" Or KlientID = "MC" Then
             PersonligIDL.Visible = True
             PersonligIDTB.Visible = True
             PersonligIDTB.Text = PersonligID
@@ -40,7 +41,7 @@ Public Class Foretag
         End If
 
         checkmeny = hamptaversion("VadminMENY")
-        vernr = "20251210a"
+        vernr = "20251210b"
         Labdatabasnamn = "NMLab"
 
         My.Computer.FileSystem.WriteAllText(sokvag + "LabVersion.cfg", "Labversion=" + vernr + Space(40) + vbCrLf, False)
@@ -54,7 +55,70 @@ Public Class Foretag
         OleDbSource = "sql.vadmin.net"
         datum.Text = today
     End Sub
+    Private Sub loginrutin()
+        KlientID = UCase(KlientID)
+        Me.Cursor = Cursors.WaitCursor
+        If spar = "True" Then
+            SparaCB.Checked = True
+        Else
+            SparaCB.Checked = False
+        End If
+        hamptaforetag(KlientID)
+        If KlientID = "MD" Or KlientID = "NM" Or KlientID = "MC" Then
+            sakerhet = 1
 
+            GetNewBehorighet(PersonligIDTB.Text)
+            If GetNewBehorighet(PersonligIDTB.Text) = "" Then
+                sakerhet = 0
+                If PersonligIDTB.Text = "edgar.massey@gmail.com" And LosenTB.Text = "EMassey46" Then sakerhet = 1
+            Else
+
+                If InStr(PersonligIDKlass, "1") > 0 Then sakerhet = 1
+                If InStr(PersonligIDKlass, "4") > 0 Then sakerhet = 2
+                If InStr(PersonligIDKlass, "5") > 0 Then sakerhet = 3
+                If PersonligIDTB.Text = "edgar.massey@gmail.com" And LosenTB.Text = "EMassey46" Then sakerhet = 1
+
+            End If
+
+
+            dummy = PersonligKlarTextName
+            dummy = PersonligID
+            dummy = PersonligIDKlass
+            dummy = PersonligIDLosen
+        Else
+            If losen = password6 Then sakerhet = 6
+            If losen = password5 Then sakerhet = 5
+            If losen = password4 Then sakerhet = 4
+            If losen = password3 Then sakerhet = 3
+            If losen = password2 Then sakerhet = 2
+            If losen = "EMassey46" Or losen = password1 Then sakerhet = 1
+
+        End If
+
+        If sakerhet > 0 Then
+
+            If SparaCB.Checked = True Then
+                My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "ClientID=" + KlientID + vbCrLf, False)
+                My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "Lösen=" + losen + vbCrLf, True)
+                My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "PersID=" + PersonligIDTB.Text + vbCrLf, True)
+                My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "Spara=" + CStr(SparaCB.Checked) + vbCrLf, True)
+            Else
+                My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "" + vbCrLf, False)
+
+            End If
+            ReadClientfil(sokvag + KlientID + ".cfg")
+            Me.SendToBack()
+
+            If MaxBehorighet = "True" Or TotLab = "True" Then
+                LabstartF.Show()
+            Else
+                MessageBox.Show("Ogiltig inloggning")
+            End If
+        Else
+            MessageBox.Show("Ogiltig inloggning")
+        End If
+        Me.Cursor = Cursors.Arrow
+    End Sub
     Private Sub AvslutaK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AvslutaK.Click
         System.Diagnostics.Process.Start(sokvag + "VadminMeny.exe")
         Me.Close()
@@ -199,69 +263,6 @@ nocon:
         losen = LosenTB.Text
     End Sub
 
-    Private Sub loginrutin()
-        KlientID = UCase(KlientID)
-        Me.Cursor = Cursors.WaitCursor
-        If spar = "True" Then
-            SparaCB.Checked = True
-        Else
-            SparaCB.Checked = False
-        End If
-        hamptaforetag(KlientID)
-        If KlientID = "MD" Or KlientID = "NM" Then
-            sakerhet = 0
-            hamptapersonligID(KlientID)
-
-            If hamptapersonligID(KlientID) = "" Then
-                sakerhet = 0
-                If PersonligIDTB.Text = "edgar.massey@gmail.com" And LosenTB.Text = "EMassey46" Then sakerhet = 1
-            Else
-
-                If InStr(PersonligIDKlass, "1") > 0 Then sakerhet = 1
-                If InStr(PersonligIDKlass, "4") > 0 Then sakerhet = 2
-                If InStr(PersonligIDKlass, "5") > 0 Then sakerhet = 3
-                If PersonligIDTB.Text = "edgar.massey@gmail.com" And LosenTB.Text = "EMassey46" Then sakerhet = 1
-
-            End If
-
-
-            dummy = PersonligKlarTextName
-            dummy = PersonligID
-            dummy = PersonligIDKlass
-            dummy = PersonligIDLosen
-        Else
-            If losen = password6 Then sakerhet = 6
-            If losen = password5 Then sakerhet = 5
-            If losen = password4 Then sakerhet = 4
-            If losen = password3 Then sakerhet = 3
-            If losen = password2 Then sakerhet = 2
-            If losen = "EMassey46" Or losen = password1 Then sakerhet = 1
-
-        End If
-
-        If sakerhet > 0 Then
-
-            If SparaCB.Checked = True Then
-                My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "ClientID=" + KlientID + vbCrLf, False)
-                My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "Lösen=" + losen + vbCrLf, True)
-                My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "PersID=" + PersonligIDTB.Text + vbCrLf, True)
-                My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "Spara=" + CStr(SparaCB.Checked) + vbCrLf, True)
-            Else
-                My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "" + vbCrLf, False)
-
-            End If
-            ReadClientfil(sokvag + KlientID + ".cfg")
-            Me.SendToBack()
-            LabstartF.Show()
-
-
-
-        Else
-            MessageBox.Show("Ogiltig inloggning")
-        End If
-        Me.Cursor = Cursors.Arrow
-    End Sub
-
     Private Sub LosenTB_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LosenTB.TextChanged
         losen = LosenTB.Text
     End Sub
@@ -269,9 +270,6 @@ nocon:
     Private Sub SparaCB_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SparaCB.CheckedChanged
         spar = SparaCB.Checked
     End Sub
-
-
-
 
     Private Sub datum_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles datum.Click
         LokalInstF.Show()
@@ -325,9 +323,6 @@ slut:
         Dim Buttons As MessageBoxButtons = MessageBoxButtons.OKCancel
         Dim Result As DialogResult
 
-        ' Result = MessageBox.Show(Message, Caption, Buttons)
-
-
         rfn = "ftp://ftp.vadmin.net/vadmin.net/downloads/VadminMeny.exe"
         lfn = sokvag + "\VadminMeny.exe"
         Dim ftp As FtpWebRequest = CType(FtpWebRequest.Create(rfn), FtpWebRequest)
@@ -356,8 +351,6 @@ slut:
         MessageBox.Show("Meny uppdateringen utfört!")
 
     End Sub
-
-
 
     Function getlocalIP()
         Dim strHostName As String
@@ -478,6 +471,55 @@ nocon:
         LasMenyVersion = ""
 
     End Function
+    Function GetNewBehorighet(ByVal kod As String)
+        Dim cn As OdbcConnection, mySQL As String
+        Dim connStr As String, l As Integer
+        connStr = "DSN=" + odbcsourcer + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        cn = New OdbcConnection(connStr)
+        cn.Open()
+        mySQL = "SELECT * FROM BehorReg"
+        mySQL = mySQL + " WHERE UserId = '" + kod + "'  "
 
+        GetNewBehorighet = ""
+        Dim myCmd As New OdbcCommand(mySQL, cn)
+        Dim tabel As OdbcDataReader = myCmd.ExecuteReader(CommandBehavior.CloseConnection)
+        'myCmd.ExecuteNonQuery()
+        l = 1
+        If tabel.HasRows = False Then
+            GoTo slut
+        Else
+            While tabel.Read()
+                UserID = nullhantering(tabel("UserID"), "S")
+                UserNamn = nullhantering(tabel("Usernamn"), "S")
+                Userpassword = nullhantering(tabel("UserPassword"), "S")
+                MaxBehorighet = tabel("MaxBehorighet")
+                'Olika programmoduler
+                TotCal = tabel("TotCal")
+                TotLab = tabel("Totlab")
+                TotRec = tabel("TotRec")
+                TotRed = tabel("TotRed")
+                TotOLF = tabel("TotOlf")
+                'OLF moduler 
+                MOLFKundreg = tabel("MOLFKundreg")
+                MOLFKundres = tabel("MOLFKundres")
+                MOLFProdreg = tabel("MOLFProdreg")
+                MOLFOrderFakt = tabel("MOLFOrderFakt")
+                MOLFArbOrder = tabel("MOLFArbOrder")
+                MOLFInlev = tabel("MOLFInlev")
+                MOLFBestall = tabel("MOLFBestall")
+                'Diverse begränsningar/undantag
+                BRECBegrOmtappning = tabel("BRECBegrOmtappning")
+                BOLFBegProdpriser = tabel("BOLFBegProdpriser")
+                BOLFAnkomnstKontroll = tabel("BOLFAnkomnstKontroll")
+                BCalEndastVisning = tabel("BCalEndastVisning")
+                l = l + 1
+                GetNewBehorighet = "Ja"
+            End While
+
+        End If
+slut:
+        cn.Close()
+
+    End Function
 
 End Class

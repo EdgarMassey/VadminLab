@@ -92,6 +92,13 @@ Module MDlib
     Public OrdFontB As New Font("Times New Roman", 12, FontStyle.Bold)
     Public LargeFontB As New Font("Times New Roman", 14, FontStyle.Bold)
     Public LargeFontR As New Font("Times New Roman", 14, FontStyle.Regular)
+
+    Public UserID As String, UserNamn As String, Userpassword As String
+    Public MaxBehorighet As String, TotCal As String, TotLab As String, TotRec As String, TotRed As String, TotOLF As String
+    Public MOLFKundreg As String, MOLFKundres As String, MOLFProdreg As String, MOLFOrderFakt As String
+    Public MOLFArbOrder As String, MOLFInlev As String, MOLFBestall As String
+    Public BRECBegrOmtappning As String, BOLFBegProdpriser As String, BOLFAnkomnstKontroll As String
+    Public BCalEndastVisning As String
     Function kommatillpunkt(ByVal nummer As String)
         While InStr(nummer, ",") > 0
             Mid$(nummer, InStr(nummer, ","), 1) = "."

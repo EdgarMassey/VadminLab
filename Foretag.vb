@@ -1,17 +1,13 @@
 ﻿
-Imports System
+
+Imports System.Data.Odbc
 Imports System.IO
 Imports System.Net
-Imports System.Data.Odbc
-Imports System.Configuration
-Imports System.Text.RegularExpressions
-
-
 
 Public Class Foretag
     Dim Labversion As String = "", dummy As String
+
     Private Sub Foretag_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'Labdatabasnamn = "NMLab"
         Dim ipp() As Net.IPAddress = System.Net.Dns.GetHostAddresses("")
         If ipp.Count > 0 Then
             For Each ipadd As Net.IPAddress In ipp
@@ -22,8 +18,13 @@ Public Class Foretag
         sokvag = AppDomain.CurrentDomain.BaseDirectory
         Me.Top = (rect.Height / 2) - (Me.Height / 2)
         Me.Left = (rect.Width / 2) - (Me.Width / 2)
-        laslogg()
+
+        readdll()
+        ReadClientfil(sokvag + KlientID + ".cfg")
         KlientIdTB.Text = KlientID
+        LasVersion(sokvag + "LabVersion.cfg")
+        LasMenyVersion()
+
         If KlientID = "NM" Or KlientID = "MD" Then
             PersonligIDL.Visible = True
             PersonligIDTB.Visible = True
@@ -33,17 +34,17 @@ Public Class Foretag
             PersonligIDTB.Visible = False
         End If
         LosenTB.Text = losen
-        dummy = laslokal2("LabVersion.cfg")
+
         If spar = "True" Then
             SparaCB.Checked = True
         End If
+
         checkmeny = hamptaversion("VadminMENY")
-        vernr = "20251209a"
+        vernr = "20251210a"
         Labdatabasnamn = "NMLab"
 
-        lasmenyversion()
-
         My.Computer.FileSystem.WriteAllText(sokvag + "LabVersion.cfg", "Labversion=" + vernr + Space(40) + vbCrLf, False)
+
         myip = "90.231.192.137"
         Prognamn = "Vadmin 2025 "
         Ver.Text = "Version: " + vernr
@@ -52,65 +53,7 @@ Public Class Foretag
         odbclosen = "alfons"
         OleDbSource = "sql.vadmin.net"
         datum.Text = today
-
-
-
     End Sub
-    Public Shared Sub laslogg()
-        Try
-            ' Create an instance of StreamReader to read from a file.
-            Dim sr As StreamReader = New StreamReader(sokvag + "vdriver.dll")
-            Dim line As String, dummy As String
-            ' Read and display the lines from the file until the end 
-            ' of the file is reached.
-            Do
-                line = sr.ReadLine()
-                'Console.WriteLine(line)
-                dummy = parserad(line)
-            Loop Until line Is Nothing
-            sr.Close()
-        Catch E As Exception
-            ' Let the user know what went wrong.
-            Console.WriteLine("The file could not be read:")
-            Console.WriteLine(E.Message)
-        End Try
-    End Sub
-    Public Shared Sub laslokal()
-        Try
-            Dim sr As StreamReader = New StreamReader(sokvag + KlientID + ".cfg")
-            Dim line As String, dummy As String
-            Do
-                line = sr.ReadLine()
-                'Console.WriteLine(line)
-                dummy = parserad(line)
-            Loop Until line Is Nothing
-            sr.Close()
-        Catch E As Exception
-            Console.WriteLine("The file could not be read:")
-            Console.WriteLine(E.Message)
-        End Try
-
-    End Sub
-    Function laslokal2(progr As String)
-        Try
-            Dim sr As StreamReader = New StreamReader(sokvag + progr)
-            Dim line As String
-            Do
-                line = sr.ReadLine()
-                laslokal2 = parserad2(line)
-            Loop Until line Is Nothing
-            sr.Close()
-        Catch E As Exception
-            Console.WriteLine("The file could not be read:")
-            Console.WriteLine(E.Message)
-        End Try
-        laslokal2 = "1"
-
-    End Function
-    Function parserad2(ByVal rad As String)
-        If Strings.Left$(rad, 10) = "Labversion" Then Labversion = BLANKBORT(Mid$(rad, 12, 50))
-        parserad2 = "1"
-    End Function
 
     Private Sub AvslutaK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AvslutaK.Click
         System.Diagnostics.Process.Start(sokvag + "VadminMeny.exe")
@@ -132,14 +75,10 @@ Public Class Foretag
     End Sub
     Function hamptaforetag(ByVal clientid As String)
         hamptaforetag = ""
-        If Len(nullhantering(odbcsource, "S")) < 2 Then
-            ' odbcsource = "VadminODBC"
-            ' odbcsourcer = odbcsource
-        End If
-
         'On Error GoTo nocon
         Dim cn As OdbcConnection, mySQL As String
         Dim connStr As String, test As Decimal
+
         connStr = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
 
         cn = New OdbcConnection(connStr)
@@ -263,15 +202,12 @@ nocon:
     Private Sub loginrutin()
         KlientID = UCase(KlientID)
         Me.Cursor = Cursors.WaitCursor
-        laslokal()
-
         If spar = "True" Then
             SparaCB.Checked = True
         Else
             SparaCB.Checked = False
         End If
         hamptaforetag(KlientID)
-        ReadClientfil(sokvag + KlientID + ".cfg")
         If KlientID = "MD" Or KlientID = "NM" Then
             sakerhet = 0
             hamptapersonligID(KlientID)
@@ -303,15 +239,8 @@ nocon:
 
         End If
 
-
-
-
-
-
-
-
         If sakerhet > 0 Then
-            SkrivaLoginLogg(KlientID, "LAGER")
+
             If SparaCB.Checked = True Then
                 My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "ClientID=" + KlientID + vbCrLf, False)
                 My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "Lösen=" + losen + vbCrLf, True)
@@ -323,7 +252,7 @@ nocon:
             End If
             ReadClientfil(sokvag + KlientID + ".cfg")
             Me.SendToBack()
-            LabStartF.Show()
+            LabstartF.Show()
 
 
 
@@ -387,22 +316,7 @@ nocon:
 slut:
         cn.Close()
     End Function
-    Public Shared Sub lasmenyversion()
-        Try
-            Dim sr As StreamReader = New StreamReader(sokvag + "MenyInfo.cfg")
-            Dim line As String, dummy As String
-            Do
-                line = sr.ReadLine()
-                'Console.WriteLine(line)
-                dummy = parserad(line)
-            Loop Until line Is Nothing
-            sr.Close()
-        Catch E As Exception
-            Console.WriteLine("The file could not be read:")
-            Console.WriteLine(E.Message)
-        End Try
 
-    End Sub
     Sub uppdateramenyprogram()
         On Error Resume Next
         Dim rfn As String, lfn As String
@@ -443,55 +357,7 @@ slut:
 
     End Sub
 
-    Function SkrivaLoginLogg(AnvID As String, AnvNamn As String)
-        On Error Resume Next
-        tid = DateTime.Now.ToString("HH:mm:ss")
-        'hostip
-        Dim iphostadress As String
-        Dim lol As WebClient = New WebClient()
-        Dim str As String = lol.DownloadString("http://www.themasseys.net/ip.asp")
-        Dim pattern As String = "<h3>Your IP number is:(.+)</h3>"
-        Dim ipad As String
-        Dim matches1 As MatchCollection = Regex.Matches(str, pattern)
-        Dim ip As String = matches1(0).ToString
-        ip = ip.Remove(0, 22)
-        ip = ip.Replace("</h3>", "")
-        ip = ip.Replace(" ", "")
-        ipad = ip
-        iphostadress = ipad
-        'localip
-        ipadress = getlocalIP()
-        '
-        Dim cn As OdbcConnection, mySQL As String
-        Dim connStr As String, falt As String, varden As String
-        connStr = "DSN=" + odbcsourcer + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
-        cn = New OdbcConnection(connStr)
-        cn.Open()
-        falt = "" : varden = ""
-        mySQL = "INSERT INTO LogonLoggen "
-        falt = falt + "MyTimeStamp,"
-        varden = varden + "'" + gettimestamp() + "',"
-        falt = falt + "Datum,"
-        varden = varden + "'" + today + "',"
-        falt = falt + "Tid,"
-        varden = varden + "'" + tid + "',"
-        falt = falt + "HostIP,"
-        varden = varden + "'" + iphostadress + "',"
-        falt = falt + "LokalIP,"
-        varden = varden + "'" + ipadress + "',"
-        falt = falt + "AnvID,"
-        varden = varden + "'" + AnvID + "',"
-        falt = falt + "AnvNamn "
-        varden = varden + "'" + AnvNamn + "'"
-        mySQL = mySQL & "(" & falt & ") VALUES (" & varden & ");"
-        Dim myCmd = New OdbcCommand(mySQL, cn)
-        If iphostadress <> myip Then
-            myCmd.ExecuteNonQuery()
 
-        End If
-        cn.Close()
-        SkrivaLoginLogg = "Ja"
-    End Function
 
     Function getlocalIP()
         Dim strHostName As String
@@ -583,4 +449,35 @@ nocon:
         Next
         ReadClientfil = "1"
     End Function
+    Function readdll()
+        For Each line As String In System.IO.File.ReadLines(sokvag + "vdriver.dll")
+            ' Console.WriteLine(line)
+            If Strings.Left$(line, Len("ClientID")) = "ClientID" Then KlientID = BLANKBORT(Mid$(line, Len("ClientID") + 2, 50))
+            If Strings.Left$(line, 5) = "Lösen" Then losen = BLANKBORT(Mid$(line, Len("Lösen") + 2, 50))
+            If Strings.Left$(line, 6) = "PersID" Then PersonligID = BLANKBORT(Mid$(line, Len("PersID") + 2, 50))
+            If Strings.Left$(line, Len("Spar")) = "Spar" Then spar = BLANKBORT(Mid$(line, Len("Spar") + 3, 4))
+        Next
+        readdll = ""
+
+    End Function
+    Function LasVersion(fil As String)
+        For Each line As String In System.IO.File.ReadLines(fil)
+            ' Console.WriteLine(line)
+            If Strings.Left$(line, 10) = "Labversion" Then Labversion = BLANKBORT(Mid$(line, 12, 50))
+        Next
+        LasVersion = ""
+    End Function
+
+
+    Function LasMenyVersion()
+        For Each line As String In System.IO.File.ReadLines("MenyInfo.cfg")
+            ' Console.WriteLine(line)
+            If Strings.Left$(line, 11) = "MenyVersion" Then menuversion = BLANKBORT(Mid$(line, 13, 50))
+            LasMenyVersion = ""
+        Next
+        LasMenyVersion = ""
+
+    End Function
+
+
 End Class

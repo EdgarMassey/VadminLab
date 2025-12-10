@@ -115,64 +115,10 @@ Module MDlib
         Next l5
         BLANKBORT = blankkoll
     End Function
-    Public Function parserad(ByVal rad As String)
-        If Left$(rad, 11) = "MenyVersion" Then menuversion = BLANKBORT(Mid$(rad, 13, 50))
-        If Left$(rad, 7) = "Invoice" Then invoicepr = BLANKBORT(Mid$(rad, 9, 50))
-        If Left$(rad, 8) = "Standard" Then standardpr = BLANKBORT(Mid$(rad, 10, 50))
-        If Left$(rad, 4) = "Pack" Then packpr = BLANKBORT(Mid$(rad, 6, 50))
-        If Left$(rad, 8) = "Delivery" Then deliverypr = BLANKBORT(Mid$(rad, 10, 50))
-        If Left$(rad, 4) = "Bill" Then billpr = BLANKBORT(Mid$(rad, 6, 50))
-        If Left$(rad, 3) = "PDF" Then pdfpr = BLANKBORT(Mid$(rad, 5, 50))
-        If Left$(rad, 7) = "PostPak" Then postpr = BLANKBORT(Mid$(rad, 9, 50))
-        If Left$(rad, 8) = "Reminder" Then paminpr = BLANKBORT(Mid$(rad, 10, 50))
-        If Left$(rad, 8) = "Wagespec" Then lonbeskpr = BLANKBORT(Mid$(rad, 10, 50))
-        If Left$(rad, 7) = "Telefax" Then telefaxpr = BLANKBORT(Mid$(rad, 9, 50))
-        If Left$(rad, 7) = "Bestskr" Then bestpr = BLANKBORT(Mid$(rad, 9, 50))
-        If Left$(rad, 8) = "Timecard" Then timecardpr = BLANKBORT(Mid$(rad, 10, 50))
-        If Left$(rad, 10) = "DefaultRef" Then defaultref = BLANKBORT(Mid$(rad, 12, 50))
-        If Left$(rad, 10) = "DefaultDoc" Then defaultDoc = BLANKBORT(Mid$(rad, 12, 50))
-        If Left$(rad, 11) = "StationType" Then stationtype = BLANKBORT(Mid$(rad, 13, 50))
-        If Left$(rad, 8) = "Calender" Then calbok = BLANKBORT(Mid$(rad, 10, 20))
-        If Left$(rad, 10) = "Kvittorems" Then
-            kvittorems = BLANKBORT(Mid$(rad, 12, 50))
 
-        End If
-        If Left$(rad, 9) = "Startutsk" Then startutsk = BLANKBORT(Mid$(rad, 11, 50))
-
-        If Left$(rad, 10) = "Fraktsedel" Then fraktsedpr = BLANKBORT(Mid$(rad, 12, 50))
-        If Left$(rad, 11) = "Kolliadress" Then kolliadrpr = BLANKBORT(Mid$(rad, 13, 50))
-        If Left$(rad, 10) = "Farliggods" Then farliggodspr = BLANKBORT(Mid$(rad, 12, 50))
-        If Left$(rad, 7) = "Stdmoms" Then stdmoms = BLANKBORT(Mid$(rad, 9, 1))
-        If Left$(rad, 12) = "Databasename" Then databasnamn = BLANKBORT(Mid$(rad, 14, 50))
-        If Left$(rad, 6) = "Offert" Then offertpr = BLANKBORT(Mid$(rad, 8, 50))
-
-        If Left$(rad, 10) = "ODBCSource" Then
-            odbcsourcer = BLANKBORT(Mid$(rad, 12, 50))
-            odbcsourcerr = odbcsourcer
-            odbcsource = odbcsourcer
-
-        End If
-        If Left$(rad, 10) = "StationsID" Then stationsid = BLANKBORT(Mid$(rad, 12, 50))
-        If Left$(rad, Len("ClientID")) = "ClientID" Then KlientID = BLANKBORT(Mid$(rad, Len("ClientID") + 2, 50))
-        If Left$(rad, 1) = "L" Then
-            losen = BLANKBORT(Mid$(rad, Len("Lösen") + 2, 50))
-        End If
-        If Left$(rad, 6) = "PersID" Then
-            PersonligID = BLANKBORT(Mid$(rad, Len("PersID") + 2, 50))
-        End If
-        If Left$(rad, Len("Tid")) = "Tid" Then tid = BLANKBORT(Mid$(rad, Len("Tid") + 2, 20))
-        If Left$(rad, Len("Spar")) = "Spar" Then spar = BLANKBORT(Mid$(rad, Len("Spar") + 3, 4))
-        parserad = "1"
-
-    End Function
     Public Function nullhantering(ByVal varde As Object, ByVal typ As String) As Object
         On Error Resume Next
-        'If typ = "T" Then
-        '    If varde = "¤¤¤" Then varde = "0"
-        '    If (IsNaN(varde)) = True Then
-        '        varde = 0
-        '    End If
-        'End If
+
         Select Case VarType(varde)
             Case 0 : If typ = "S" Then nullhantering = "" Else nullhantering = 0
             Case 1 : If typ = "S" Then nullhantering = "" Else nullhantering = 0

@@ -80,18 +80,20 @@ Public Class LokalInstF
         My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "Databasename=" + databasnamn + Space(20) + vbCrLf, False)
         My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "StationsID=" + stationsid + Space(20) + vbCrLf, True)
         My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "ODBCSource=" + odbcsourcer + Space(20) + vbCrLf, True)
-        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "Stdmoms=" + StandardmomsTB.Text + Space(20) + vbCrLf, True)
-        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "DefaultRef=" + STDVarRefTB.Text + Space(20) + vbCrLf, True)
-        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "Invoice=" + InvPrLb.Text + Space(20) + vbCrLf, True)
-        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "Standard=" + STDPrLB.Text + Space(20) + vbCrLf, True)
-        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "Wagespec=" + LonbesPRLB.Text + Space(20) + vbCrLf, True)
-        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "Delivery=" + DelPrLB.Text + Space(20) + vbCrLf, True)
-        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "Offert=" + OffertPrLB.Text + Space(20) + vbCrLf, True)
+        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "Stdmoms=" + stdmoms + Space(20) + vbCrLf, True)
+        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "DefaultRef=" + defaultref + Space(20) + vbCrLf, True)
+        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "Invoice=" + invoicepr + Space(20) + vbCrLf, True)
+        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "Standard=" + standardpr + Space(20) + vbCrLf, True)
+        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "Wagespec=" + lonbeskpr + Space(20) + vbCrLf, True)
+        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "Delivery=" + deliverypr + Space(20) + vbCrLf, True)
+        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "Offert=" + offertpr + Space(20) + vbCrLf, True)
         My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "Bill=" + billpr + Space(20) + vbCrLf, True)
-        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "PDF=" + PDFPRLB.Text + Space(20) + vbCrLf, True)
-        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "StationType=" + StationsIDTB.Text + Space(20) + vbCrLf, True)
-        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "Kvittorems=" + KvittoPrLB.Text + Space(20) + vbCrLf, True)
-        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "Startutsk=" + StartUtskriftCB.Text + Space(20) + vbCrLf, True)
+        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "PDF=" + pdfpr + Space(20) + vbCrLf, True)
+        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "StationType=" + stationtype + Space(20) + vbCrLf, True)
+        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "Kvittorems=" + kvittorems + Space(20) + vbCrLf, True)
+        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "Startutsk=" + startutsk + Space(20) + vbCrLf, True)
+        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "KundDokMapp=" + KunddokumentmappTB.Text + Space(20) + vbCrLf, True)
+        My.Computer.FileSystem.WriteAllText(sokvag + KlientID + ".cfg", "LevDokMapp=" + LevdokumentmappTB.Text + Space(20) + vbCrLf, True)
     End Sub
 
 
@@ -262,7 +264,10 @@ Public Class LokalInstF
                 deliverypr = BLANKBORT(Mid$(line, 10, 50))
                 DelPrLB.Text = deliverypr
             End If
-            If Strings.Left$(line, 4) = "Bill" Then billpr = BLANKBORT(Mid$(line, 6, 50))
+            If Strings.Left$(line, 4) = "Bill" Then
+                billpr = BLANKBORT(Mid$(line, 6, 50))
+                KvittoPrLB.Text = billpr
+            End If
             If Strings.Left$(line, 3) = "PDF" Then
                 pdfpr = BLANKBORT(Mid$(line, 5, 50))
                 PDFPRLB.Text = pdfpr
@@ -283,15 +288,13 @@ Public Class LokalInstF
             If Strings.Left$(line, 10) = "DefaultDoc" Then
                 defaultDoc = BLANKBORT(Mid$(line, 12, 50))
             End If
-            If Strings.Left$(line, 11) = "StationType" Then
-                stationtype = BLANKBORT(Mid$(line, 13, 50))
-                StationsIDTB.Text = stationtype
-            End If
+
+
             If Strings.Left$(line, 8) = "Calender" Then calbok = BLANKBORT(Mid$(line, 10, 20))
-            If Strings.Left$(line, 10) = "Kvittorems" Then
-                kvittorems = BLANKBORT(Mid$(line, 12, 50))
-                KvittoPrLB.Text = kvittorems
-            End If
+            'If Strings.Left$(line, 10) = "Kvittorems" Then
+            '    kvittorems = BLANKBORT(Mid$(line, 12, 50))
+            '    KvittoPrLB.Text = kvittorems
+            'End If
             If Strings.Left$(line, 9) = "Startutsk" Then StartUtskriftCB.Text = BLANKBORT(Mid$(line, 11, 50))
             If Strings.Left$(line, 10) = "Fraktsedel" Then fraktsedpr = BLANKBORT(Mid$(line, 12, 50))
             If Strings.Left$(line, 11) = "Kolliadress" Then kolliadrpr = BLANKBORT(Mid$(line, 13, 50))
@@ -301,8 +304,14 @@ Public Class LokalInstF
                 StandardmomsTB.Text = stdmoms
             End If
             If Strings.Left$(line, 12) = "Databasename" Then DatabasnamnTB.Text = BLANKBORT(Mid$(line, 14, 50))
-            If Strings.Left$(line, 11) = "KundDokMapp" Then KundDokMapp = BLANKBORT(Mid$(line, 13, 50))
-            If Strings.Left$(line, 10) = "LevDokMapp" Then levdokmapp = BLANKBORT(Mid$(line, 12, 50))
+            If Strings.Left$(line, 11) = "KundDokMapp" Then
+                KundDokMapp = BLANKBORT(Mid$(line, 13, 50))
+                KunddokumentmappTB.Text = KundDokMapp
+            End If
+            If Strings.Left$(line, 10) = "LevDokMapp" Then
+                levdokmapp = BLANKBORT(Mid$(line, 12, 50))
+                LevdokumentmappTB.Text = levdokmapp
+            End If
             If Strings.Left$(line, 6) = "Offert" Then
                 offertpr = BLANKBORT(Mid$(line, 8, 50))
                 OffertPrLB.Text = offertpr
@@ -312,7 +321,12 @@ Public Class LokalInstF
                 odbcsourcerr = odbcsourcer
                 ODBCsourceTB.Text = odbcsourcer
             End If
-            If Strings.Left$(line, 10) = "StationsID" Then stationsid = BLANKBORT(Mid$(line, 12, 50))
+            If Strings.Left$(line, 10) = "StationsID" Then
+                stationsid = BLANKBORT(Mid$(line, 12, 50))
+                StationsIDTB.Text = stationsid
+
+
+            End If
             If Strings.Left$(line, Len("ClientID")) = "ClientID" Then KlientID = BLANKBORT(Mid$(line, Len("ClientID") + 2, 50))
             If Strings.Left$(line, 2) = "Lö" Then losen = BLANKBORT(Mid$(line, Len("Lösen") + 2, 50))
             If Strings.Left$(line, 6) = "PersID" Then PersonligID = BLANKBORT(Mid$(line, Len("PersID") + 2, 50))
@@ -322,4 +336,5 @@ Public Class LokalInstF
         ReadClientfil = "1"
 
     End Function
+
 End Class

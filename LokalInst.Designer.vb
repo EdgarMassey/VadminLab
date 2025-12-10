@@ -67,6 +67,10 @@ Partial Class LokalInstF
         Me.Uppdatmeny = New System.Windows.Forms.Button()
         Me.Alla = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
+        Me.LevdokumentmappTB = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.KunddokumentmappTB = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.Ver.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -90,7 +94,7 @@ Partial Class LokalInstF
         Me.Ver.Controls.Add(Me.datum)
         Me.Ver.Controls.Add(Me.Versionl)
         Me.Ver.ForeColor = System.Drawing.Color.Gray
-        Me.Ver.Location = New System.Drawing.Point(7, 502)
+        Me.Ver.Location = New System.Drawing.Point(9, 576)
         Me.Ver.Name = "Ver"
         Me.Ver.Size = New System.Drawing.Size(197, 73)
         Me.Ver.TabIndex = 22
@@ -154,7 +158,7 @@ Partial Class LokalInstF
         '
         Me.SparaB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SparaB.ForeColor = System.Drawing.Color.Maroon
-        Me.SparaB.Location = New System.Drawing.Point(369, 528)
+        Me.SparaB.Location = New System.Drawing.Point(499, 595)
         Me.SparaB.Name = "SparaB"
         Me.SparaB.Size = New System.Drawing.Size(98, 25)
         Me.SparaB.TabIndex = 235
@@ -165,7 +169,7 @@ Partial Class LokalInstF
         '
         Me.AvslutaK.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AvslutaK.ForeColor = System.Drawing.Color.Maroon
-        Me.AvslutaK.Location = New System.Drawing.Point(372, 559)
+        Me.AvslutaK.Location = New System.Drawing.Point(502, 626)
         Me.AvslutaK.Name = "AvslutaK"
         Me.AvslutaK.Size = New System.Drawing.Size(95, 25)
         Me.AvslutaK.TabIndex = 234
@@ -294,7 +298,7 @@ Partial Class LokalInstF
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(320, 341)
+        Me.Label9.Location = New System.Drawing.Point(322, 415)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(111, 13)
         Me.Label9.TabIndex = 303
@@ -303,7 +307,7 @@ Partial Class LokalInstF
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(320, 312)
+        Me.Label10.Location = New System.Drawing.Point(322, 386)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(71, 13)
         Me.Label10.TabIndex = 305
@@ -321,7 +325,7 @@ Partial Class LokalInstF
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(320, 367)
+        Me.Label12.Location = New System.Drawing.Point(322, 441)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(91, 13)
         Me.Label12.TabIndex = 309
@@ -330,7 +334,7 @@ Partial Class LokalInstF
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(320, 420)
+        Me.Label13.Location = New System.Drawing.Point(322, 494)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(88, 13)
         Me.Label13.TabIndex = 311
@@ -339,7 +343,7 @@ Partial Class LokalInstF
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(320, 446)
+        Me.Label14.Location = New System.Drawing.Point(322, 520)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(108, 13)
         Me.Label14.TabIndex = 313
@@ -348,7 +352,7 @@ Partial Class LokalInstF
         'RemPrCB
         '
         Me.RemPrCB.AutoSize = True
-        Me.RemPrCB.Location = New System.Drawing.Point(397, 311)
+        Me.RemPrCB.Location = New System.Drawing.Point(399, 385)
         Me.RemPrCB.Name = "RemPrCB"
         Me.RemPrCB.Size = New System.Drawing.Size(85, 17)
         Me.RemPrCB.TabIndex = 314
@@ -358,7 +362,7 @@ Partial Class LokalInstF
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(320, 394)
+        Me.Label15.Location = New System.Drawing.Point(322, 468)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(65, 13)
         Me.Label15.TabIndex = 316
@@ -374,7 +378,7 @@ Partial Class LokalInstF
         'KvittoPrLB
         '
         Me.KvittoPrLB.FormattingEnabled = True
-        Me.KvittoPrLB.Location = New System.Drawing.Point(10, 312)
+        Me.KvittoPrLB.Location = New System.Drawing.Point(12, 386)
         Me.KvittoPrLB.Name = "KvittoPrLB"
         Me.KvittoPrLB.Size = New System.Drawing.Size(301, 21)
         Me.KvittoPrLB.TabIndex = 325
@@ -382,7 +386,7 @@ Partial Class LokalInstF
         'STDPrLB
         '
         Me.STDPrLB.FormattingEnabled = True
-        Me.STDPrLB.Location = New System.Drawing.Point(10, 285)
+        Me.STDPrLB.Location = New System.Drawing.Point(12, 359)
         Me.STDPrLB.Name = "STDPrLB"
         Me.STDPrLB.Size = New System.Drawing.Size(301, 21)
         Me.STDPrLB.TabIndex = 326
@@ -390,7 +394,7 @@ Partial Class LokalInstF
         'InvPrLb
         '
         Me.InvPrLb.FormattingEnabled = True
-        Me.InvPrLb.Location = New System.Drawing.Point(10, 339)
+        Me.InvPrLb.Location = New System.Drawing.Point(12, 413)
         Me.InvPrLb.Name = "InvPrLb"
         Me.InvPrLb.Size = New System.Drawing.Size(301, 21)
         Me.InvPrLb.TabIndex = 327
@@ -398,7 +402,7 @@ Partial Class LokalInstF
         'DelPrLB
         '
         Me.DelPrLB.FormattingEnabled = True
-        Me.DelPrLB.Location = New System.Drawing.Point(10, 367)
+        Me.DelPrLB.Location = New System.Drawing.Point(12, 441)
         Me.DelPrLB.Name = "DelPrLB"
         Me.DelPrLB.Size = New System.Drawing.Size(301, 21)
         Me.DelPrLB.TabIndex = 328
@@ -406,7 +410,7 @@ Partial Class LokalInstF
         'PDFPRLB
         '
         Me.PDFPRLB.FormattingEnabled = True
-        Me.PDFPRLB.Location = New System.Drawing.Point(10, 394)
+        Me.PDFPRLB.Location = New System.Drawing.Point(12, 468)
         Me.PDFPRLB.Name = "PDFPRLB"
         Me.PDFPRLB.Size = New System.Drawing.Size(301, 21)
         Me.PDFPRLB.TabIndex = 329
@@ -414,7 +418,7 @@ Partial Class LokalInstF
         'OffertPrLB
         '
         Me.OffertPrLB.FormattingEnabled = True
-        Me.OffertPrLB.Location = New System.Drawing.Point(10, 421)
+        Me.OffertPrLB.Location = New System.Drawing.Point(12, 495)
         Me.OffertPrLB.Name = "OffertPrLB"
         Me.OffertPrLB.Size = New System.Drawing.Size(301, 21)
         Me.OffertPrLB.TabIndex = 330
@@ -422,7 +426,7 @@ Partial Class LokalInstF
         'LonbesPRLB
         '
         Me.LonbesPRLB.FormattingEnabled = True
-        Me.LonbesPRLB.Location = New System.Drawing.Point(10, 448)
+        Me.LonbesPRLB.Location = New System.Drawing.Point(12, 522)
         Me.LonbesPRLB.Name = "LonbesPRLB"
         Me.LonbesPRLB.Size = New System.Drawing.Size(301, 21)
         Me.LonbesPRLB.TabIndex = 331
@@ -449,7 +453,7 @@ Partial Class LokalInstF
         '
         Me.Uppdatmeny.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Uppdatmeny.ForeColor = System.Drawing.Color.Maroon
-        Me.Uppdatmeny.Location = New System.Drawing.Point(10, 475)
+        Me.Uppdatmeny.Location = New System.Drawing.Point(12, 549)
         Me.Uppdatmeny.Name = "Uppdatmeny"
         Me.Uppdatmeny.Size = New System.Drawing.Size(215, 25)
         Me.Uppdatmeny.TabIndex = 334
@@ -460,7 +464,7 @@ Partial Class LokalInstF
         '
         Me.Alla.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Alla.ForeColor = System.Drawing.Color.Maroon
-        Me.Alla.Location = New System.Drawing.Point(323, 263)
+        Me.Alla.Location = New System.Drawing.Point(325, 337)
         Me.Alla.Name = "Alla"
         Me.Alla.Size = New System.Drawing.Size(98, 22)
         Me.Alla.TabIndex = 335
@@ -470,17 +474,53 @@ Partial Class LokalInstF
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(320, 288)
+        Me.Label16.Location = New System.Drawing.Point(322, 362)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(90, 13)
         Me.Label16.TabIndex = 336
         Me.Label16.Text = "Standard skrivare"
         '
+        'LevdokumentmappTB
+        '
+        Me.LevdokumentmappTB.Location = New System.Drawing.Point(405, 270)
+        Me.LevdokumentmappTB.Name = "LevdokumentmappTB"
+        Me.LevdokumentmappTB.Size = New System.Drawing.Size(192, 20)
+        Me.LevdokumentmappTB.TabIndex = 344
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(291, 272)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(101, 13)
+        Me.Label18.TabIndex = 343
+        Me.Label18.Text = "Levdokument mapp"
+        '
+        'KunddokumentmappTB
+        '
+        Me.KunddokumentmappTB.Location = New System.Drawing.Point(113, 270)
+        Me.KunddokumentmappTB.Name = "KunddokumentmappTB"
+        Me.KunddokumentmappTB.Size = New System.Drawing.Size(170, 20)
+        Me.KunddokumentmappTB.TabIndex = 342
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(0, 272)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(108, 13)
+        Me.Label17.TabIndex = 341
+        Me.Label17.Text = "Kunddokument mapp"
+        '
         'LokalInstF
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(579, 587)
+        Me.ClientSize = New System.Drawing.Size(618, 662)
+        Me.Controls.Add(Me.LevdokumentmappTB)
+        Me.Controls.Add(Me.Label18)
+        Me.Controls.Add(Me.KunddokumentmappTB)
+        Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Alla)
         Me.Controls.Add(Me.Uppdatmeny)
@@ -573,4 +613,8 @@ Partial Class LokalInstF
     Friend WithEvents Uppdatmeny As System.Windows.Forms.Button
     Friend WithEvents Alla As System.Windows.Forms.Button
     Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents LevdokumentmappTB As TextBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents KunddokumentmappTB As TextBox
+    Friend WithEvents Label17 As Label
 End Class

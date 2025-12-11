@@ -13,7 +13,7 @@
     <AssemblyName>VadminLab</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <IsWebBootstrapper>true</IsWebBootstrapper>
@@ -148,6 +148,12 @@
     <Compile Include="CalenderTyp.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Foretag.Designer.vb">
+      <DependentUpon>Foretag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Foretag.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Inleverans.Designer.vb">
       <DependentUpon>Inleverans.vb</DependentUpon>
     </Compile>
@@ -164,12 +170,6 @@
       <DependentUpon>BehorighetReg.vb</DependentUpon>
     </Compile>
     <Compile Include="BehorighetReg.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Foretag.Designer.vb">
-      <DependentUpon>Foretag.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Foretag.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Labstart.Designer.vb">
@@ -282,6 +282,9 @@
     <EmbeddedResource Include="CalenderTyp.resx">
       <DependentUpon>CalenderTyp.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Foretag.resx">
+      <DependentUpon>Foretag.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inleverans.resx">
       <DependentUpon>Inleverans.vb</DependentUpon>
     </EmbeddedResource>
@@ -290,10 +293,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BehorighetReg.resx">
       <DependentUpon>BehorighetReg.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Foretag.resx">
-      <DependentUpon>Foretag.vb</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Labstart.resx">
       <DependentUpon>Labstart.vb</DependentUpon>

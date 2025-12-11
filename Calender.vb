@@ -557,36 +557,36 @@ slut:
 
     End Sub
     Sub HamtaTyp()
-        Dim cn As OdbcConnection, mySQL As String
-        Dim connStr As String
-        Dim order As String, typnamn As String
-        Owner0 = "" : Owner1 = "" : Owner2 = "" : Owner3 = "" : Owner4 = ""
-        connStr = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
-        cn = New OdbcConnection(connStr)
-        cn.Open()
-        mySQL = "SELECT * FROM CalenderTyp"
-        mySQL = mySQL + " Order by typorder  "
+        '        Dim cn As OdbcConnection, mySQL As String
+        '        Dim connStr As String
+        '        Dim order As String, typnamn As String
+        '        Owner0 = "" : Owner1 = "" : Owner2 = "" : Owner3 = "" : Owner4 = ""
+        '        connStr = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        '        cn = New OdbcConnection(connStr)
+        '        cn.Open()
+        '        mySQL = "SELECT * FROM CalenderTyp"
+        '        mySQL = mySQL + " Order by typorder  "
 
-        Dim myCmd As New OdbcCommand(mySQL, cn)
-        Dim tabel As OdbcDataReader = myCmd.ExecuteReader(CommandBehavior.CloseConnection)
-        'myCmd.ExecuteNonQuery()
+        '        Dim myCmd As New OdbcCommand(mySQL, cn)
+        '        Dim tabel As OdbcDataReader = myCmd.ExecuteReader(CommandBehavior.CloseConnection)
+        '        'myCmd.ExecuteNonQuery()
 
-        If tabel.HasRows = False Then
-            GoTo slut
-        Else
-            While tabel.Read()
-                order = nullhantering(tabel("typorder"), "S")
-                typnamn = nullhantering(tabel("typnamn"), "S")
+        '        If tabel.HasRows = False Then
+        '            GoTo slut
+        '        Else
+        '            While tabel.Read()
+        '                order = nullhantering(tabel("typorder"), "S")
+        '                typnamn = nullhantering(tabel("typnamn"), "S")
 
-                If order = "1" Then Caltyp0 = typnamn
-                If order = "2" Then Caltyp1 = typnamn
-                If order = "3" Then Caltyp2 = typnamn
-                If order = "4" Then Caltyp3 = typnamn
-                If order = "5" Then Caltyp4 = typnamn
-            End While
-        End If
-        cn.Close()
-slut:
+        '                If order = "1" Then Caltyp0 = typnamn
+        '                If order = "2" Then Caltyp1 = typnamn
+        '                If order = "3" Then Caltyp2 = typnamn
+        '                If order = "4" Then Caltyp3 = typnamn
+        '                If order = "5" Then Caltyp4 = typnamn
+        '            End While
+        '        End If
+        '        cn.Close()
+        'slut:
 
     End Sub
 End Class

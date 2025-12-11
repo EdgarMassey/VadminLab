@@ -11,7 +11,7 @@
     <deploymentProvider codebase="http://www.vadmin.net/Downloads/Vadmin2000Upgrade/VadminLab.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
     <dependentAssembly dependencyType="install" codebase="VadminLab.exe.manifest" size="5325">
@@ -21,7 +21,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>J2efMBoie/kHsNFthcPi986GPvm0gZseYHHVMlnFksI=</dsig:DigestValue>
+        <dsig:DigestValue>++cMlXnOhHSoS0ksbYFmxbVakNQ+RnDUV2H/6EgFuuo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

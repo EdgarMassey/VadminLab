@@ -43,7 +43,7 @@ Public Class AnteckningarF
 
         DataGridView1.DataSource.Table.Rows.Clear()
         DataGridView1.DataSource = CreateDataSet.Tables(0).DefaultView
-
+        Labdatabasnamn = "NMLab"
     End Sub
 
     Private Sub NyB_Click(sender As Object, e As EventArgs) Handles NyB.Click

@@ -47,7 +47,7 @@ Public Class Foretag
             SparaCB.Checked = True
             SparaCB.Refresh()
         End If
-        vernr = "20251211f"
+        vernr = "20251212a"
         My.Computer.FileSystem.WriteAllText(sokvag + "LabVersion.cfg", "Labversion=" + vernr + Space(40) + vbCrLf, False)
 
         myip = "90.231.192.137"

@@ -11,12 +11,12 @@
       "RelativeMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|solutionrelative:foretag.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|C:\\Github\\VadminLab\\anteckningar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|solutionrelative:anteckningar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|C:\\Github\\VadminLab\\mdlib.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|solutionrelative:mdlib.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|C:\\Github\\VadminLab\\anteckningar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|solutionrelative:anteckningar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}|VadminLab.vbproj|C:\\Github\\VadminLab\\lokalinst.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
@@ -54,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Anteckningar.vb",
               "DocumentMoniker": "C:\\Github\\VadminLab\\Anteckningar.vb",
               "RelativeDocumentMoniker": "Anteckningar.vb",
@@ -72,7 +72,7 @@
               "RelativeDocumentMoniker": "Foretag.vb",
               "ToolTip": "C:\\Github\\VadminLab\\Foretag.vb",
               "RelativeToolTip": "Foretag.vb",
-              "ViewState": "AgIAAFECAAAAAAAAAAAAAFQCAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGEAAAAAAAAAAADwv0EAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-12-11T11:14:41.734Z",
               "EditorCaption": ""
@@ -86,19 +86,21 @@
               "ToolTip": "C:\\Github\\VadminLab\\Foretag.vb [Design]",
               "RelativeToolTip": "Foretag.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-12-11T11:11:10.237Z"
+              "WhenOpened": "2025-12-11T11:11:10.237Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MDLib.vb",
               "DocumentMoniker": "C:\\Github\\VadminLab\\MDLib.vb",
               "RelativeDocumentMoniker": "MDLib.vb",
               "ToolTip": "C:\\Github\\VadminLab\\MDLib.vb",
               "RelativeToolTip": "MDLib.vb",
-              "ViewState": "AgIAADgAAAAAAAAAAAAcwGQAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGQAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-12-10T13:02:40.693Z"
+              "WhenOpened": "2025-12-10T13:02:40.693Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

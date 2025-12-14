@@ -92,7 +92,7 @@ Module MDlib
     Public OrdFontB As New Font("Times New Roman", 12, FontStyle.Bold)
     Public LargeFontB As New Font("Times New Roman", 14, FontStyle.Bold)
     Public LargeFontR As New Font("Times New Roman", 14, FontStyle.Regular)
-
+    'behorigheter
     Public UserID As String, UserNamn As String, Userpassword As String
     Public MaxBehorighet As String, TotCal As String, TotLab As String, TotRec As String, TotRed As String, TotOLF As String
     Public MOLFKundreg As String, MOLFKundres As String, MOLFProdreg As String, MOLFOrderFakt As String

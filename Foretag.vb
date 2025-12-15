@@ -457,8 +457,8 @@ nocon:
     End Function
 
     Private Sub Huvud_Click(sender As Object, e As EventArgs) Handles Huvud.Click
-        ' LokalInstF.Show()
-        ' LokalInstF.BringToFront()
+        LokalInstF.Show()
+        LokalInstF.BringToFront()
     End Sub
     Sub skrivatillvdriver()
         If SparaCB.Checked = True Then

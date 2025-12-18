@@ -146,3 +146,4 @@ C:\Github\VadminLab - kopia\obj\x86\Debug\VadminLab.application
 C:\Github\VadminLab - kopia\obj\x86\Debug\VadminLab.exe
 C:\Github\VadminLab - kopia\obj\x86\Debug\VadminLab.xml
 C:\Github\VadminLab - kopia\obj\x86\Debug\VadminLab.pdb
+C:\Github\VadminLab\obj\x86\Debug\Ord.VistsF.resources

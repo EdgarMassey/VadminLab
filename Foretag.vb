@@ -10,7 +10,7 @@ Public Class Foretag
     Dim pityp As String
     Private Sub Foretag_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim ip() As Net.IPAddress = System.Net.Dns.GetHostAddresses("")
-        vernr = "20251218a"
+        vernr = "20251218c"
         If ip.Count > 0 Then
             For Each ipadd As Net.IPAddress In ip
 

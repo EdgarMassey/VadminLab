@@ -261,6 +261,12 @@
     <Compile Include="TestReg.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Vists.Designer.vb">
+      <DependentUpon>Vists.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vists.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AboutBox1.resx">
@@ -335,6 +341,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TestReg.resx">
       <DependentUpon>TestReg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vists.resx">
+      <DependentUpon>Vists.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

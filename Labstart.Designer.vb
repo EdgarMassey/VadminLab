@@ -40,6 +40,7 @@ Partial Class LabstartF
         Me.AnteckB = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.LocalaInställningarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BesokB = New System.Windows.Forms.Button()
         Me.Ver.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -53,7 +54,7 @@ Partial Class LabstartF
         Me.Ver.Controls.Add(Me.datum)
         Me.Ver.Controls.Add(Me.Versionl)
         Me.Ver.ForeColor = System.Drawing.Color.Gray
-        Me.Ver.Location = New System.Drawing.Point(10, 282)
+        Me.Ver.Location = New System.Drawing.Point(10, 327)
         Me.Ver.Name = "Ver"
         Me.Ver.Size = New System.Drawing.Size(197, 73)
         Me.Ver.TabIndex = 323
@@ -145,7 +146,7 @@ Partial Class LabstartF
         Me.AvslutaB.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.AvslutaB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AvslutaB.ForeColor = System.Drawing.Color.Maroon
-        Me.AvslutaB.Location = New System.Drawing.Point(478, 324)
+        Me.AvslutaB.Location = New System.Drawing.Point(478, 369)
         Me.AvslutaB.Name = "AvslutaB"
         Me.AvslutaB.Size = New System.Drawing.Size(92, 25)
         Me.AvslutaB.TabIndex = 372
@@ -183,7 +184,7 @@ Partial Class LabstartF
         Me.SpecialrutinerB.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.SpecialrutinerB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SpecialrutinerB.ForeColor = System.Drawing.Color.Maroon
-        Me.SpecialrutinerB.Location = New System.Drawing.Point(133, 250)
+        Me.SpecialrutinerB.Location = New System.Drawing.Point(133, 295)
         Me.SpecialrutinerB.Name = "SpecialrutinerB"
         Me.SpecialrutinerB.Size = New System.Drawing.Size(303, 25)
         Me.SpecialrutinerB.TabIndex = 376
@@ -209,7 +210,7 @@ Partial Class LabstartF
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LocalaInställningarToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(600, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(610, 24)
         Me.MenuStrip1.TabIndex = 378
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -219,12 +220,26 @@ Partial Class LabstartF
         Me.LocalaInställningarToolStripMenuItem.Size = New System.Drawing.Size(121, 20)
         Me.LocalaInställningarToolStripMenuItem.Text = "Locala inställningar"
         '
+        'BesokB
+        '
+        Me.BesokB.BackColor = System.Drawing.Color.Cornsilk
+        Me.BesokB.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BesokB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BesokB.ForeColor = System.Drawing.Color.Maroon
+        Me.BesokB.Location = New System.Drawing.Point(133, 247)
+        Me.BesokB.Name = "BesokB"
+        Me.BesokB.Size = New System.Drawing.Size(303, 25)
+        Me.BesokB.TabIndex = 379
+        Me.BesokB.Text = "Besökregister"
+        Me.BesokB.UseVisualStyleBackColor = False
+        '
         'LabstartF
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ClientSize = New System.Drawing.Size(600, 366)
+        Me.ClientSize = New System.Drawing.Size(610, 423)
+        Me.Controls.Add(Me.BesokB)
         Me.Controls.Add(Me.AnteckB)
         Me.Controls.Add(Me.SpecialrutinerB)
         Me.Controls.Add(Me.BatchreporterB)
@@ -264,4 +279,5 @@ Partial Class LabstartF
     Friend WithEvents AnteckB As Button
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents LocalaInställningarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BesokB As Button
 End Class

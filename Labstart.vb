@@ -70,4 +70,11 @@ Public Class LabstartF
     Private Sub LocalaInställningarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LocalaInställningarToolStripMenuItem.Click
         LokalInstF.Show()
     End Sub
+
+    Private Sub BesokB_Click(sender As Object, e As EventArgs) Handles BesokB.Click
+        VistsF.Show()
+        VistsF.BringToFront()
+        VistsF.Activate()
+        VistsF.WindowState = FormWindowState.Normal
+    End Sub
 End Class

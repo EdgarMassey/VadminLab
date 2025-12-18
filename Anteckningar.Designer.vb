@@ -43,6 +43,12 @@ Partial Class AnteckningarF
         Me.SoktextTB = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label35 = New System.Windows.Forms.Label()
+        Me.DatFromTB = New System.Windows.Forms.TextBox()
+        Me.DatTomTB = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Ver.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -131,7 +137,7 @@ Partial Class AnteckningarF
         '
         Me.SparaB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SparaB.ForeColor = System.Drawing.Color.Maroon
-        Me.SparaB.Location = New System.Drawing.Point(954, 580)
+        Me.SparaB.Location = New System.Drawing.Point(952, 597)
         Me.SparaB.Name = "SparaB"
         Me.SparaB.Size = New System.Drawing.Size(98, 25)
         Me.SparaB.TabIndex = 377
@@ -152,7 +158,7 @@ Partial Class AnteckningarF
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(89, 87)
+        Me.DataGridView1.Location = New System.Drawing.Point(89, 121)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 51
@@ -163,7 +169,7 @@ Partial Class AnteckningarF
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(338, 241)
+        Me.Label3.Location = New System.Drawing.Point(338, 275)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(91, 17)
         Me.Label3.TabIndex = 382
@@ -171,7 +177,7 @@ Partial Class AnteckningarF
         '
         'AnteckningarTB
         '
-        Me.AnteckningarTB.Location = New System.Drawing.Point(331, 261)
+        Me.AnteckningarTB.Location = New System.Drawing.Point(331, 295)
         Me.AnteckningarTB.Multiline = True
         Me.AnteckningarTB.Name = "AnteckningarTB"
         Me.AnteckningarTB.ScrollBars = System.Windows.Forms.ScrollBars.Both
@@ -180,7 +186,7 @@ Partial Class AnteckningarF
         '
         'DatumTB
         '
-        Me.DatumTB.Location = New System.Drawing.Point(89, 267)
+        Me.DatumTB.Location = New System.Drawing.Point(89, 301)
         Me.DatumTB.Name = "DatumTB"
         Me.DatumTB.Size = New System.Drawing.Size(142, 20)
         Me.DatumTB.TabIndex = 380
@@ -189,7 +195,7 @@ Partial Class AnteckningarF
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(86, 241)
+        Me.Label2.Location = New System.Drawing.Point(86, 275)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(79, 17)
         Me.Label2.TabIndex = 379
@@ -210,7 +216,7 @@ Partial Class AnteckningarF
         '
         Me.RaderaB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RaderaB.ForeColor = System.Drawing.Color.Maroon
-        Me.RaderaB.Location = New System.Drawing.Point(812, 580)
+        Me.RaderaB.Location = New System.Drawing.Point(810, 597)
         Me.RaderaB.Name = "RaderaB"
         Me.RaderaB.Size = New System.Drawing.Size(98, 25)
         Me.RaderaB.TabIndex = 384
@@ -221,7 +227,7 @@ Partial Class AnteckningarF
         '
         Me.Button1.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Maroon
-        Me.Button1.Location = New System.Drawing.Point(13, 87)
+        Me.Button1.Location = New System.Drawing.Point(13, 121)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(70, 25)
         Me.Button1.TabIndex = 385
@@ -230,7 +236,7 @@ Partial Class AnteckningarF
         '
         'SoktextTB
         '
-        Me.SoktextTB.Location = New System.Drawing.Point(15, 61)
+        Me.SoktextTB.Location = New System.Drawing.Point(15, 71)
         Me.SoktextTB.Name = "SoktextTB"
         Me.SoktextTB.Size = New System.Drawing.Size(196, 20)
         Me.SoktextTB.TabIndex = 387
@@ -239,7 +245,7 @@ Partial Class AnteckningarF
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 41)
+        Me.Label1.Location = New System.Drawing.Point(12, 51)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(62, 16)
         Me.Label1.TabIndex = 386
@@ -249,17 +255,77 @@ Partial Class AnteckningarF
         '
         Me.Label35.AutoSize = True
         Me.Label35.Font = New System.Drawing.Font("Wingdings 3", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
-        Me.Label35.Location = New System.Drawing.Point(217, 66)
+        Me.Label35.Location = New System.Drawing.Point(217, 76)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(20, 15)
         Me.Label35.TabIndex = 388
         Me.Label35.Text = "8"
+        '
+        'DatFromTB
+        '
+        Me.DatFromTB.Location = New System.Drawing.Point(371, 71)
+        Me.DatFromTB.Name = "DatFromTB"
+        Me.DatFromTB.Size = New System.Drawing.Size(76, 20)
+        Me.DatFromTB.TabIndex = 389
+        '
+        'DatTomTB
+        '
+        Me.DatTomTB.Location = New System.Drawing.Point(510, 71)
+        Me.DatTomTB.Name = "DatTomTB"
+        Me.DatTomTB.Size = New System.Drawing.Size(70, 20)
+        Me.DatTomTB.TabIndex = 390
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(377, 51)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(52, 17)
+        Me.Label4.TabIndex = 391
+        Me.Label4.Text = "Fr.o.m."
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(507, 51)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(48, 17)
+        Me.Label5.TabIndex = 392
+        Me.Label5.Text = "T.o.m."
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Wingdings 3", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
+        Me.Label6.Location = New System.Drawing.Point(444, 76)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(20, 15)
+        Me.Label6.TabIndex = 393
+        Me.Label6.Text = "8"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Wingdings 3", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
+        Me.Label7.Location = New System.Drawing.Point(576, 76)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(20, 15)
+        Me.Label7.TabIndex = 394
+        Me.Label7.Text = "8"
         '
         'AnteckningarF
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1079, 696)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.DatTomTB)
+        Me.Controls.Add(Me.DatFromTB)
         Me.Controls.Add(Me.Label35)
         Me.Controls.Add(Me.SoktextTB)
         Me.Controls.Add(Me.Label1)
@@ -306,4 +372,10 @@ Partial Class AnteckningarF
     Friend WithEvents SoktextTB As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label35 As Label
+    Friend WithEvents DatFromTB As TextBox
+    Friend WithEvents DatTomTB As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
 End Class

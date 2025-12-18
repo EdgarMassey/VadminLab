@@ -12,7 +12,7 @@ Public Class InleveransF
         Huvud.Text = Prognamn + " - Beställningar "
         datum.Text = today
         KlientIdl.Text = "KlientID:" + KlientID
-        odbcsource.Text = "ODBCsource:" + odbcsourcer
+        odbcsourcel.Text = "ODBCsource:" + odbcsourcer
 
         databas.Text = "Databasnamn:" + databasnamn
         Gnamn.Text = Firmanamn
@@ -266,7 +266,7 @@ Public Class InleveransF
     Private Sub sparaBEST()
         Dim cn As OdbcConnection, mySQL As String
         Dim connStr As String, falt As String, varden As String
-        connStr = "DSN=" + odbcsourcer + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = "DELETE FROM Bestallningsreg "
@@ -384,7 +384,7 @@ Public Class InleveransF
         Dim tabel As OdbcDataReader
 
 
-        connStr = "DSN=" + odbcsourcer + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = "SELECT * FROM BestallningsReg "
@@ -501,13 +501,13 @@ slutloop:
     Private Sub NyB_Click(sender As Object, e As EventArgs) Handles NyB.Click
 
         nolla()
-        Status = "Ny"
+        status = "Ny"
     End Sub
     Sub getinneliggandebest()
         BestNRTB.Items.Clear()
         Dim cn As OdbcConnection, mySQL As String
         Dim connStr As String, l As Integer
-        connStr = "DSN=" + odbcsourcer + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = " SELECT        bestallningsID, Leverantor"
@@ -542,7 +542,7 @@ slut:
         TillLagerLogg = "Ja"
         Dim cn As OdbcConnection, mySQL As String
         Dim connStr As String, falt As String, varden As String
-        connStr = "DSN=" + odbcsourcer + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         falt = "" : varden = ""
@@ -724,12 +724,16 @@ slut:
         rmaxl.Text = rr
     End Sub
 
+    Private Sub odbcsource_Click(sender As Object, e As EventArgs) Handles odbcsourcel.Click
+
+    End Sub
+
     Private Sub LLevnrTB_KeyUp(sender As Object, e As KeyEventArgs) Handles LLevnrTB.KeyUp
         If e.KeyCode = Keys.Enter Then
             Dim dummy As String
             ' If Status <> "Ny" Then
             dummy = getleverantor("LikaNummer")
-                skrivatillform()
+            skrivatillform()
             ' End If
             LAdress1TB.Focus()
         End If

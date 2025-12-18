@@ -43,7 +43,7 @@ Public Class CalenderTypF
         Huvud.Text = Prognamn + " - CalenderOwners "
         datum.Text = today
         KlientIdl.Text = "KlientID:" + KlientID
-        odbcsource.Text = "ODBCsource:" + odbcsourcer
+        odbcsourcel.Text = "ODBCsource:" + odbcsourcer
         databas.Text = "Databasnamn:" + databasnamn
         Gnamn.Text = Firmanamn
 
@@ -72,7 +72,7 @@ Public Class CalenderTypF
 
     Function CreateDataSet() As DataSet
         Dim strConnString, strSQL As String
-        strConnString = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        strConnString = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
         strSQL = "Select * FROM CalenderTyp "
 
         strSQL = strSQL + "  order by typorder"

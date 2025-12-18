@@ -12,7 +12,7 @@ Public Class Levregf
         Huvud.Text = Prognamn + " - Leverantörsregister"
         datum.Text = today
         KlientIdl.Text = "KlientID:" + KlientID
-        odbcsource.Text = "ODBCsource:" + odbcsourcer
+        odbcsourcel.Text = "ODBCsource:" + odbcsourcer
         databas.Text = "Databasnamn:" + databasnamn
         Gnamn.Text = Firmanamn
         dummy = getleverantor("Start")
@@ -53,8 +53,8 @@ Public Class Levregf
         LLosenTB.Text = llosen
         LGSMTB.Text = lgsm
         dummy = CountCharacter(lkomment, Chr(10))
-        IbanTB.Text = LIBAN
-        SwiftTB.Text = LSwift
+        IbanTB.Text = liban
+        SwiftTB.Text = lswift
 
         If dummy > 12 Then
             FlerraderL.Text = "OBS: Flera rader levinfo än visas i rutan!"
@@ -91,7 +91,7 @@ Public Class Levregf
     Private Sub sparalev()
         Dim cn As OdbcConnection, mySQL As String
         Dim connStr As String, falt As String, varden As String
-        connStr = "DSN=" + odbcsourcer + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = "DELETE FROM levreg "

@@ -10,10 +10,11 @@ Public Class LabstartF
         Huvud.Text = Prognamn + " - Lab Startmeny "
         datum.Text = today
         KlientIdl.Text = "KlientID:" + KlientID
-        odbcsource.Text = "ODBCsource:" + odbcsourcer
+        odbcsourcel.Text = "ODBCsource:" + odbcsource
         databas.Text = "Databasnamn:" + Labdatabasnamn
         Gnamn.Text = Firmanamn
         labmap = "F:\V2012LabDok\"
+        Labdatabasnamn = "NMLab"
     End Sub
 
 

@@ -75,7 +75,7 @@ Public Class LabHanteringF
     Function CreateDataSet() As DataSet
 
         Dim strConnString, strSQL As String
-        strConnString = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        strConnString = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
         strSQL = "SELECT * FROM Provarkiv "
         strSQL = strSQL + "Where Datum >= '" + FromDatumTB.Text + "' "
         If BatchnrRB.Checked = True Then
@@ -523,7 +523,7 @@ Public Class LabHanteringF
 
         Dim cn As OdbcConnection, mySQL As String
         Dim connStr As String, falt As String, varden As String
-        connStr = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         'mySQL = "DELETE FROM ProvArkiv "
@@ -625,7 +625,7 @@ Public Class LabHanteringF
         Dim tabel2 As OdbcDataReader
         Tolerans = "" : Info = ""
 
-        connStr2 = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr2 = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn2 = New OdbcConnection(connStr2)
         cn2.Open()
         mySQL2 = "SELECT Text,Tolerans,Info,stdvarde2,TestBildID FROM LabTester"
@@ -652,7 +652,7 @@ Public Class LabHanteringF
     Function HamptaProvNamn()
         Dim cn As OdbcConnection, mySQL As String, dummy As String, dummy2 As String = ""
         Dim connStr As String, l As Integer
-        connStr = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = "SELECT * FROM Labtester"
@@ -697,7 +697,7 @@ slut:
     Function HamptaproduktID()
         Dim cn As OdbcConnection, mySQL As String, dummy As String
         Dim connStr As String, l As Integer
-        connStr = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = "SELECT * FROM LabProdukter"
@@ -735,7 +735,7 @@ slut:
         'response = MsgBox("Vill du verkligen ersätta provet", 1, "OBS")
         'If response = 1 Then    ' User chose Yes.
 
-        connStr = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = "DELETE FROM ProvArkiv "
@@ -875,7 +875,7 @@ slut:
         Dim response
         response = MsgBox("Vill du verkligen radera", 1, "OBS")
         If response = 1 Then    ' User chose Yes.
-            connStr = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+            connStr = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
             cn = New OdbcConnection(connStr)
             cn.Open()
             mySQL = "DELETE FROM Provarkiv "
@@ -1077,7 +1077,7 @@ slut:
         Dim tabel As OdbcDataReader
 
 
-        connStr = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = "SELECT top 10 * FROM LabProdukter"
@@ -1560,7 +1560,7 @@ slut:
         'DataGridView2.Columns.Clear()
         'DataGridView2.Rows.Clear()
 
-        connStr = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = "SELECT * FROM Provarkiv "
@@ -1655,7 +1655,7 @@ slut:
         Dim Prov5 As String, varde5 As String, prov6 As String, varde6 As String
         Dim Prov7 As String, varde7 As String, prov8 As String, varde8 As String
 
-        strConnString = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        strConnString = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(strConnString)
         cn.Open()
         strSQL = "SELECT * FROM Provarkiv "

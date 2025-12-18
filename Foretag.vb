@@ -1,16 +1,17 @@
 ﻿
-Imports System.Data.Odbc
+Imports System
 Imports System.IO
+Imports System.Data.Odbc
+Imports System.Configuration
 Imports System.Net
 Imports System.Text.RegularExpressions
-Imports Microsoft.VisualBasic.Strings
 
 Public Class Foretag
-    Dim Labversion As String
-    Dim pityp As String
+    Dim Labversion As String = "", pityp As String
     Private Sub Foretag_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        vernr = "20251219a"
         Dim ip() As Net.IPAddress = System.Net.Dns.GetHostAddresses("")
-        vernr = "20251218c"
+
         If ip.Count > 0 Then
             For Each ipadd As Net.IPAddress In ip
 
@@ -22,15 +23,12 @@ Public Class Foretag
         Me.Top = (rect.Height / 2) - (Me.Height / 2)
         Me.Left = (rect.Width / 2) - (Me.Width / 2)
         readdll()
+        'laslogg()
         If spar = "True" Then SparaCB.Checked = True
         SparaCB.Refresh()
         KlientIdTB.Text = KlientID
 
-        If KlientID = "NM" Or KlientID = "MD" Or KlientID = "MC" Then
-            PITyp = "New"
-        Else
-            PITyp = "No"
-        End If
+        If KlientID = "NM" Or KlientID = "MD" Or KlientID = "MC" Then PITyp = "New"
 
         If PITyp = "New" Then
             PersonligIDL.Visible = True
@@ -47,22 +45,20 @@ Public Class Foretag
             SparaCB.Refresh()
         End If
 
-        My.Computer.FileSystem.WriteAllText(sokvag + "LabVersion.cfg", "Labversion=" + vernr + Space(40) + vbCrLf, False)
+        My.Computer.FileSystem.WriteAllText(sokvag + "LABVersion.cfg", "LABversion=" + vernr + Space(40) + vbCrLf, False)
 
         myip = "90.231.192.137"
-        Prognamn = "VadminLab2025"
+        Prognamn = "VadminLab 2025"
         Ver.Text = "Version: " + vernr
         Huvud.Text = Prognamn + " - Behörighetskontroll"
         today = Format(Now, "yyyy-MM-dd")
         odbclosen = "alfons"
         datum.Text = today
-        Labdatabasnamn = "NMLab"
+
     End Sub
     Private Sub Loginrutin()
         Me.Cursor = Cursors.WaitCursor
-        LasVersion("Labversion.cfg")
         ReadClientfil(sokvag + KlientID + ".cfg")
-        GetNewBehorighet(PersonligID)
 
         If spar = "True" Then
             SparaCB.Checked = True
@@ -84,9 +80,10 @@ Public Class Foretag
             If losen = "EMassey46" Or losen = password1 Then sakerhet = 1
         End If
 
+
         If sakerhet > 0 And sakerhet < 9 Then
             skrivatillvdriver()
-            SkrivaLoginLogg(KlientID, "Cal")
+            SkrivaLoginLogg(KlientID, "Lab")
             If SparaCB.Checked = True Then
                 My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "ClientID=" + KlientID + vbCrLf, False)
                 My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "Lösen=" + losen + vbCrLf, True)
@@ -100,10 +97,10 @@ Public Class Foretag
             If PersonligIDTB.Text = "edgar.massey@gmail.com" And losen = "EMassey46" Then
                 MaxBehorighet = "True" : Userpassword = losen : BCalEndastVisning = "False"
             End If
-
-            If MaxBehorighet = "True" Or TotLab = "True" And losen = Userpassword Then
-                Dim checkver = Hamptaversion("VadminLab")
-
+            If MaxBehorighet = "True" Then BCalEndastVisning = "False"
+            If (MaxBehorighet OrElse TotLab) AndAlso losen = Userpassword Then
+                Dim checkver = Hamptaversion("VadminLAB")
+                checkver = "20261227a"
 
                 If checkver > vernr Then
                     Dim result As DialogResult = MessageBox.Show("Ny version av VadminLab finns att ladda ner från vadmin.net", "Uppdatering", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -113,19 +110,16 @@ Public Class Foretag
                 End If
 
 
+
                 LabstartF.Show()
+                Me.Close()
             Else
                 MessageBox.Show("Ogiltig inloggning")
-            End If
-        Else
-            MessageBox.Show("Ogiltig inloggning")
+                End If
+            Else
+                MessageBox.Show("Ogiltig inloggning")
         End If
         Me.Cursor = Cursors.Arrow
-    End Sub
-
-
-    Private Sub SparaCB_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SparaCB.CheckedChanged
-        spar = SparaCB.Checked
     End Sub
 
 
@@ -137,10 +131,12 @@ Public Class Foretag
     Private Sub KlientIdTB_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles KlientIdTB.KeyUp
         If KlientID = "NM" Or KlientID = "MD" Or KlientID = "MC" Then
             PITyp = "New"
+
         Else
             PITyp = "No"
+
         End If
-        If PITyp = "New" Then
+        If pityp = "New" Then
             PersonligIDL.Visible = True
             PersonligIDTB.Visible = True
             PersonligIDTB.Text = PersonligID
@@ -148,6 +144,7 @@ Public Class Foretag
             PersonligIDL.Visible = False
             PersonligIDTB.Visible = False
         End If
+
         If e.KeyCode = Keys.Enter Then
             Loginrutin()
         End If
@@ -158,6 +155,7 @@ Public Class Foretag
         KlientIdTB.Text = UCase(KlientIdTB.Text)
     End Sub
     Private Sub LoginK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LoginK.Click
+
         Loginrutin()
     End Sub
     Function Hamptaforetag(ByVal clientid As String)
@@ -167,11 +165,13 @@ Public Class Foretag
             odbcsourcer = odbcsource
         End If
 
-        On Error GoTo nocon
+       On Error GoTo nocon
         Dim cn As OdbcConnection, mySQL As String
         Dim connStr As String, test As Decimal
+
         connStr = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
+
         cn.Open()
         mySQL = "SELECT * FROM foretagreg"
         mySQL = mySQL + " WHERE ClientID = '" + KlientID + "' "
@@ -274,9 +274,11 @@ Public Class Foretag
         End While
         cn.Close()
 nocon:
+
         If Err.Number <> 0 Then
             MessageBox.Show("ODBC förbindelse saknas")
         End If
+
     End Function
 
     Private Sub LosenTB_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles LosenTB.KeyUp
@@ -287,9 +289,14 @@ nocon:
     Private Sub LosenTB_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles LosenTB.LostFocus
         losen = LosenTB.Text
     End Sub
+
+    Private Sub SparaCB_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SparaCB.CheckedChanged
+        spar = SparaCB.Checked
+    End Sub
+
     Private Sub KlientIdTB_TextChanged(sender As Object, e As EventArgs) Handles KlientIdTB.TextChanged
         KlientID = UCase(KlientIdTB.Text)
-
+        'KlientIdTB.Text = UCase(KlientIdTB.Text)
         If PITyp = "Yes" Then
             PersonligIDL.Visible = True
             PersonligIDTB.Visible = True
@@ -342,6 +349,8 @@ slut:
         Dim Buttons As MessageBoxButtons = MessageBoxButtons.OKCancel
         Dim Result As DialogResult
 
+        ' Result = MessageBox.Show(Message, Caption, Buttons)
+
         rfn = "ftp://ftp.vadmin.net/vadmin.net/downloads/VadminMeny.exe"
         lfn = sokvag + "\VadminMeny.exe"
         Dim ftp As FtpWebRequest = CType(FtpWebRequest.Create(rfn), FtpWebRequest)
@@ -390,7 +399,7 @@ slut:
         ipadress = getlocalIP()
         Dim cn As OdbcConnection, mySQL As String
         Dim connStr As String, falt As String, varden As String
-        connStr = "DSN=" + odbcsourcer + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         falt = "" : varden = ""
@@ -433,11 +442,8 @@ slut:
 
     Function HamptapersonligID(ByVal clientid As String)
         HamptapersonligID = ""
-        If Len(nullhantering(odbcsource, "S")) < 2 Then
-            odbcsource = "VadminODBC"
-            odbcsourcer = odbcsource
-        End If
 
+        On Error GoTo nocon
         Dim cn As OdbcConnection, mySQL As String
         Dim connStr As String, test As Decimal = 0
         connStr = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
@@ -467,8 +473,8 @@ nocon:
     End Function
 
     Private Sub Huvud_Click(sender As Object, e As EventArgs) Handles Huvud.Click
-        LokalInstF.Show()
-        LokalInstF.BringToFront()
+        ' LokalInstF.Show()
+        ' LokalInstF.BringToFront()
     End Sub
     Sub skrivatillvdriver()
         If SparaCB.Checked = True Then
@@ -511,11 +517,11 @@ nocon:
             If Strings.Left$(line, 11) = "KundDokMapp" Then kunddokmapp = BLANKBORT(Mid$(line, 13, 50))
             If Strings.Left$(line, 10) = "LevDokMapp" Then levdokmapp = BLANKBORT(Mid$(line, 12, 50))
             If Strings.Left$(line, 6) = "Offert" Then offertpr = BLANKBORT(Mid$(line, 8, 50))
-            If Strings.Left$(line, 10) = "ODBCSource" Then
-                odbcsourcer = BLANKBORT(Mid$(line, 12, 50))
-                odbcsourcerr = odbcsourcer
-                odbcsource = odbcsourcer
-            End If
+            'If Strings.Left$(line, 10) = "ODBCSource" Then
+            '    odbcsourcer = BLANKBORT(Mid$(line, 12, 50))
+            '    odbcsourcerr = odbcsourcer
+            '    odbcsource = odbcsourcer
+            'End If
             If Strings.Left$(line, 10) = "StationsID" Then stationsid = BLANKBORT(Mid$(line, 12, 50))
             If Strings.Left$(line, Len("ClientID")) = "ClientID" Then KlientID = BLANKBORT(Mid$(line, Len("ClientID") + 2, 50))
             If Strings.Left$(line, 2) = "Lö" Then losen = BLANKBORT(Mid$(line, Len("Lösen") + 2, 50))
@@ -557,7 +563,7 @@ nocon:
     Function GetNewBehorighet(ByVal kod As String)
         Dim cn As OdbcConnection, mySQL As String
         Dim connStr As String, l As Integer
-        connStr = "DSN=" + odbcsourcer + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = "SELECT * FROM BehorReg"
@@ -604,6 +610,27 @@ slut:
         cn.Close()
 
     End Function
+    Sub StartUpdateAndExit()
+        My.Computer.FileSystem.WriteAllText(sokvag + "Updatefile.txt", "VadminLab" + vbCrLf, False)
+        GetProgram("VadminLab")
+        Dim baseDir As String = AppDomain.CurrentDomain.BaseDirectory
+        Dim updaterExe As String = Path.Combine(baseDir, "VadminUpdater.exe")
+
+        If Not File.Exists(updaterExe) Then
+            MessageBox.Show("Updater not found:" & vbCrLf & updaterExe)
+            Return
+        End If
+
+        ' Start updater
+        Process.Start(New ProcessStartInfo() With {
+            .FileName = updaterExe,
+            .UseShellExecute = False
+        })
+
+        ' IMPORTANT: exit immediately so files can be replaced
+        Application.Exit()
+
+    End Sub
     Function GetProgram(Prognamn As String)
         Dim rfn As String, lfn As String
         On Error GoTo slut
@@ -637,33 +664,5 @@ slut:
 slut:
         GetProgram = "Ja"
     End Function
-    Sub StartUpdateAndExit()
-        My.Computer.FileSystem.WriteAllText(sokvag + "Updatefile.txt", "VadminLab" + vbCrLf, False)
-        GetProgram("VadminLab")
-        Dim baseDir As String = AppDomain.CurrentDomain.BaseDirectory
-        Dim updaterExe As String = Path.Combine(baseDir, "VadminUpdater.exe")
 
-        If Not File.Exists(updaterExe) Then
-            MessageBox.Show("Updater not found:" & vbCrLf & updaterExe)
-            Return
-        End If
-
-        ' Start updater
-        Process.Start(New ProcessStartInfo() With {
-            .FileName = updaterExe,
-            .UseShellExecute = False
-        })
-
-        ' IMPORTANT: exit immediately so files can be replaced
-        Application.Exit()
-
-    End Sub
-
-    Private Sub Ver_Enter(sender As Object, e As EventArgs) Handles Ver.Enter
-
-    End Sub
-
-    Private Sub datum_Click(sender As Object, e As EventArgs) Handles datum.Click
-
-    End Sub
 End Class

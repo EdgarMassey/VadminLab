@@ -23,7 +23,7 @@ Public Class BatchreporterF
         Huvud.Text = Prognamn + " - Sats reporter "
         datum.Text = today
         KlientIdl.Text = "KlientID:" + KlientID
-        odbcsource.Text = "ODBCsource:" + odbcsourcer
+        odbcsourcel.Text = "ODBCsource:" + odbcsourcer
         databas.Text = "Databasnamn:" + Labdatabasnamn
         Gnamn.Text = Firmanamn
         FromDatumTB.Text = CDate(today).AddDays(-600)
@@ -44,7 +44,7 @@ Public Class BatchreporterF
     Function CreateDataSet() As DataSet
 
         Dim strConnString, strSQL As String
-        strConnString = "DSN=" + odbcsourcer + "; Database=" + "Recept1" + ";Uid=v2000;Pwd=" + odbclosen
+        strConnString = "DSN=" + odbcsource + "; Database=" + "Recept1" + ";Uid=v2000;Pwd=" + odbclosen
         strSQL = "SELECT DISTINCT Satsnr,Receptnamn,Receptnr, Datum FROM Satsark WHERE datum >= '" + FromDatumTB.Text + "' "
         strSQL = strSQL + " ORDER BY satsnr "
 
@@ -62,7 +62,7 @@ Public Class BatchreporterF
     Function CreateDataSet2() As DataSet
 
         Dim strConnString2, strSQl2 As String
-        strConnString2 = "DSN=" + odbcsourcer + "; Database=" + "Recept1" + ";Uid=v2000;Pwd=" + odbclosen
+        strConnString2 = "DSN=" + odbcsource + "; Database=" + "Recept1" + ";Uid=v2000;Pwd=" + odbclosen
         strSQl2 = "SELECT  Prodnr,Prodnamn,Vikt  FROM Satsark WHERE Satsnr  = '" + satsnr + "' "
         strSQl2 = strSQl2 + " ORDER BY satsnr "
 

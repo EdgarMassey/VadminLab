@@ -28,7 +28,7 @@ Partial Class LagerRegF
         Me.Ver = New System.Windows.Forms.GroupBox()
         Me.Gnamn = New System.Windows.Forms.Label()
         Me.KlientIdl = New System.Windows.Forms.Label()
-        Me.odbcsource = New System.Windows.Forms.Label()
+        Me.odbcsourcel = New System.Windows.Forms.Label()
         Me.databas = New System.Windows.Forms.Label()
         Me.datum = New System.Windows.Forms.Label()
         Me.Versionl = New System.Windows.Forms.Label()
@@ -90,7 +90,7 @@ Partial Class LagerRegF
         '
         Me.Ver.Controls.Add(Me.Gnamn)
         Me.Ver.Controls.Add(Me.KlientIdl)
-        Me.Ver.Controls.Add(Me.odbcsource)
+        Me.Ver.Controls.Add(Me.odbcsourcel)
         Me.Ver.Controls.Add(Me.databas)
         Me.Ver.Controls.Add(Me.datum)
         Me.Ver.Controls.Add(Me.Versionl)
@@ -120,14 +120,14 @@ Partial Class LagerRegF
         Me.KlientIdl.Text = "Klientid"
         Me.KlientIdl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'odbcsource
+        'odbcsourcel
         '
-        Me.odbcsource.Location = New System.Drawing.Point(6, 42)
-        Me.odbcsource.Name = "odbcsource"
-        Me.odbcsource.Size = New System.Drawing.Size(185, 13)
-        Me.odbcsource.TabIndex = 3
-        Me.odbcsource.Text = "Odbcsource"
-        Me.odbcsource.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.odbcsourcel.Location = New System.Drawing.Point(6, 42)
+        Me.odbcsourcel.Name = "odbcsourcel"
+        Me.odbcsourcel.Size = New System.Drawing.Size(185, 13)
+        Me.odbcsourcel.TabIndex = 3
+        Me.odbcsourcel.Text = "Odbcsource"
+        Me.odbcsourcel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'databas
         '
@@ -284,7 +284,7 @@ Partial Class LagerRegF
         Me.FranlagerRB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FranlagerRB.Location = New System.Drawing.Point(115, 25)
         Me.FranlagerRB.Name = "FranlagerRB"
-        Me.FranlagerRB.Size = New System.Drawing.Size(97, 20)
+        Me.FranlagerRB.Size = New System.Drawing.Size(96, 20)
         Me.FranlagerRB.TabIndex = 292
         Me.FranlagerRB.TabStop = True
         Me.FranlagerRB.Text = "Från lager"
@@ -296,7 +296,7 @@ Partial Class LagerRegF
         Me.TilllagerRB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TilllagerRB.Location = New System.Drawing.Point(21, 25)
         Me.TilllagerRB.Name = "TilllagerRB"
-        Me.TilllagerRB.Size = New System.Drawing.Size(88, 20)
+        Me.TilllagerRB.Size = New System.Drawing.Size(87, 20)
         Me.TilllagerRB.TabIndex = 291
         Me.TilllagerRB.Text = "Till lager"
         Me.TilllagerRB.UseVisualStyleBackColor = True
@@ -477,7 +477,7 @@ Partial Class LagerRegF
     Friend WithEvents Ver As GroupBox
     Friend WithEvents Gnamn As Label
     Friend WithEvents KlientIdl As Label
-    Friend WithEvents odbcsource As Label
+    Friend WithEvents odbcsourcel As Label
     Friend WithEvents databas As Label
     Friend WithEvents datum As Label
     Friend WithEvents Versionl As Label

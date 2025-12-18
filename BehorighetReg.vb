@@ -15,7 +15,7 @@ Public Class BehorighetF
         Huvud.Text = Prognamn + " - BehörighetsRegister"
         datum.Text = today
         KlientIdl.Text = "KlientID:" + KlientID
-        odbcsource.Text = "ODBCsource:" + odbcsourcer
+        odbcsourcel.Text = "ODBCsource:" + odbcsourcer
         databas.Text = "Databasnamn:" + databasnamn
         Gnamn.Text = Firmanamn
         DataGridView1.DataSource = CreateDataSet.Tables(0).DefaultView
@@ -33,7 +33,7 @@ Public Class BehorighetF
     End Sub
     Function CreateDataSet() As DataSet
         Dim strConnString, strSQL As String
-        strConnString = "DSN=" + odbcsourcer + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        strConnString = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
         strSQL = ""
 
         strSQL = "SELECT * FROM Behorighetsreg "

@@ -26,7 +26,7 @@ Public Class CalenderOwnerF
     End Sub
     Function CreateDataSet() As DataSet
         Dim strConnString, strSQL As String
-        strConnString = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        strConnString = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
         strSQL = "Select * FROM CalenderOwners "
 
         strSQL = strSQL + "  order by typorder"
@@ -54,7 +54,7 @@ Public Class CalenderOwnerF
     Private Sub SparaB_Click(sender As Object, e As EventArgs) Handles SparaB.Click
         Dim cn As OdbcConnection, mySQL As String
         Dim connStr As String, falt As String, varden As String
-        connStr = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = "DELETE FROM CalenderOwners "
@@ -100,7 +100,7 @@ Public Class CalenderOwnerF
         Dim response
         response = MsgBox("Vill du verkligen radera denna post", 1, "OBS")
         If response = 1 Then    ' User chose Yes.
-            connStr = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+            connStr = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
             cn = New OdbcConnection(connStr)
             cn.Open()
             mySQL = "DELETE FROM CalenderOwners "

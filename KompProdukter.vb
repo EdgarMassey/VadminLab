@@ -72,7 +72,7 @@ Public Class ProduktKomponenterF
         Huvud.Text = Prognamn + "LabKomponenter / Lableverantörer   "
         datum.Text = today
         KlientIdl.Text = "KlientID:" + KlientID
-        odbcsource.Text = "ODBCsource:" + odbcsourcer
+        odbcsourcel.Text = "ODBCsource:" + odbcsourcer
         databas.Text = "Databasnamn:" + Labdatabasnamn
         Gnamn.Text = Firmanamn
 
@@ -91,7 +91,7 @@ Public Class ProduktKomponenterF
 
         Dim cn As OdbcConnection, mySQL As String
         Dim connStr As String, falt As String, varden As String
-        connStr = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = "DELETE FROM LabKomponenter"
@@ -145,7 +145,7 @@ Public Class ProduktKomponenterF
         Dim response
         response = MsgBox("Vill du verkligen radera produkten", 1, "OBS")
         If response = 1 Then    ' User chose Yes.
-            connStr = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+            connStr = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
             cn = New OdbcConnection(connStr)
             cn.Open()
             mySQL = "DELETE FROM LabKomponenter"
@@ -219,7 +219,7 @@ Public Class ProduktKomponenterF
     Function CreateDataSet() As DataSet
 
         Dim strConnString, strSQL As String
-        strConnString = "DSN=" + odbcsourcer + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        strConnString = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
 
         strSQL = "SELECT * FROM produktreg "
             strSQL = strSQL + " where produktgrupp   = 'ZRV' "
@@ -244,7 +244,7 @@ Public Class ProduktKomponenterF
     Function CreateDataSet2() As DataSet
 
         Dim strConnString2, strSQL2 As String
-        strConnString2 = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        strConnString2 = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
         strSQL2 = "SELECT * FROM Labkomponenter"
         strSQL2 = strSQL2 + "  order by komponentnamn"
 
@@ -275,7 +275,7 @@ Public Class ProduktKomponenterF
     Function CreateDataSet3() As DataSet
 
         Dim strConnString3, strSQL3 As String
-        strConnString3 = "DSN=" + odbcsourcer + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        strConnString3 = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
 
         strSQL3 = "SELECT * FROM Levreg "
         strSQL3 = strSQL3 + "  order by Levnamn"
@@ -294,7 +294,7 @@ Public Class ProduktKomponenterF
     Function CreateDataSet4() As DataSet
 
         Dim strConnString4, strSQL4 As String
-        strConnString4 = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        strConnString4 = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
 
         strSQL4 = "SELECT * FROM ProdLevLink "
         strSQL4 = strSQL4 + "  where kompnr = '" + KomponentIDTB.Text + "' "
@@ -316,7 +316,7 @@ Public Class ProduktKomponenterF
         On Error Resume Next
         Dim cn As OdbcConnection, mySQL As String
         Dim connStr As String, falt As String, varden As String
-        connStr = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = "DELETE FROM Prodlevlink"
@@ -365,7 +365,7 @@ Public Class ProduktKomponenterF
         Dim response
         response = MsgBox("Vill du verkligen radera leverantören", 1, "OBS")
         If response = 1 Then    ' User chose Yes.
-            connStr = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+            connStr = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
             cn = New OdbcConnection(connStr)
             cn.Open()
             mySQL = "DELETE FROM Prodlevlink"
@@ -386,7 +386,7 @@ Public Class ProduktKomponenterF
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles SparaLankadeInfoB.Click
         Dim cn As OdbcConnection, mySQL As String
         Dim connStr As String, falt As String, varden As String
-        connStr = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = "DELETE FROM Prodlevlink"

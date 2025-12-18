@@ -1,6 +1,7 @@
 ﻿Imports System.IO
 Imports System.Data.Odbc
 Module MDlib
+
     'Local values
     Public Labdatabasnamn As String, LabODBC As String, StTimestamp As String, colorprov As String
     Public invoicepr As String, standardpr As String, packpr As String, deliverypr As String, billpr As String, postpr As String, paminpr As String
@@ -159,7 +160,7 @@ Module MDlib
         'typ Next, Backa, Kolla
         Dim cn As OdbcConnection, mySQL As String, nextnummer As String
         Dim connStr As String
-        connStr = "DSN=" + odbcsourcer + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = "SELECT * FROM nummerserier "
@@ -203,7 +204,7 @@ Module MDlib
         Dim cn As OdbcConnection, mySQL As String
         Dim connStr As String
         hamptakund = "No"
-        connStr = "DSN=" + odbcsourcer + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = "SELECT Top 1 * FROM kundreg"
@@ -359,7 +360,7 @@ slut:
 
         Dim cn As OdbcConnection, mySQL As String
         Dim connStr As String
-        connStr = "DSN=" + odbcsourcer + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = "SELECT Top 2 * FROM " + "Produktreg "
@@ -501,7 +502,7 @@ slut:
             Next
         Next n
 
-        connStr = "DSN=" + odbcsourcer + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = "SELECT * FROM rabattmall "
@@ -766,7 +767,7 @@ slutloop:
         Dim tabel As OdbcDataReader
 
 
-        connStr = "DSN=" + odbcsourcer + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = "SELECT * FROM kontoplan "
@@ -801,7 +802,7 @@ slutloop:
         Dim tabel As OdbcDataReader
 
 
-        connStr = "DSN=" + odbcsourcer + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = "SELECT top 10 * FROM levreg"

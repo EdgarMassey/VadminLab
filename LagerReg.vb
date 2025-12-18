@@ -14,7 +14,7 @@ Public Class LagerRegF
         Huvud.Text = Prognamn + " - Lagerregister"
         datum.Text = today
         KlientIdl.Text = "KlientID:" + KlientID
-        odbcsource.Text = "ODBCsource:" + odbcsourcer
+        odbcsourcel.Text = "ODBCsource:" + odbcsourcer
         databas.Text = "Databasnamn:" + databasnamn
         Gnamn.Text = Firmanamn
         DataGridView1.DataSource = CreateDataSet.Tables(0).DefaultView
@@ -35,14 +35,14 @@ Public Class LagerRegF
     End Sub
     Function CreateDataSet() As DataSet
         Dim strConnString, strSQL As String, DELSTRING As Integer = 0
-        strConnString = "DSN=" + odbcsourcer + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        strConnString = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
 
         strSQL = "SELECT * FROM LagerPlatsReg "
 
 
 
         If Len(Sokbegrepp.Text) > 0 Then
-                If LagerPlatsRB.Checked = True Then
+            If LagerPlatsRB.Checked = True Then
 
                 'strSQL = strSQL + "Where lagerplats = '" + Sokbegrepp.Text + "'"
                 DELSTRING = Len(Sokbegrepp.Text)
@@ -82,7 +82,7 @@ Public Class LagerRegF
 
 
             DataGridView1.DataSource.Table.Rows.Clear()
-                DataGridView1.DataSource = CreateDataSet.Tables(0).DefaultView
+            DataGridView1.DataSource = CreateDataSet.Tables(0).DefaultView
             summering()
 
 
@@ -243,7 +243,7 @@ slut1:
         Dim tabel As OdbcDataReader
 
 
-        connStr = "DSN=" + odbcsourcer + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = "SELECT * FROM LagerPlatsReg "
@@ -269,7 +269,7 @@ slut1:
     Function skrivatilllager(lp As String, pnr As String, ant As Double)
         Dim cn As OdbcConnection, mySQL As String
         Dim connStr As String, falt As String, varden As String
-        connStr = "DSN=" + odbcsourcer + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + databasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = "DELETE FROM LagerPlatsReg "

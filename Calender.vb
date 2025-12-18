@@ -27,7 +27,7 @@ Public Class CalenderF
         Huvud.Text = Prognamn + " - Calender "
         datum.Text = today
         KlientIdl.Text = "KlientID:" + KlientID
-        odbcsource.Text = "ODBCsource:" + odbcsourcer
+        odbcsourcel.Text = "ODBCsource:" + odbcsourcer
         databas.Text = "Databasnamn:" + databasnamn
         Gnamn.Text = Firmanamn
         Dim datu As String
@@ -127,7 +127,7 @@ Public Class CalenderF
 
     Function CreateDataSet() As DataSet
         Dim strConnString, strSQL As String
-        strConnString = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        strConnString = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
         strSQL = "Select * FROM Calender "
         strSQL = strSQL + " Where datum ='" + cdatum + "' "
         strSQL = strSQL + "  order by MyTimeStamp"
@@ -163,7 +163,7 @@ Public Class CalenderF
     End Sub
     Function CreateDataSet2() As DataSet
         Dim strConnString, strSQL As String
-        strConnString = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        strConnString = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
         strSQL = "Select * FROM Calender "
         strSQL = strSQL + " Where datum  >= '" + today + "' "
         strSQL = strSQL + "  order by datum,mytimestamp "
@@ -528,7 +528,7 @@ endloop:
         Dim connStr As String
         Dim order As String, typnamn As String
         Owner0 = "" : Owner1 = "" : Owner2 = "" : Owner3 = "" : Owner4 = ""
-        connStr = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
+        connStr = "DSN=" + odbcsource + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
         cn = New OdbcConnection(connStr)
         cn.Open()
         mySQL = "SELECT * FROM Calenderowners"

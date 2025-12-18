@@ -1,17 +1,16 @@
 ﻿
-Imports System
-Imports System.Configuration
 Imports System.Data.Odbc
 Imports System.IO
 Imports System.Net
-Imports System.Net.WebRequestMethods
 Imports System.Text.RegularExpressions
+Imports Microsoft.VisualBasic.Strings
 
 Public Class Foretag
     Dim Labversion As String
     Dim pityp As String
     Private Sub Foretag_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim ip() As Net.IPAddress = System.Net.Dns.GetHostAddresses("")
+        vernr = "20251218a"
         If ip.Count > 0 Then
             For Each ipadd As Net.IPAddress In ip
 
@@ -47,7 +46,7 @@ Public Class Foretag
             SparaCB.Checked = True
             SparaCB.Refresh()
         End If
-        vernr = "20251212a"
+
         My.Computer.FileSystem.WriteAllText(sokvag + "LabVersion.cfg", "Labversion=" + vernr + Space(40) + vbCrLf, False)
 
         myip = "90.231.192.137"
@@ -103,6 +102,17 @@ Public Class Foretag
             End If
 
             If MaxBehorighet = "True" Or TotLab = "True" And losen = Userpassword Then
+                Dim checkver = Hamptaversion("VadminLab")
+
+
+                If checkver > vernr Then
+                    Dim result As DialogResult = MessageBox.Show("Ny version av VadminLab finns att ladda ner från vadmin.net", "Uppdatering", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                    If result = DialogResult.Yes Then
+                        StartUpdateAndExit()
+                    End If
+                End If
+
+
                 LabstartF.Show()
             Else
                 MessageBox.Show("Ogiltig inloggning")
@@ -594,6 +604,66 @@ slut:
         cn.Close()
 
     End Function
+    Function GetProgram(Prognamn As String)
+        Dim rfn As String, lfn As String
+        On Error GoTo slut
+        Dim ftplosen = "alfons"
+        rfn = "ftp://ftp.vadmin.net/vadmin.net/downloads/" + Prognamn + ".exe"
+        lfn = sokvag + "\" + Prognamn + "Temp.exe"
+        Dim ftp As FtpWebRequest = CType(FtpWebRequest.Create(rfn), FtpWebRequest)
+        Console.WriteLine("Downloading: " & rfn)
+        ftp.Credentials = New NetworkCredential("Edgar", ftplosen)
+        ftp.KeepAlive = False
+        ftp.UseBinary = True
+        ftp.Method = WebRequestMethods.Ftp.DownloadFile
+        Using FtpResponse As FtpWebResponse = CType(ftp.GetResponse, FtpWebResponse)
+            Using ResponseStream As IO.Stream = FtpResponse.GetResponseStream
+                Using fs As New IO.FileStream(lfn, FileMode.Create)
+                    Dim buffer(2047) As Byte
+                    Dim read As Integer = 0
+                    Do
+                        read = ResponseStream.Read(buffer, 0, buffer.Length)
+                        fs.Write(buffer, 0, read)
+                        Console.Write(".")
+                    Loop Until read = 0
+                    ResponseStream.Close()
+                    fs.Flush()
+                    fs.Close()
+                End Using
+                ResponseStream.Close()
+            End Using
+        End Using
 
+slut:
+        GetProgram = "Ja"
+    End Function
+    Sub StartUpdateAndExit()
+        My.Computer.FileSystem.WriteAllText(sokvag + "Updatefile.txt", "VadminLab" + vbCrLf, False)
+        GetProgram("VadminLab")
+        Dim baseDir As String = AppDomain.CurrentDomain.BaseDirectory
+        Dim updaterExe As String = Path.Combine(baseDir, "VadminUpdater.exe")
 
+        If Not File.Exists(updaterExe) Then
+            MessageBox.Show("Updater not found:" & vbCrLf & updaterExe)
+            Return
+        End If
+
+        ' Start updater
+        Process.Start(New ProcessStartInfo() With {
+            .FileName = updaterExe,
+            .UseShellExecute = False
+        })
+
+        ' IMPORTANT: exit immediately so files can be replaced
+        Application.Exit()
+
+    End Sub
+
+    Private Sub Ver_Enter(sender As Object, e As EventArgs) Handles Ver.Enter
+
+    End Sub
+
+    Private Sub datum_Click(sender As Object, e As EventArgs) Handles datum.Click
+
+    End Sub
 End Class

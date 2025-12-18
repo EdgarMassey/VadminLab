@@ -301,4 +301,43 @@ Public Class LokalInstF
         Next
         ReadClientfil = "1"
     End Function
+
+    Private Sub UpdaterB_Click(sender As Object, e As EventArgs) Handles UpdaterB.Click
+        On Error GoTo errorhant
+        Dim rfn As String, lfn As String
+        Dim Message As String = "Vill du verkligen uppdatera VadminMeny programet ?"
+        Dim Caption As String = "OBS:Se till att inte programet körs!!"
+        Dim Buttons As MessageBoxButtons = MessageBoxButtons.OKCancel
+        Dim Result As DialogResult
+        rfn = "ftp://ftp.vadmin.net/vadmin.net/downloads/VadminUpdater.exe"
+        lfn = sokvag + "\VadminUpdater.exe"
+        Dim ftp As FtpWebRequest = CType(FtpWebRequest.Create(rfn), FtpWebRequest)
+        Console.WriteLine("Downloading: " & rfn)
+        ftp.Credentials = New NetworkCredential("Edgar", "alfons")
+        ftp.KeepAlive = False
+        ftp.UseBinary = True
+        ftp.Method = WebRequestMethods.Ftp.DownloadFile
+        Using FtpResponse As FtpWebResponse = CType(ftp.GetResponse, FtpWebResponse)
+            Using ResponseStream As IO.Stream = FtpResponse.GetResponseStream
+                Using fs As New IO.FileStream(lfn, FileMode.Create)
+                    Dim buffer(2047) As Byte
+                    Dim read As Integer = 0
+                    Do
+                        read = ResponseStream.Read(buffer, 0, buffer.Length)
+                        fs.Write(buffer, 0, read)
+                        Console.Write(".")
+                    Loop Until read = 0
+                    ResponseStream.Close()
+                    fs.Flush()
+                    fs.Close()
+                End Using
+                ResponseStream.Close()
+            End Using
+        End Using
+        MessageBox.Show("VadminUpdater nedladdad!")
+        Exit Sub
+errorhant:
+
+        Me.Close()
+    End Sub
 End Class

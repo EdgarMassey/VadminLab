@@ -66,4 +66,8 @@ Public Class LabstartF
         AnteckningarF.Activate()
         AnteckningarF.WindowState = FormWindowState.Normal
     End Sub
+
+    Private Sub LocalaInställningarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LocalaInställningarToolStripMenuItem.Click
+        LokalInstF.Show()
+    End Sub
 End Class

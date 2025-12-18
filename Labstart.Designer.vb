@@ -38,7 +38,10 @@ Partial Class LabstartF
         Me.BatchreporterB = New System.Windows.Forms.Button()
         Me.SpecialrutinerB = New System.Windows.Forms.Button()
         Me.AnteckB = New System.Windows.Forms.Button()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.LocalaInställningarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Ver.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Ver
@@ -201,6 +204,21 @@ Partial Class LabstartF
         Me.AnteckB.Text = "Anteckningar"
         Me.AnteckB.UseVisualStyleBackColor = False
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LocalaInställningarToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(600, 24)
+        Me.MenuStrip1.TabIndex = 378
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'LocalaInställningarToolStripMenuItem
+        '
+        Me.LocalaInställningarToolStripMenuItem.Name = "LocalaInställningarToolStripMenuItem"
+        Me.LocalaInställningarToolStripMenuItem.Size = New System.Drawing.Size(121, 20)
+        Me.LocalaInställningarToolStripMenuItem.Text = "Locala inställningar"
+        '
         'LabstartF
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -215,12 +233,17 @@ Partial Class LabstartF
         Me.Controls.Add(Me.ProvHanteringB)
         Me.Controls.Add(Me.Huvud)
         Me.Controls.Add(Me.Ver)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "LabstartF"
         Me.Text = "NM Lab start"
         Me.Ver.ResumeLayout(False)
         Me.Ver.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -239,4 +262,6 @@ Partial Class LabstartF
     Friend WithEvents BatchreporterB As Button
     Friend WithEvents SpecialrutinerB As Button
     Friend WithEvents AnteckB As Button
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents LocalaInställningarToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Foretag
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Foretag
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Foretag))
         Me.Label1 = New System.Windows.Forms.Label()
@@ -122,7 +122,7 @@ Partial Class Foretag
         '
         Me.LoginK.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LoginK.ForeColor = System.Drawing.Color.Maroon
-        Me.LoginK.Location = New System.Drawing.Point(359, 239)
+        Me.LoginK.Location = New System.Drawing.Point(369, 263)
         Me.LoginK.Name = "LoginK"
         Me.LoginK.Size = New System.Drawing.Size(98, 24)
         Me.LoginK.TabIndex = 6
@@ -133,7 +133,7 @@ Partial Class Foretag
         '
         Me.AvslutaK.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AvslutaK.ForeColor = System.Drawing.Color.Maroon
-        Me.AvslutaK.Location = New System.Drawing.Point(359, 282)
+        Me.AvslutaK.Location = New System.Drawing.Point(369, 306)
         Me.AvslutaK.Name = "AvslutaK"
         Me.AvslutaK.Size = New System.Drawing.Size(98, 25)
         Me.AvslutaK.TabIndex = 7
@@ -174,7 +174,7 @@ Partial Class Foretag
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(489, 319)
+        Me.ClientSize = New System.Drawing.Size(489, 342)
         Me.Controls.Add(Me.PersonligIDTB)
         Me.Controls.Add(Me.PersonligIDL)
         Me.Controls.Add(Me.SparaCB)

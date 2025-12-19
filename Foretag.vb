@@ -9,36 +9,26 @@ Imports System.Text.RegularExpressions
 Public Class Foretag
     Dim Labversion As String = "", pityp As String
     Private Sub Foretag_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        vernr = "20251219b"
-        Dim ip() As Net.IPAddress = System.Net.Dns.GetHostAddresses("")
-
-        If ip.Count > 0 Then
-            For Each ipadd As Net.IPAddress In ip
-
-                ipadress = (ipadd.ToString)
-            Next
-        End If
+        vernr = "20251225a"
+        Prognamn = "VadminLab 2026"
         Dim rect As Rectangle = Screen.PrimaryScreen.WorkingArea
         sokvag = AppDomain.CurrentDomain.BaseDirectory
         Me.Top = (rect.Height / 2) - (Me.Height / 2)
         Me.Left = (rect.Width / 2) - (Me.Width / 2)
         readdll()
-        'laslogg()
+
         If spar = "True" Then SparaCB.Checked = True
         SparaCB.Refresh()
         KlientIdTB.Text = KlientID
 
         If KlientID = "NM" Or KlientID = "MD" Or KlientID = "MC" Then PITyp = "New"
 
-        If PITyp = "New" Then
-            PersonligIDL.Visible = True
+
+        PersonligIDL.Visible = True
             PersonligIDTB.Visible = True
             PersonligIDTB.Text = PersonligID
-        Else
-            PersonligIDL.Visible = False
-            PersonligIDTB.Visible = False
-        End If
-        LosenTB.Text = losen
+
+            LosenTB.Text = losen
 
         If spar = "=True" Then
             SparaCB.Checked = True
@@ -48,7 +38,7 @@ Public Class Foretag
         My.Computer.FileSystem.WriteAllText(sokvag + "LABVersion.cfg", "LABversion=" + vernr + Space(40) + vbCrLf, False)
 
         myip = "90.231.192.137"
-        Prognamn = "VadminLab 2025"
+
         Ver.Text = "Version: " + vernr
         Huvud.Text = Prognamn + " - Behörighetskontroll"
         today = Format(Now, "yyyy-MM-dd")
@@ -67,58 +57,52 @@ Public Class Foretag
             SparaCB.Checked = False
         End If
         Hamptaforetag(KlientID)
-
-        If PITyp = "New" Then
-            GetNewBehorighet(PersonligIDTB.Text)
-            sakerhet = 1
-        Else
-            If losen = password6 Then sakerhet = 6
-            If losen = password5 Then sakerhet = 5
-            If losen = password4 Then sakerhet = 4
-            If losen = password3 Then sakerhet = 3
-            If losen = password2 Then sakerhet = 2
-            If losen = "EMassey46" Or losen = password1 Then sakerhet = 1
-        End If
-
-
-        If sakerhet > 0 And sakerhet < 9 Then
+        GetNewBehorighet(PersonligIDTB.Text)
+        sakerhet = 1
             skrivatillvdriver()
-            SkrivaLoginLogg(KlientID, "Lab")
-            If SparaCB.Checked = True Then
-                My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "ClientID=" + KlientID + vbCrLf, False)
-                My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "Lösen=" + losen + vbCrLf, True)
-                My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "PersID=" + PersonligIDTB.Text + vbCrLf, True)
-                My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "Spara=" + CStr(SparaCB.Checked) + vbCrLf, True)
-            Else
-                My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "" + vbCrLf, False)
+        SkrivaLoginLogg(KlientID, "Lab")
+        'hanterar dll filen
+        If SparaCB.Checked = True Then
+            My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "ClientID=" + KlientID + vbCrLf, False)
+            My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "Lösen=" + losen + vbCrLf, True)
+            My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "PersID=" + PersonligIDTB.Text + vbCrLf, True)
+            My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "Spara=" + CStr(SparaCB.Checked) + vbCrLf, True)
+        Else
+            My.Computer.FileSystem.WriteAllText(sokvag + "vdriver.dll", "" + vbCrLf, False)
             End If
 
-            ''backdoor
-            If PersonligIDTB.Text = "edgar.massey@gmail.com" And losen = "EMassey46" Then
-                MaxBehorighet = "True" : Userpassword = losen : BCalEndastVisning = "False"
-            End If
-            If MaxBehorighet = "True" Then BCalEndastVisning = "False"
-            If (MaxBehorighet OrElse TotLab) AndAlso losen = Userpassword Then
-                Dim checkver = Hamptaversion("VadminLAB")
-                ' checkver = "20261227a"
-
-                If checkver > vernr Then
-                    Dim result As DialogResult = MessageBox.Show("Ny version av VadminLab finns att ladda ner från vadmin.net", "Uppdatering", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-                    If result = DialogResult.Yes Then
-                        StartUpdateAndExit()
-                    End If
-                End If
-
-
-
-                LabstartF.Show()
-                Me.Close()
-            Else
-                MessageBox.Show("Ogiltig inloggning")
-                End If
-            Else
-                MessageBox.Show("Ogiltig inloggning")
+        ''backdoor
+        If PersonligIDTB.Text = "edgar.massey@gmail.com" And losen = "EMassey46" Then
+            MaxBehorighet = True : Userpassword = losen
         End If
+
+        ' Password check
+        If LosenTB.Text <> Userpassword Then
+            MessageBox.Show("Fel lösenord")
+            Exit Sub
+        End If
+
+        ' Authorization check
+        If Not (MaxBehorighet Or TotLab) Then
+            MessageBox.Show("Ingen behörighet för VadminLab")
+            Exit Sub
+        End If
+
+        ' ---- Approved ----
+        Dim checkver = Hamptaversion("VadminLAB")
+        'checkver = "20251228"
+        If checkver > vernr Then
+            Dim result As DialogResult =
+        MessageBox.Show("Ny version av VadminLab finns att ladda ner från vadmin.net", "Uppdatering", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If result = DialogResult.Yes Then
+                StartUpdateAndExit()
+                Exit Sub
+            End If
+        End If
+        LabstartF.Show()
+
+        Me.Close()
+
         Me.Cursor = Cursors.Arrow
     End Sub
 
@@ -129,21 +113,12 @@ Public Class Foretag
     End Sub
 
     Private Sub KlientIdTB_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles KlientIdTB.KeyUp
-        If KlientID = "NM" Or KlientID = "MD" Or KlientID = "MC" Then
-            PITyp = "New"
 
-        Else
-            PITyp = "No"
 
-        End If
-        If pityp = "New" Then
-            PersonligIDL.Visible = True
-            PersonligIDTB.Visible = True
-            PersonligIDTB.Text = PersonligID
-        Else
-            PersonligIDL.Visible = False
-            PersonligIDTB.Visible = False
-        End If
+        PersonligIDL.Visible = True
+        PersonligIDTB.Visible = True
+        PersonligIDTB.Text = PersonligID
+
 
         If e.KeyCode = Keys.Enter Then
             Loginrutin()
@@ -173,7 +148,7 @@ Public Class Foretag
         cn = New OdbcConnection(connStr)
 
         cn.Open()
-        mySQL = "SELECT * FROM foretagreg"
+        mySQL = "Select * FROM foretagreg"
         mySQL = mySQL + " WHERE ClientID = '" + KlientID + "' "
         Dim myCmd As New OdbcCommand(mySQL, cn)
         Dim tabel As OdbcDataReader = myCmd.ExecuteReader(CommandBehavior.CloseConnection)
@@ -575,23 +550,23 @@ nocon:
         'myCmd.ExecuteNonQuery()
         l = 1
         If tabel.HasRows = False Then
-            MaxBehorighet = "False"
-            TotCal = "False"
-            TotLab = "False"
-            TotRec = "False"
-            TotRed = "False"
-            TotOLF = "False"
-            MOLFKundreg = "False"
-            MOLFKundres = "False"
-            MOLFProdreg = "False"
-            MOLFOrderFakt = "False"
-            MOLFArbOrder = "False"
-            MOLFInlev = "False"
-            MOLFBestall = "False"
-            BRECBegrOmtappning = "False"
-            BOLFBegProdpriser = "False"
-            BOLFAnkomnstKontroll = "False"
-            BCalEndastVisning = "False"
+            MaxBehorighet = False
+            TotCal = False
+            TotLab = False
+            TotRec = False
+            TotRed = False
+            TotOLF = False
+            MOLFKundreg = False
+            MOLFKundres = False
+            MOLFProdreg = False
+            MOLFOrderFakt = False
+            MOLFArbOrder = False
+            MOLFInlev = False
+            MOLFBestall = False
+            BRECBegrOmtappning = False
+            BOLFBegProdpriser = False
+            BOLFAnkomnstKontroll = False
+            BCalEndastVisning = False
         Else
             While tabel.Read()
                 UserID = nullhantering(tabel("UserID"), "S")
@@ -647,6 +622,12 @@ nocon:
         Application.Exit()
 
     End Sub
+
+    Private Sub PersonligIDTB_TextChanged(sender As Object, e As EventArgs) Handles PersonligIDTB.TextChanged
+        PersonligID = PersonligIDTB.Text
+
+    End Sub
+
     Function GetProgram(Prognamn As String)
         Dim rfn As String, lfn As String
         On Error GoTo slut

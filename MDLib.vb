@@ -95,11 +95,11 @@ Module MDlib
     Public LargeFontR As New Font("Times New Roman", 14, FontStyle.Regular)
     'behorigheter
     Public UserID As String, UserNamn As String, Userpassword As String
-    Public MaxBehorighet As String, TotCal As String, TotLab As String, TotRec As String, TotRed As String, TotOLF As String
-    Public MOLFKundreg As String, MOLFKundres As String, MOLFProdreg As String, MOLFOrderFakt As String
-    Public MOLFArbOrder As String, MOLFInlev As String, MOLFBestall As String
-    Public BRECBegrOmtappning As String, BOLFBegProdpriser As String, BOLFAnkomnstKontroll As String
-    Public BCalEndastVisning As String
+    Public MaxBehorighet As Boolean, TotCal As Boolean, TotLab As Boolean, TotRec As Boolean, TotRed As Boolean, TotOLF As Boolean
+    Public MOLFKundreg As Boolean, MOLFKundres As Boolean, MOLFProdreg As Boolean, MOLFOrderFakt As Boolean
+    Public MOLFArbOrder As Boolean, MOLFInlev As Boolean, MOLFBestall As Boolean
+    Public BRECBegrOmtappning As Boolean, BOLFBegProdpriser As Boolean, BOLFAnkomnstKontroll As Boolean
+    Public BCalEndastVisning As Boolean
     Function kommatillpunkt(ByVal nummer As String)
         While InStr(nummer, ",") > 0
             Mid$(nummer, InStr(nummer, ","), 1) = "."

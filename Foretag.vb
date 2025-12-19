@@ -9,7 +9,7 @@ Imports System.Text.RegularExpressions
 Public Class Foretag
     Dim Labversion As String = "", pityp As String
     Private Sub Foretag_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        vernr = "20251219a"
+        vernr = "20251219b"
         Dim ip() As Net.IPAddress = System.Net.Dns.GetHostAddresses("")
 
         If ip.Count > 0 Then
@@ -100,7 +100,7 @@ Public Class Foretag
             If MaxBehorighet = "True" Then BCalEndastVisning = "False"
             If (MaxBehorighet OrElse TotLab) AndAlso losen = Userpassword Then
                 Dim checkver = Hamptaversion("VadminLAB")
-                checkver = "20261227a"
+                ' checkver = "20261227a"
 
                 If checkver > vernr Then
                     Dim result As DialogResult = MessageBox.Show("Ny version av VadminLab finns att ladda ner från vadmin.net", "Uppdatering", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -575,7 +575,23 @@ nocon:
         'myCmd.ExecuteNonQuery()
         l = 1
         If tabel.HasRows = False Then
-            GoTo slut
+            MaxBehorighet = "False"
+            TotCal = "False"
+            TotLab = "False"
+            TotRec = "False"
+            TotRed = "False"
+            TotOLF = "False"
+            MOLFKundreg = "False"
+            MOLFKundres = "False"
+            MOLFProdreg = "False"
+            MOLFOrderFakt = "False"
+            MOLFArbOrder = "False"
+            MOLFInlev = "False"
+            MOLFBestall = "False"
+            BRECBegrOmtappning = "False"
+            BOLFBegProdpriser = "False"
+            BOLFAnkomnstKontroll = "False"
+            BCalEndastVisning = "False"
         Else
             While tabel.Read()
                 UserID = nullhantering(tabel("UserID"), "S")
@@ -606,7 +622,7 @@ nocon:
             End While
 
         End If
-slut:
+
         cn.Close()
 
     End Function

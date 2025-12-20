@@ -9,7 +9,7 @@ Imports System.Text.RegularExpressions
 Public Class Foretag
     Dim Labversion As String = "", pityp As String
     Private Sub Foretag_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        vernr = "20251225a"
+        vernr = "20251221a"
         Prognamn = "VadminLab 2026"
         Dim rect As Rectangle = Screen.PrimaryScreen.WorkingArea
         sokvag = AppDomain.CurrentDomain.BaseDirectory
@@ -135,12 +135,8 @@ Public Class Foretag
     End Sub
     Function Hamptaforetag(ByVal clientid As String)
 
-        If Len(nullhantering(odbcsource, "S")) < 2 Then
-            odbcsource = "VadminODBC"
-            odbcsourcer = odbcsource
-        End If
 
-       On Error GoTo nocon
+        On Error GoTo nocon
         Dim cn As OdbcConnection, mySQL As String
         Dim connStr As String, test As Decimal
 
@@ -448,8 +444,8 @@ nocon:
     End Function
 
     Private Sub Huvud_Click(sender As Object, e As EventArgs) Handles Huvud.Click
-        ' LokalInstF.Show()
-        ' LokalInstF.BringToFront()
+        LokalInstF.Show()
+        LokalInstF.BringToFront()
     End Sub
     Sub skrivatillvdriver()
         If SparaCB.Checked = True Then
@@ -492,11 +488,8 @@ nocon:
             If Strings.Left$(line, 11) = "KundDokMapp" Then kunddokmapp = BLANKBORT(Mid$(line, 13, 50))
             If Strings.Left$(line, 10) = "LevDokMapp" Then levdokmapp = BLANKBORT(Mid$(line, 12, 50))
             If Strings.Left$(line, 6) = "Offert" Then offertpr = BLANKBORT(Mid$(line, 8, 50))
-            'If Strings.Left$(line, 10) = "ODBCSource" Then
-            '    odbcsourcer = BLANKBORT(Mid$(line, 12, 50))
-            '    odbcsourcerr = odbcsourcer
-            '    odbcsource = odbcsourcer
-            'End If
+            If Strings.Left$(line, 10) = "ODBCSource" Then odbcsource = BLANKBORT(Mid$(line, 12, 50))
+            odbcsourcer = odbcsource
             If Strings.Left$(line, 10) = "StationsID" Then stationsid = BLANKBORT(Mid$(line, 12, 50))
             If Strings.Left$(line, Len("ClientID")) = "ClientID" Then KlientID = BLANKBORT(Mid$(line, Len("ClientID") + 2, 50))
             If Strings.Left$(line, 2) = "Lö" Then losen = BLANKBORT(Mid$(line, Len("Lösen") + 2, 50))
@@ -626,6 +619,15 @@ nocon:
     Private Sub PersonligIDTB_TextChanged(sender As Object, e As EventArgs) Handles PersonligIDTB.TextChanged
         PersonligID = PersonligIDTB.Text
 
+    End Sub
+
+    Private Sub VisaLosenCB_CheckedChanged(sender As Object, e As EventArgs) Handles VisaLosenCB.CheckedChanged
+        If VisaLosenCB.Checked = True Then
+            LosenTB.PasswordChar = ControlChars.NullChar
+        Else
+            LosenTB.PasswordChar = "*"c
+
+        End If
     End Sub
 
     Function GetProgram(Prognamn As String)

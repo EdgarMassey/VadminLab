@@ -36,6 +36,7 @@ Partial Class Foretag
         Me.SparaCB = New System.Windows.Forms.CheckBox()
         Me.PersonligIDTB = New System.Windows.Forms.TextBox()
         Me.PersonligIDL = New System.Windows.Forms.Label()
+        Me.VisaLosenCB = New System.Windows.Forms.CheckBox()
         Me.Ver.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -170,11 +171,23 @@ Partial Class Foretag
         Me.PersonligIDL.Text = "PersonligID"
         Me.PersonligIDL.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
+        'VisaLosenCB
+        '
+        Me.VisaLosenCB.AutoSize = True
+        Me.VisaLosenCB.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.VisaLosenCB.Location = New System.Drawing.Point(343, 145)
+        Me.VisaLosenCB.Name = "VisaLosenCB"
+        Me.VisaLosenCB.Size = New System.Drawing.Size(44, 19)
+        Me.VisaLosenCB.TabIndex = 16
+        Me.VisaLosenCB.Text = "Visa"
+        Me.VisaLosenCB.UseVisualStyleBackColor = True
+        '
         'Foretag
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(489, 342)
+        Me.Controls.Add(Me.VisaLosenCB)
         Me.Controls.Add(Me.PersonligIDTB)
         Me.Controls.Add(Me.PersonligIDL)
         Me.Controls.Add(Me.SparaCB)
@@ -209,4 +222,5 @@ Partial Class Foretag
     Friend WithEvents datum As System.Windows.Forms.Label
     Friend WithEvents PersonligIDTB As TextBox
     Friend WithEvents PersonligIDL As Label
+    Friend WithEvents VisaLosenCB As CheckBox
 End Class

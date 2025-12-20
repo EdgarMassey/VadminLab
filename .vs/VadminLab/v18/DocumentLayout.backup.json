@@ -48,9 +48,10 @@
               "RelativeDocumentMoniker": "MDLib.vb",
               "ToolTip": "C:\\Github\\VadminLab\\MDLib.vb",
               "RelativeToolTip": "MDLib.vb",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAcwGUAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-12-19T14:35:34.068Z"
+              "WhenOpened": "2025-12-19T14:35:34.068Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -58,9 +59,9 @@
               "Title": "Foretag.vb",
               "DocumentMoniker": "C:\\Github\\VadminLab\\Foretag.vb",
               "RelativeDocumentMoniker": "Foretag.vb",
-              "ToolTip": "C:\\Github\\VadminLab\\Foretag.vb",
-              "RelativeToolTip": "Foretag.vb",
-              "ViewState": "AgIAADQAAAAAAAAAAADwv1gAAAAOAAAAAAAAAA==",
+              "ToolTip": "C:\\Github\\VadminLab\\Foretag.vb*",
+              "RelativeToolTip": "Foretag.vb*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-12-19T05:16:15.085Z",
               "EditorCaption": ""
@@ -71,8 +72,8 @@
               "Title": "Foretag.vb [Design]",
               "DocumentMoniker": "C:\\Github\\VadminLab\\Foretag.vb",
               "RelativeDocumentMoniker": "Foretag.vb",
-              "ToolTip": "C:\\Github\\VadminLab\\Foretag.vb [Design]",
-              "RelativeToolTip": "Foretag.vb [Design]",
+              "ToolTip": "C:\\Github\\VadminLab\\Foretag.vb [Design]*",
+              "RelativeToolTip": "Foretag.vb [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-12-19T05:16:12.313Z",
               "EditorCaption": " [Design]"

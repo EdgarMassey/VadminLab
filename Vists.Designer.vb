@@ -51,6 +51,11 @@ Partial Class VistsF
         Me.Huvud = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.ForetagTB = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.SokForetagTB = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Ver.SuspendLayout()
         Me.SuspendLayout()
@@ -59,9 +64,10 @@ Partial Class VistsF
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Wingdings 3", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
-        Me.Label7.Location = New System.Drawing.Point(568, 69)
+        Me.Label7.Location = New System.Drawing.Point(771, 72)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(20, 15)
+        Me.Label7.Size = New System.Drawing.Size(24, 18)
         Me.Label7.TabIndex = 415
         Me.Label7.Text = "8"
         '
@@ -69,9 +75,10 @@ Partial Class VistsF
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Wingdings 3", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
-        Me.Label6.Location = New System.Drawing.Point(436, 69)
+        Me.Label6.Location = New System.Drawing.Point(684, 85)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(20, 15)
+        Me.Label6.Size = New System.Drawing.Size(24, 18)
         Me.Label6.TabIndex = 414
         Me.Label6.Text = "8"
         '
@@ -79,9 +86,10 @@ Partial Class VistsF
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(499, 44)
+        Me.Label5.Location = New System.Drawing.Point(768, 54)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(48, 17)
+        Me.Label5.Size = New System.Drawing.Size(54, 20)
         Me.Label5.TabIndex = 413
         Me.Label5.Text = "T.o.m."
         '
@@ -89,50 +97,56 @@ Partial Class VistsF
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(369, 44)
+        Me.Label4.Location = New System.Drawing.Point(595, 54)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(52, 17)
+        Me.Label4.Size = New System.Drawing.Size(60, 20)
         Me.Label4.TabIndex = 412
         Me.Label4.Text = "Fr.o.m."
         '
         'DatTomTB
         '
-        Me.DatTomTB.Location = New System.Drawing.Point(502, 64)
+        Me.DatTomTB.Location = New System.Drawing.Point(772, 79)
+        Me.DatTomTB.Margin = New System.Windows.Forms.Padding(4)
         Me.DatTomTB.Name = "DatTomTB"
-        Me.DatTomTB.Size = New System.Drawing.Size(70, 20)
+        Me.DatTomTB.Size = New System.Drawing.Size(92, 22)
         Me.DatTomTB.TabIndex = 411
         '
         'DatFromTB
         '
-        Me.DatFromTB.Location = New System.Drawing.Point(363, 64)
+        Me.DatFromTB.Location = New System.Drawing.Point(587, 79)
+        Me.DatFromTB.Margin = New System.Windows.Forms.Padding(4)
         Me.DatFromTB.Name = "DatFromTB"
-        Me.DatFromTB.Size = New System.Drawing.Size(76, 20)
+        Me.DatFromTB.Size = New System.Drawing.Size(100, 22)
         Me.DatFromTB.TabIndex = 410
         '
         'Label35
         '
         Me.Label35.AutoSize = True
         Me.Label35.Font = New System.Drawing.Font("Wingdings 3", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
-        Me.Label35.Location = New System.Drawing.Point(209, 69)
+        Me.Label35.Location = New System.Drawing.Point(446, 111)
+        Me.Label35.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(20, 15)
+        Me.Label35.Size = New System.Drawing.Size(24, 18)
         Me.Label35.TabIndex = 409
         Me.Label35.Text = "8"
         '
         'SoktextTB
         '
-        Me.SoktextTB.Location = New System.Drawing.Point(7, 64)
+        Me.SoktextTB.Location = New System.Drawing.Point(178, 111)
+        Me.SoktextTB.Margin = New System.Windows.Forms.Padding(4)
         Me.SoktextTB.Name = "SoktextTB"
-        Me.SoktextTB.Size = New System.Drawing.Size(196, 20)
+        Me.SoktextTB.Size = New System.Drawing.Size(260, 22)
         Me.SoktextTB.TabIndex = 408
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(-76, 54)
+        Me.Label1.Location = New System.Drawing.Point(-101, 66)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(62, 16)
+        Me.Label1.Size = New System.Drawing.Size(77, 20)
         Me.Label1.TabIndex = 407
         Me.Label1.Text = "Sök text"
         '
@@ -140,9 +154,10 @@ Partial Class VistsF
         '
         Me.Button1.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Maroon
-        Me.Button1.Location = New System.Drawing.Point(-75, 124)
+        Me.Button1.Location = New System.Drawing.Point(-100, 153)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(70, 25)
+        Me.Button1.Size = New System.Drawing.Size(93, 31)
         Me.Button1.TabIndex = 406
         Me.Button1.Text = "Välj"
         Me.Button1.UseVisualStyleBackColor = True
@@ -151,9 +166,10 @@ Partial Class VistsF
         '
         Me.RaderaB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RaderaB.ForeColor = System.Drawing.Color.Maroon
-        Me.RaderaB.Location = New System.Drawing.Point(802, 590)
+        Me.RaderaB.Location = New System.Drawing.Point(1100, 726)
+        Me.RaderaB.Margin = New System.Windows.Forms.Padding(4)
         Me.RaderaB.Name = "RaderaB"
-        Me.RaderaB.Size = New System.Drawing.Size(98, 25)
+        Me.RaderaB.Size = New System.Drawing.Size(131, 31)
         Me.RaderaB.TabIndex = 405
         Me.RaderaB.Text = "Radera"
         Me.RaderaB.UseVisualStyleBackColor = True
@@ -162,9 +178,10 @@ Partial Class VistsF
         '
         Me.NyB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NyB.ForeColor = System.Drawing.Color.Maroon
-        Me.NyB.Location = New System.Drawing.Point(727, 642)
+        Me.NyB.Location = New System.Drawing.Point(969, 790)
+        Me.NyB.Margin = New System.Windows.Forms.Padding(4)
         Me.NyB.Name = "NyB"
-        Me.NyB.Size = New System.Drawing.Size(98, 25)
+        Me.NyB.Size = New System.Drawing.Size(131, 31)
         Me.NyB.TabIndex = 404
         Me.NyB.Text = "Ny"
         Me.NyB.UseVisualStyleBackColor = True
@@ -173,55 +190,61 @@ Partial Class VistsF
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(320, 268)
+        Me.Label3.Location = New System.Drawing.Point(427, 330)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(123, 17)
+        Me.Label3.Size = New System.Drawing.Size(145, 20)
         Me.Label3.TabIndex = 403
         Me.Label3.Text = "Besök beskrivning"
         '
         'AnteckningarTB
         '
-        Me.AnteckningarTB.Location = New System.Drawing.Point(323, 288)
+        Me.AnteckningarTB.Location = New System.Drawing.Point(431, 394)
+        Me.AnteckningarTB.Margin = New System.Windows.Forms.Padding(4)
         Me.AnteckningarTB.Multiline = True
         Me.AnteckningarTB.Name = "AnteckningarTB"
         Me.AnteckningarTB.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.AnteckningarTB.Size = New System.Drawing.Size(736, 296)
+        Me.AnteckningarTB.Size = New System.Drawing.Size(980, 314)
         Me.AnteckningarTB.TabIndex = 402
         '
         'DatumTB
         '
-        Me.DatumTB.Location = New System.Drawing.Point(81, 294)
+        Me.DatumTB.Location = New System.Drawing.Point(108, 362)
+        Me.DatumTB.Margin = New System.Windows.Forms.Padding(4)
         Me.DatumTB.Name = "DatumTB"
-        Me.DatumTB.Size = New System.Drawing.Size(142, 20)
+        Me.DatumTB.Size = New System.Drawing.Size(188, 22)
         Me.DatumTB.TabIndex = 401
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(78, 268)
+        Me.Label2.Location = New System.Drawing.Point(104, 330)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(79, 17)
+        Me.Label2.Size = New System.Drawing.Size(94, 20)
         Me.Label2.TabIndex = 400
         Me.Label2.Text = "Reg Datum"
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(81, 114)
+        Me.DataGridView1.Location = New System.Drawing.Point(108, 140)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.Size = New System.Drawing.Size(978, 151)
+        Me.DataGridView1.Size = New System.Drawing.Size(1304, 186)
         Me.DataGridView1.TabIndex = 399
         '
         'SparaB
         '
         Me.SparaB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SparaB.ForeColor = System.Drawing.Color.Maroon
-        Me.SparaB.Location = New System.Drawing.Point(944, 590)
+        Me.SparaB.Location = New System.Drawing.Point(1259, 726)
+        Me.SparaB.Margin = New System.Windows.Forms.Padding(4)
         Me.SparaB.Name = "SparaB"
-        Me.SparaB.Size = New System.Drawing.Size(98, 25)
+        Me.SparaB.Size = New System.Drawing.Size(131, 31)
         Me.SparaB.TabIndex = 398
         Me.SparaB.Text = "Spara"
         Me.SparaB.UseVisualStyleBackColor = True
@@ -230,9 +253,10 @@ Partial Class VistsF
         '
         Me.AvslutaK.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AvslutaK.ForeColor = System.Drawing.Color.Maroon
-        Me.AvslutaK.Location = New System.Drawing.Point(946, 642)
+        Me.AvslutaK.Location = New System.Drawing.Point(1261, 790)
+        Me.AvslutaK.Margin = New System.Windows.Forms.Padding(4)
         Me.AvslutaK.Name = "AvslutaK"
-        Me.AvslutaK.Size = New System.Drawing.Size(98, 25)
+        Me.AvslutaK.Size = New System.Drawing.Size(131, 31)
         Me.AvslutaK.TabIndex = 397
         Me.AvslutaK.Text = "Avsluta"
         Me.AvslutaK.UseVisualStyleBackColor = True
@@ -246,45 +270,51 @@ Partial Class VistsF
         Me.Ver.Controls.Add(Me.datum)
         Me.Ver.Controls.Add(Me.Versionl)
         Me.Ver.ForeColor = System.Drawing.Color.Gray
-        Me.Ver.Location = New System.Drawing.Point(7, 613)
+        Me.Ver.Location = New System.Drawing.Point(9, 754)
+        Me.Ver.Margin = New System.Windows.Forms.Padding(4)
         Me.Ver.Name = "Ver"
-        Me.Ver.Size = New System.Drawing.Size(197, 73)
+        Me.Ver.Padding = New System.Windows.Forms.Padding(4)
+        Me.Ver.Size = New System.Drawing.Size(263, 90)
         Me.Ver.TabIndex = 396
         Me.Ver.TabStop = False
         Me.Ver.Text = "Version"
         '
         'Gnamn
         '
-        Me.Gnamn.Location = New System.Drawing.Point(9, 57)
+        Me.Gnamn.Location = New System.Drawing.Point(12, 70)
+        Me.Gnamn.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Gnamn.Name = "Gnamn"
-        Me.Gnamn.Size = New System.Drawing.Size(182, 13)
+        Me.Gnamn.Size = New System.Drawing.Size(243, 16)
         Me.Gnamn.TabIndex = 17
         Me.Gnamn.Text = "Företagsnamn"
         Me.Gnamn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'KlientIdl
         '
-        Me.KlientIdl.Location = New System.Drawing.Point(6, 13)
+        Me.KlientIdl.Location = New System.Drawing.Point(8, 16)
+        Me.KlientIdl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.KlientIdl.Name = "KlientIdl"
-        Me.KlientIdl.Size = New System.Drawing.Size(185, 13)
+        Me.KlientIdl.Size = New System.Drawing.Size(247, 16)
         Me.KlientIdl.TabIndex = 4
         Me.KlientIdl.Text = "Klientid"
         Me.KlientIdl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'odbcsourcel
         '
-        Me.odbcsourcel.Location = New System.Drawing.Point(6, 42)
+        Me.odbcsourcel.Location = New System.Drawing.Point(8, 52)
+        Me.odbcsourcel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.odbcsourcel.Name = "odbcsourcel"
-        Me.odbcsourcel.Size = New System.Drawing.Size(185, 13)
+        Me.odbcsourcel.Size = New System.Drawing.Size(247, 16)
         Me.odbcsourcel.TabIndex = 3
         Me.odbcsourcel.Text = "Odbcsource"
         Me.odbcsourcel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'databas
         '
-        Me.databas.Location = New System.Drawing.Point(12, 26)
+        Me.databas.Location = New System.Drawing.Point(16, 32)
+        Me.databas.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.databas.Name = "databas"
-        Me.databas.Size = New System.Drawing.Size(185, 13)
+        Me.databas.Size = New System.Drawing.Size(247, 16)
         Me.databas.TabIndex = 2
         Me.databas.Text = "Databas"
         Me.databas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -292,27 +322,30 @@ Partial Class VistsF
         'datum
         '
         Me.datum.AutoSize = True
-        Me.datum.Location = New System.Drawing.Point(120, 0)
+        Me.datum.Location = New System.Drawing.Point(160, 0)
+        Me.datum.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.datum.Name = "datum"
-        Me.datum.Size = New System.Drawing.Size(38, 13)
+        Me.datum.Size = New System.Drawing.Size(46, 16)
         Me.datum.TabIndex = 1
         Me.datum.Text = "Datum"
         '
         'Versionl
         '
         Me.Versionl.AutoSize = True
-        Me.Versionl.Location = New System.Drawing.Point(22, 16)
+        Me.Versionl.Location = New System.Drawing.Point(29, 20)
+        Me.Versionl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Versionl.Name = "Versionl"
-        Me.Versionl.Size = New System.Drawing.Size(0, 13)
+        Me.Versionl.Size = New System.Drawing.Size(0, 16)
         Me.Versionl.TabIndex = 0
         '
         'Huvud
         '
         Me.Huvud.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Huvud.ForeColor = System.Drawing.Color.Maroon
-        Me.Huvud.Location = New System.Drawing.Point(182, 5)
+        Me.Huvud.Location = New System.Drawing.Point(243, 6)
+        Me.Huvud.Margin = New System.Windows.Forms.Padding(4)
         Me.Huvud.Name = "Huvud"
-        Me.Huvud.Size = New System.Drawing.Size(668, 36)
+        Me.Huvud.Size = New System.Drawing.Size(891, 44)
         Me.Huvud.TabIndex = 395
         Me.Huvud.Text = "Besökregister"
         Me.Huvud.UseVisualStyleBackColor = True
@@ -321,9 +354,10 @@ Partial Class VistsF
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(4, 45)
+        Me.Label8.Location = New System.Drawing.Point(84, 107)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(62, 16)
+        Me.Label8.Size = New System.Drawing.Size(77, 20)
         Me.Label8.TabIndex = 416
         Me.Label8.Text = "Sök text"
         '
@@ -331,18 +365,74 @@ Partial Class VistsF
         '
         Me.Button2.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.Maroon
-        Me.Button2.Location = New System.Drawing.Point(7, 114)
+        Me.Button2.Location = New System.Drawing.Point(9, 140)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(70, 25)
+        Me.Button2.Size = New System.Drawing.Size(93, 31)
         Me.Button2.TabIndex = 417
         Me.Button2.Text = "Välj"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'ForetagTB
+        '
+        Me.ForetagTB.Location = New System.Drawing.Point(108, 433)
+        Me.ForetagTB.Margin = New System.Windows.Forms.Padding(4)
+        Me.ForetagTB.Name = "ForetagTB"
+        Me.ForetagTB.Size = New System.Drawing.Size(296, 22)
+        Me.ForetagTB.TabIndex = 419
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(104, 401)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(66, 20)
+        Me.Label9.TabIndex = 418
+        Me.Label9.Text = "Företag"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(56, 79)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(105, 20)
+        Me.Label10.TabIndex = 421
+        Me.Label10.Text = "Sök foretag"
+        '
+        'SokForetagTB
+        '
+        Me.SokForetagTB.AccessibleName = "T"
+        Me.SokForetagTB.Location = New System.Drawing.Point(178, 79)
+        Me.SokForetagTB.Margin = New System.Windows.Forms.Padding(4)
+        Me.SokForetagTB.Name = "SokForetagTB"
+        Me.SokForetagTB.Size = New System.Drawing.Size(260, 22)
+        Me.SokForetagTB.TabIndex = 420
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Wingdings 3", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
+        Me.Label11.Location = New System.Drawing.Point(446, 85)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(24, 18)
+        Me.Label11.TabIndex = 422
+        Me.Label11.Text = "8"
+        '
         'VistsF
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1083, 711)
+        Me.ClientSize = New System.Drawing.Size(1444, 875)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.SokForetagTB)
+        Me.Controls.Add(Me.ForetagTB)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -366,6 +456,7 @@ Partial Class VistsF
         Me.Controls.Add(Me.AvslutaK)
         Me.Controls.Add(Me.Ver)
         Me.Controls.Add(Me.Huvud)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "VistsF"
         Me.Text = "Besökregister"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -405,4 +496,9 @@ Partial Class VistsF
     Friend WithEvents Huvud As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents ForetagTB As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents SokForetagTB As TextBox
+    Friend WithEvents Label11 As Label
 End Class

@@ -28,7 +28,8 @@ Public Class VistsF
         End With
         DataGridView1.Columns(0).Width = 0
         DataGridView1.Columns(1).Width = 80
-        DataGridView1.Columns(2).Width = 900
+        DataGridView1.Columns(2).Width = 200
+        DataGridView1.Columns(3).Width = 600
 
     End Sub
     Private Sub SparaB_Click(sender As Object, e As EventArgs) Handles SparaB.Click
@@ -49,6 +50,8 @@ Public Class VistsF
         varden = varden + "'" + kommatillpunkt(Mytimestamp) + "',"
         falt = falt + "Datum,"
         varden = varden + "'" + kommatillpunkt(DatumTB.Text) + "',"
+        falt = falt + "Foretag,"
+        varden = varden + "'" + kommatillpunkt(ForetagTB.Text) + "',"
         falt = falt + "Text "
 
         varden = varden + "'" + kommatillpunkt(AnteckningarTB.Text) + "'  "
@@ -67,6 +70,7 @@ Public Class VistsF
     Private Sub NyB_Click(sender As Object, e As EventArgs) Handles NyB.Click
         Mytimestamp = gettimestamp()
         DatumTB.Text = today '
+        ForetagTB.Text = ""
         AnteckningarTB.Text = ""
     End Sub
 
@@ -110,12 +114,17 @@ Public Class VistsF
 
         strSQL = strSQL + " Where datum >= '" + DatFromTB.Text + "' and datum <= '" + DatTomTB.Text + "' "
 
+        If SokForetagTB.Text <> "" Then
+            strSQL = strSQL + "And CHARINDEX('" + SokForetagTB.Text + "', Foretag) > 0 "
+            ' WHERE CHARINDEX('shortstring', LongTextColumn) > 0
+        End If
+
+
         If SoktextTB.Text <> "" Then
             strSQL = strSQL + "And CHARINDEX('" + SoktextTB.Text + "', Text) > 0 "
             ' WHERE CHARINDEX('shortstring', LongTextColumn) > 0
         End If
 
-        strSQL = strSQL + "  order by Datum desc"
 
         objConn.ConnectionString = strConnString
         With objCmd
@@ -143,8 +152,9 @@ Public Class VistsF
         c2 = DataGridView1.CurrentCell.ColumnIndex
         Mytimestamp = nullhantering(DataGridView1.Item(0, r2).Value, "S")
         DatumTB.Text = nullhantering(DataGridView1.Item(1, r2).Value, "S")
+        ForetagTB.Text = nullhantering(DataGridView1.Item(2, r2).Value, "S")
 
-        dummy = nullhantering(DataGridView1.Item(2, r2).Value, "S")
+        dummy = nullhantering(DataGridView1.Item(3, r2).Value, "S")
         dummy = dummy.Replace(Chr(10), vbCrLf)
         AnteckningarTB.Text = dummy
     End Sub
@@ -161,6 +171,18 @@ Public Class VistsF
         End If
     End Sub
 
+    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles ForetagTB.TextChanged
+
+    End Sub
+
+    Private Sub SokForetagTB_TextChanged(sender As Object, e As EventArgs) Handles SokForetagTB.TextChanged
+
+    End Sub
+
     Private Sub SoktextTB_KeyPress(sender As Object, e As KeyPressEventArgs) Handles SoktextTB.KeyPress
 
     End Sub
@@ -174,6 +196,14 @@ Public Class VistsF
     End Sub
 
     Private Sub DatTomTB_KeyUp(sender As Object, e As KeyEventArgs) Handles DatTomTB.KeyUp
+        If e.KeyCode = Keys.Enter Then
+            CreateDataSet()
+            DataGridView1.DataSource.Table.Rows.Clear()
+            DataGridView1.DataSource = CreateDataSet.Tables(0).DefaultView
+        End If
+    End Sub
+
+    Private Sub SokForetagTB_KeyUp(sender As Object, e As KeyEventArgs) Handles SokForetagTB.KeyUp
         If e.KeyCode = Keys.Enter Then
             CreateDataSet()
             DataGridView1.DataSource.Table.Rows.Clear()

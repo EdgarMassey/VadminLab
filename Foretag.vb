@@ -9,7 +9,7 @@ Imports System.Text.RegularExpressions
 Public Class Foretag
     Dim Labversion As String = "", pityp As String
     Private Sub Foretag_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        vernr = "20251221a"
+        vernr = "20251223a"
         Prognamn = "VadminLab 2026"
         Dim rect As Rectangle = Screen.PrimaryScreen.WorkingArea
         sokvag = AppDomain.CurrentDomain.BaseDirectory

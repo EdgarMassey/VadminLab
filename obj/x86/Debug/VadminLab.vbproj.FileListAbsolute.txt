@@ -1,0 +1,153 @@
+Z:\VadminLab\obj\x86\Debug\VadminLab.vbproj.AssemblyReference.cache
+Z:\VadminLab\obj\x86\Debug\VadminLab.vbproj.ResolveComReference.cache
+Z:\VadminLab\obj\x86\Debug\Ord.AboutBox1.resources
+Z:\VadminLab\obj\x86\Debug\Ord.BehorighetF.resources
+Z:\VadminLab\obj\x86\Debug\Ord.Foretag.resources
+Z:\VadminLab\obj\x86\Debug\Ord.LoginLoggF.resources
+Z:\VadminLab\obj\x86\Debug\Ord.LokalInstF.resources
+Z:\VadminLab\obj\x86\Debug\Ord.Resources.resources
+Z:\VadminLab\obj\x86\Debug\VadminLab.vbproj.GenerateResource.cache
+Z:\VadminLab\obj\x86\Debug\VadminLab.vbproj.CoreCompileInputs.cache
+Z:\VadminLab\bin\Release\VadminLab.exe.config
+Z:\VadminLab\bin\Release\VadminLab.exe.manifest
+Z:\VadminLab\bin\Release\VadminLab.application
+Z:\VadminLab\bin\Release\VadminLab.exe
+Z:\VadminLab\bin\Release\VadminLab.pdb
+Z:\VadminLab\bin\Release\VadminLab.xml
+Z:\VadminLab\obj\x86\Debug\Ord.LabStartF.resources
+Z:\VadminLab\obj\x86\Debug\VadminLab.exe.manifest
+Z:\VadminLab\obj\x86\Debug\VadminLab.application
+Z:\VadminLab\obj\x86\Debug\VadminLab.exe
+Z:\VadminLab\obj\x86\Debug\VadminLab.xml
+Z:\VadminLab\obj\x86\Debug\VadminLab.pdb
+Z:\VadminLab\obj\x86\Debug\Ord.TestregF.resources
+Z:\VadminLab\obj\x86\Debug\Ord.ProdregF.resources
+Z:\VadminLab\obj\x86\Debug\Ord.LabHanteringF.resources
+Z:\VadminLab\obj\x86\Debug\Ord.POLstartF.resources
+Z:\VadminLab\obj\x86\Debug\Ord.LeverantorF.resources
+Z:\VadminLab\obj\x86\Debug\Ord.ProduktKomponenterF.resources
+Z:\VadminLab\obj\x86\Debug\Ord.InleveransF.resources
+Z:\VadminLab\obj\x86\Debug\Ord.BatchreporterF.resources
+Z:\VadminLab\obj\x86\Debug\Ord.LagerRegF.resources
+Z:\VadminLab\obj\x86\Debug\Ord.Levregf.resources
+Z:\VadminLab\obj\x86\Debug\Ord.StatistikPopupf.resources
+Z:\VadminLab\obj\x86\Debug\Ord.SpecrutinerF.resources
+Z:\VadminLab\obj\x86\Debug\Ord.CalenderF.resources
+Z:\VadminLab\obj\x86\Debug\Ord.CalenderTypF.resources
+Z:\VadminLab\obj\x86\Debug\Ord.CalenderOwnerF.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\VadminLab.vbproj.AssemblyReference.cache
+C:\Github\VadminLab - kopia\obj\x86\Debug\VadminLab.vbproj.ResolveComReference.cache
+C:\Github\VadminLab - kopia\obj\x86\Debug\Ord.AboutBox1.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\Ord.AnteckningarF.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\Ord.BatchreporterF.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\Ord.CalenderF.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\Ord.CalenderOwnerF.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\Ord.CalenderTypF.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\Ord.Foretag.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\Ord.InleveransF.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\Ord.ProduktKomponenterF.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\Ord.BehorighetF.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\Ord.LabstartF.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\Ord.LabHanteringF.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\Ord.LagerRegF.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\Ord.LeverantorF.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\Ord.Levregf.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\Ord.LoginLoggF.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\Ord.LokalInstF.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\Ord.Resources.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\Ord.POLstartF.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\Ord.ProdregF.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\Ord.SpecrutinerF.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\Ord.StatistikPopupf.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\Ord.TestregF.resources
+C:\Github\VadminLab - kopia\obj\x86\Debug\VadminLab.vbproj.GenerateResource.cache
+C:\Github\VadminLab - kopia\obj\x86\Debug\VadminLab.vbproj.CoreCompileInputs.cache
+C:\Github\VadminLab - kopia\bin\Release\VadminLab.exe.config
+C:\Github\VadminLab - kopia\bin\Release\VadminLab.exe.manifest
+C:\Github\VadminLab - kopia\bin\Release\VadminLab.application
+C:\Github\VadminLab - kopia\bin\Release\VadminLab.exe
+C:\Github\VadminLab - kopia\bin\Release\VadminLab.pdb
+C:\Github\VadminLab - kopia\bin\Release\VadminLab.xml
+C:\Github\VadminLab - kopia\obj\x86\Debug\VadminLab.exe.manifest
+C:\Github\VadminLab - kopia\obj\x86\Debug\VadminLab.application
+C:\Github\VadminLab - kopia\obj\x86\Debug\VadminLab.exe
+C:\Github\VadminLab - kopia\obj\x86\Debug\VadminLab.xml
+C:\Github\VadminLab - kopia\obj\x86\Debug\VadminLab.pdb
+C:\Github\VadminLab\obj\x86\Debug\VadminLab.vbproj.AssemblyReference.cache
+C:\Github\VadminLab\obj\x86\Debug\VadminLab.vbproj.ResolveComReference.cache
+C:\Github\VadminLab\obj\x86\Debug\Ord.AboutBox1.resources
+C:\Github\VadminLab\obj\x86\Debug\Ord.AnteckningarF.resources
+C:\Github\VadminLab\obj\x86\Debug\Ord.BatchreporterF.resources
+C:\Github\VadminLab\obj\x86\Debug\Ord.CalenderF.resources
+C:\Github\VadminLab\obj\x86\Debug\Ord.CalenderOwnerF.resources
+C:\Github\VadminLab\obj\x86\Debug\Ord.CalenderTypF.resources
+C:\Github\VadminLab\obj\x86\Debug\Ord.InleveransF.resources
+C:\Github\VadminLab\obj\x86\Debug\Ord.ProduktKomponenterF.resources
+C:\Github\VadminLab\obj\x86\Debug\Ord.BehorighetF.resources
+C:\Github\VadminLab\obj\x86\Debug\Ord.LabstartF.resources
+C:\Github\VadminLab\obj\x86\Debug\Ord.LabHanteringF.resources
+C:\Github\VadminLab\obj\x86\Debug\Ord.LagerRegF.resources
+C:\Github\VadminLab\obj\x86\Debug\Ord.LeverantorF.resources
+C:\Github\VadminLab\obj\x86\Debug\Ord.Levregf.resources
+C:\Github\VadminLab\obj\x86\Debug\Ord.LoginLoggF.resources
+C:\Github\VadminLab\obj\x86\Debug\Ord.LokalInstF.resources
+C:\Github\VadminLab\obj\x86\Debug\Ord.Resources.resources
+C:\Github\VadminLab\obj\x86\Debug\Ord.POLstartF.resources
+C:\Github\VadminLab\obj\x86\Debug\Ord.ProdregF.resources
+C:\Github\VadminLab\obj\x86\Debug\Ord.SpecrutinerF.resources
+C:\Github\VadminLab\obj\x86\Debug\Ord.StatistikPopupf.resources
+C:\Github\VadminLab\obj\x86\Debug\Ord.TestregF.resources
+C:\Github\VadminLab\obj\x86\Debug\Ord.VistsF.resources
+C:\Github\VadminLab\obj\x86\Debug\VadminLab.vbproj.GenerateResource.cache
+C:\Github\VadminLab\obj\x86\Debug\VadminLab.vbproj.CoreCompileInputs.cache
+C:\Github\VadminLab\obj\x86\Debug\Ord.Foretag.resources
+C:\Github\VadminLab\bin\Release\VadminLab.exe.config
+C:\Github\VadminLab\bin\Release\VadminLab.exe.manifest
+C:\Github\VadminLab\bin\Release\VadminLab.application
+C:\Github\VadminLab\bin\Release\VadminLab.exe
+C:\Github\VadminLab\bin\Release\VadminLab.pdb
+C:\Github\VadminLab\bin\Release\VadminLab.xml
+C:\Github\VadminLab\obj\x86\Debug\VadminLab.exe.manifest
+C:\Github\VadminLab\obj\x86\Debug\VadminLab.application
+C:\Github\VadminLab\obj\x86\Debug\VadminLab.exe
+C:\Github\VadminLab\obj\x86\Debug\VadminLab.xml
+C:\Github\VadminLab\obj\x86\Debug\VadminLab.pdb
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\VadminLab.vbproj.AssemblyReference.cache
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\VadminLab.vbproj.ResolveComReference.cache
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.AboutBox1.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.AnteckningarF.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.BatchreporterF.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.CalenderF.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.CalenderOwnerF.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.CalenderTypF.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.Foretag.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.InleveransF.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.ProduktKomponenterF.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.BehorighetF.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.LabstartF.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.LabHanteringF.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.LagerRegF.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.LeverantorF.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.Levregf.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.LoginLoggF.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.LokalInstF.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.Resources.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.POLstartF.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.ProdregF.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.SpecrutinerF.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.StatistikPopupf.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.TestregF.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\Ord.VistsF.resources
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\VadminLab.vbproj.GenerateResource.cache
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\VadminLab.vbproj.CoreCompileInputs.cache
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\VadminLab.exe
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\VadminLab.xml
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\VadminLab.pdb
+C:\Users\edgar\OneDrive\Desktop\VadminLab\bin\Release\VadminLab.exe.config
+C:\Users\edgar\OneDrive\Desktop\VadminLab\bin\Release\VadminLab.exe.manifest
+C:\Users\edgar\OneDrive\Desktop\VadminLab\bin\Release\VadminLab.application
+C:\Users\edgar\OneDrive\Desktop\VadminLab\bin\Release\VadminLab.exe
+C:\Users\edgar\OneDrive\Desktop\VadminLab\bin\Release\VadminLab.pdb
+C:\Users\edgar\OneDrive\Desktop\VadminLab\bin\Release\VadminLab.xml
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\VadminLab.exe.manifest
+C:\Users\edgar\OneDrive\Desktop\VadminLab\obj\x86\Debug\VadminLab.application

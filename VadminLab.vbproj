@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Ord.My.MyApplication</StartupObject>
+    <RootNamespace>Ord</RootNamespace>
+    <AssemblyName>VadminLab</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>D:\Webmap\Vadmin.net\Downloads\Vadmin2000Upgrade\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://www.vadmin.net/Downloads/Vadmin2000Upgrade/</InstallUrl>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>VadminLab.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>VadminLab.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A512AA193C9761C3BBF0CC05FFDEE9E1342DF6EA</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>VadminOLFnet_1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>VadminLAB.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.Designer.vb">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutBox1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Anteckningar.Designer.vb">
+      <DependentUpon>Anteckningar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Anteckningar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Batchreporter.Designer.vb">
+      <DependentUpon>Batchreporter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Batchreporter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calender.Designer.vb">
+      <DependentUpon>Calender.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Calender.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalenderOwner.Designer.vb">
+      <DependentUpon>CalenderOwner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CalenderOwner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalenderTyp.Designer.vb">
+      <DependentUpon>CalenderTyp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CalenderTyp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Foretag.Designer.vb">
+      <DependentUpon>Foretag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Foretag.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inleverans.Designer.vb">
+      <DependentUpon>Inleverans.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inleverans.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KompProdukter.Designer.vb">
+      <DependentUpon>KompProdukter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KompProdukter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BehorighetReg.Designer.vb">
+      <DependentUpon>BehorighetReg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BehorighetReg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Labstart.Designer.vb">
+      <DependentUpon>Labstart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Labstart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Labtester.Designer.vb">
+      <DependentUpon>Labtester.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Labtester.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LagerReg.Designer.vb">
+      <DependentUpon>LagerReg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LagerReg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Leverantor.Designer.vb">
+      <DependentUpon>Leverantor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Leverantor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levreg.Designer.vb">
+      <DependentUpon>Levreg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Levreg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginLogg.Designer.vb">
+      <DependentUpon>LoginLogg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginLogg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LokalInst.Designer.vb">
+      <DependentUpon>LokalInst.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LokalInst.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDLib.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="POLStart.Designer.vb">
+      <DependentUpon>POLStart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="POLStart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProduktReg.Designer.vb">
+      <DependentUpon>ProduktReg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProduktReg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Specialarutiner.Designer.vb">
+      <DependentUpon>Specialarutiner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Specialarutiner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatistikPopup.Designer.vb">
+      <DependentUpon>StatistikPopup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StatistikPopup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestReg.Designer.vb">
+      <DependentUpon>TestReg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TestReg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vists.Designer.vb">
+      <DependentUpon>Vists.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vists.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Anteckningar.resx">
+      <DependentUpon>Anteckningar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Batchreporter.resx">
+      <DependentUpon>Batchreporter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calender.resx">
+      <DependentUpon>Calender.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalenderOwner.resx">
+      <DependentUpon>CalenderOwner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalenderTyp.resx">
+      <DependentUpon>CalenderTyp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Foretag.resx">
+      <DependentUpon>Foretag.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inleverans.resx">
+      <DependentUpon>Inleverans.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KompProdukter.resx">
+      <DependentUpon>KompProdukter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BehorighetReg.resx">
+      <DependentUpon>BehorighetReg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Labstart.resx">
+      <DependentUpon>Labstart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Labtester.resx">
+      <DependentUpon>Labtester.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LagerReg.resx">
+      <DependentUpon>LagerReg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Leverantor.resx">
+      <DependentUpon>Leverantor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levreg.resx">
+      <DependentUpon>Levreg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginLogg.resx">
+      <DependentUpon>LoginLogg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LokalInst.resx">
+      <DependentUpon>LokalInst.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POLStart.resx">
+      <DependentUpon>POLStart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProduktReg.resx">
+      <DependentUpon>ProduktReg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Specialarutiner.resx">
+      <DependentUpon>Specialarutiner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatistikPopup.resx">
+      <DependentUpon>StatistikPopup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestReg.resx">
+      <DependentUpon>TestReg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vists.resx">
+      <DependentUpon>Vists.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\WindowsApplication1.My.MyApplication.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Address Book %28Alt_blue%29.ico" />
+    <Content Include="cabinet.ico" />
+    <Content Include="Evernote Brown.ico" />
+    <Content Include="VadminLAB.ico" />
+    <None Include="Resources\login %283%29.jpg" />
+    <None Include="Resources\login %282%291.jpg" />
+    <None Include="Resources\login %282%29.jpg" />
+    <None Include="Resources\login.jpg" />
+    <None Include="Resources\olf.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

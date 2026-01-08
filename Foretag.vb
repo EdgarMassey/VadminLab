@@ -9,7 +9,7 @@ Imports System.Text.RegularExpressions
 Public Class Foretag
     Dim Labversion As String = "", pityp As String
     Private Sub Foretag_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        vernr = "20260107b"
+        vernr = "20260108a"
         Prognamn = "VadminLab2026"
         Dim rect As Rectangle = Screen.PrimaryScreen.WorkingArea
         sokvag = AppDomain.CurrentDomain.BaseDirectory
@@ -56,6 +56,7 @@ Public Class Foretag
         Else
             SparaCB.Checked = False
         End If
+
         HamtaForetagNy(KlientID)
         GetNewBehorighet(PersonligIDTB.Text)
         sakerhet = 1
@@ -653,6 +654,10 @@ nocon:
             LosenTB.PasswordChar = "*"c
 
         End If
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs)
+        HamtaForetagNy(KlientID)
     End Sub
 
     Function GetProgram(Prognamn As String)

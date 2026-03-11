@@ -42,6 +42,11 @@ Partial Class LabstartF
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.LocalaInställningarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BesokB = New System.Windows.Forms.Button()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Ver.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -234,12 +239,67 @@ Partial Class LabstartF
         Me.BesokB.Text = "Besökregister"
         Me.BesokB.UseVisualStyleBackColor = False
         '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(395, 87)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(29, 9)
+        Me.Label20.TabIndex = 495
+        Me.Label20.Text = "LAB 01"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(395, 132)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(29, 9)
+        Me.Label1.TabIndex = 496
+        Me.Label1.Text = "LAB 02"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(395, 180)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(29, 9)
+        Me.Label2.TabIndex = 497
+        Me.Label2.Text = "LAB 03"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(395, 222)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(29, 9)
+        Me.Label3.TabIndex = 498
+        Me.Label3.Text = "LAB 04"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(395, 263)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(29, 9)
+        Me.Label4.TabIndex = 499
+        Me.Label4.Text = "LAB 05"
+        '
         'LabstartF
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLight
         Me.ClientSize = New System.Drawing.Size(610, 423)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Label20)
         Me.Controls.Add(Me.BesokB)
         Me.Controls.Add(Me.AnteckB)
         Me.Controls.Add(Me.SpecialrutinerB)
@@ -282,4 +342,9 @@ Partial Class LabstartF
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents LocalaInställningarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BesokB As Button
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
 End Class

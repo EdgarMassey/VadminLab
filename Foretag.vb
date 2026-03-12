@@ -1,20 +1,40 @@
 ﻿
 Imports System
-Imports System.IO
-Imports System.Data.Odbc
 Imports System.Configuration
+Imports System.Data.Odbc
+Imports System.IO
 Imports System.Net
 Imports System.Text.RegularExpressions
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox
 
 Public Class Foretag
-    Dim Labversion As String = "", pityp As String
+    Dim Labversion As String = "", pityp As String, Target As String
     Private Sub Foretag_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        vernr = "20260108a"
+        vernr = "20260312a"
         Prognamn = "VadminLab2026"
         Dim rect As Rectangle = Screen.PrimaryScreen.WorkingArea
         sokvag = AppDomain.CurrentDomain.BaseDirectory
         Me.Top = (rect.Height / 2) - (Me.Height / 2)
         Me.Left = (rect.Width / 2) - (Me.Width / 2)
+        On Error Resume Next
+        Dim parameters = ParseArguments()
+        Dim Typ = parameters("Typ")
+        Dim DBID = parameters("DBID")
+        Dim DB = parameters("DB")
+        Dim UserID = parameters("UserID")
+        Dim UserLosen = parameters("UserLosen")
+        Dim ODBC = parameters("ODBC")
+        target = parameters("Target")
+        If Typ = "PMN" Then
+            odbcsource = ODBC
+            odbcsourcer = ODBC
+            databasnamn = DB
+            LosenTB.Text = UserLosen
+            odbclosen = "alfons"
+            PersonligIDTB.Text = UserID
+            KlientIdTB.Text = DBID
+
+        End If
         readdll()
 
         If spar = "True" Then SparaCB.Checked = True
@@ -44,7 +64,9 @@ Public Class Foretag
         today = Format(Now, "yyyy-MM-dd")
         odbclosen = "alfons"
         datum.Text = today
-
+        If Typ = "PMN" Then
+            Loginrutin()
+        End If
     End Sub
     Private Sub Loginrutin()
         Me.Cursor = Cursors.WaitCursor
@@ -100,7 +122,35 @@ Public Class Foretag
                 Exit Sub
             End If
         End If
-        LabstartF.Show()
+        'LabstartF.Show()
+        'Startmeny.Show()
+        labmap = "F:\V2012LabDok\"
+        Labdatabasnamn = "NMLab"
+        If Target = "LabHanteringF" Then
+            LabHanteringF.Show()
+            Me.Close()
+            LabstartF.Close()
+        ElseIf Target = "InleveransF" Then
+            InleveransF.Show()
+            Me.Close()
+            LabstartF.Close()
+        ElseIf Target = "BatchreporterF" Then
+            BatchreporterF.Show()
+            Me.Close()
+            LabstartF.Close()
+        ElseIf Target = "AnteckningarF" Then
+            AnteckningarF.Show()
+            Me.Close()
+            LabstartF.Close()
+        ElseIf Target = "VistsF" Then
+            VistsF.Show()
+            Me.Close()
+            LabstartF.Close()
+        Else
+
+            LabstartF.Show()
+            Me.Close()
+        End If
 
         Me.Close()
 
@@ -693,5 +743,25 @@ nocon:
 slut:
         GetProgram = "Ja"
     End Function
-
+    Function ParseArguments() As Dictionary(Of String, String)
+        Dim args() As String = Environment.GetCommandLineArgs()
+        Dim result As New Dictionary(Of String, String)(StringComparer.OrdinalIgnoreCase)
+        Dim i As Integer = 1
+        While i < args.Length
+            Dim key As String = args(i)
+            If key.StartsWith("/") Or key.StartsWith("-") Then
+                key = key.TrimStart("/"c, "-"c)
+                If i + 1 < args.Length AndAlso Not args(i + 1).StartsWith("/") AndAlso Not args(i + 1).StartsWith("-") Then
+                    result(key) = args(i + 1)
+                    i += 2
+                Else
+                    result(key) = "true"
+                    i += 1
+                End If
+            Else
+                i += 1
+            End If
+        End While
+        Return result
+    End Function
 End Class

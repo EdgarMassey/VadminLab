@@ -24,7 +24,8 @@ Public Class LabstartF
     End Sub
 
     Private Sub AvslutaB_Click(sender As Object, e As EventArgs) Handles AvslutaB.Click
-        System.Diagnostics.Process.Start(sokvag + "VadminMeny.exe")
+
+        'System.Diagnostics.Process.Start(sokvag + "VadminMeny.exe")
         Foretag.Close()
         Me.Close()
     End Sub
@@ -78,4 +79,5 @@ Public Class LabstartF
         VistsF.Activate()
         VistsF.WindowState = FormWindowState.Normal
     End Sub
+
 End Class

@@ -10,7 +10,7 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox
 Public Class Foretag
     Dim Labversion As String = "", pityp As String, Target As String
     Private Sub Foretag_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        vernr = "20260312a"
+        vernr = "20260317e"
         Prognamn = "VadminLab2026"
         Dim rect As Rectangle = Screen.PrimaryScreen.WorkingArea
         sokvag = AppDomain.CurrentDomain.BaseDirectory
@@ -152,8 +152,36 @@ Public Class Foretag
             Me.Close()
         End If
 
-        Me.Close()
+        Select Case StartupRequest.Target.ToUpper()
 
+            Case "LABHANTERINGF"
+                OpenOrActivateForm(Of LabHanteringF)()
+
+            Case "INLEVERANSF"
+                OpenOrActivateForm(Of InleveransF)()
+
+            Case "PRODREGF"
+                OpenOrActivateForm(Of ProdregF)()
+
+            Case "BATCHREPORTERF"
+                OpenOrActivateForm(Of BatchreporterF)()
+
+            Case "ANTECKNINGARF"
+                OpenOrActivateForm(Of AnteckningarF)()
+
+            Case "VISITSF"
+                OpenOrActivateForm(Of VistsF)()
+
+
+            Case Else
+                OpenOrActivateForm(Of LabHanteringF)()
+
+        End Select
+
+        StartupRequest.Target = ""
+
+
+        Me.Close()
         Me.Cursor = Cursors.Arrow
     End Sub
 

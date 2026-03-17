@@ -154,6 +154,7 @@
     <Compile Include="Foretag.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormHelper.vb" />
     <Compile Include="Inleverans.Designer.vb">
       <DependentUpon>Inleverans.vb</DependentUpon>
     </Compile>
@@ -249,6 +250,7 @@
     <Compile Include="Specialarutiner.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="StartupRequest.vb" />
     <Compile Include="StatistikPopup.Designer.vb">
       <DependentUpon>StatistikPopup.vb</DependentUpon>
     </Compile>

@@ -22,6 +22,7 @@ Partial Class SpecrutinerF
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SpecrutinerF))
         Me.HämtaNotesB = New System.Windows.Forms.Button()
         Me.TomProvRegB = New System.Windows.Forms.Button()
         Me.TomLabProdukterB = New System.Windows.Forms.Button()
@@ -189,6 +190,7 @@ Partial Class SpecrutinerF
         Me.Controls.Add(Me.TomLabProdukterB)
         Me.Controls.Add(Me.TomProvRegB)
         Me.Controls.Add(Me.HämtaNotesB)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "SpecrutinerF"
         Me.Text = "Speciala rutiner"

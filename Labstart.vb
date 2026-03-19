@@ -80,4 +80,14 @@ Public Class LabstartF
         VistsF.WindowState = FormWindowState.Normal
     End Sub
 
+    Private Sub LabstartF_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
+        PipeServer.StopPipeServer()
+
+        If SingleInstanceGuard.AppMutex IsNot Nothing Then
+            Try
+                SingleInstanceGuard.AppMutex.ReleaseMutex()
+            Catch
+            End Try
+        End If
+    End Sub
 End Class

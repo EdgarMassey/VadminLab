@@ -10,7 +10,23 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox
 Public Class Foretag
     Dim Labversion As String = "", pityp As String, Target As String
     Private Sub Foretag_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        vernr = "20260317e"
+        Dim createdNew As Boolean
+        Dim requestedTarget As String = GetTargetFromCommandLine()
+
+        SingleInstanceGuard.AppMutex = New Threading.Mutex(True, "VadminOLFnet_SingleInstance", createdNew)
+
+        If Not createdNew Then
+            If requestedTarget <> "" Then
+                PipeClient.SendTargetToRunningInstance(requestedTarget)
+            End If
+
+            Me.Close()
+            Exit Sub
+        End If
+
+        StartupRequest.Target = requestedTarget
+        PipeServer.StartPipeServer()
+        vernr = "20260319e"
         Prognamn = "VadminLab2026"
         Dim rect As Rectangle = Screen.PrimaryScreen.WorkingArea
         sokvag = AppDomain.CurrentDomain.BaseDirectory
@@ -126,60 +142,13 @@ Public Class Foretag
         'Startmeny.Show()
         labmap = "F:\V2012LabDok\"
         Labdatabasnamn = "NMLab"
-        If Target = "LabHanteringF" Then
-            LabHanteringF.Show()
-            Me.Close()
-            LabstartF.Close()
-        ElseIf Target = "InleveransF" Then
-            InleveransF.Show()
-            Me.Close()
-            LabstartF.Close()
-        ElseIf Target = "BatchreporterF" Then
-            BatchreporterF.Show()
-            Me.Close()
-            LabstartF.Close()
-        ElseIf Target = "AnteckningarF" Then
-            AnteckningarF.Show()
-            Me.Close()
-            LabstartF.Close()
-        ElseIf Target = "VistsF" Then
-            VistsF.Show()
-            Me.Close()
-            LabstartF.Close()
+
+
+        If StartupRequest.Target.Trim() <> "" Then
+            FormHelper.OpenRequestedFormIfAny()
         Else
-
             LabstartF.Show()
-            Me.Close()
         End If
-
-        Select Case StartupRequest.Target.ToUpper()
-
-            Case "LABHANTERINGF"
-                OpenOrActivateForm(Of LabHanteringF)()
-
-            Case "INLEVERANSF"
-                OpenOrActivateForm(Of InleveransF)()
-
-            Case "PRODREGF"
-                OpenOrActivateForm(Of ProdregF)()
-
-            Case "BATCHREPORTERF"
-                OpenOrActivateForm(Of BatchreporterF)()
-
-            Case "ANTECKNINGARF"
-                OpenOrActivateForm(Of AnteckningarF)()
-
-            Case "VISITSF"
-                OpenOrActivateForm(Of VistsF)()
-
-
-            Case Else
-                OpenOrActivateForm(Of LabHanteringF)()
-
-        End Select
-
-        StartupRequest.Target = ""
-
 
         Me.Close()
         Me.Cursor = Cursors.Arrow
@@ -791,5 +760,16 @@ slut:
             End If
         End While
         Return result
+    End Function
+    Private Function GetTargetFromCommandLine() As String
+        Dim args = Environment.GetCommandLineArgs()
+
+        For i As Integer = 0 To args.Length - 1
+            If args(i).Trim().ToUpper() = "/TARGET" AndAlso i < args.Length - 1 Then
+                Return args(i + 1)
+            End If
+        Next
+
+        Return ""
     End Function
 End Class

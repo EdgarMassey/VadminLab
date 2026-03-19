@@ -13,9 +13,9 @@ Namespace My
         End Sub
 
         Private Sub MyApplication_StartupNextInstance(
-            sender As Object,
-            e As StartupNextInstanceEventArgs
-        ) Handles Me.StartupNextInstance
+    sender As Object,
+    e As StartupNextInstanceEventArgs
+) Handles Me.StartupNextInstance
 
             StartupRequest.Target = GetTargetArg(e.CommandLine)
 
@@ -23,9 +23,6 @@ Namespace My
                 If Me.MainForm.WindowState = FormWindowState.Minimized Then
                     Me.MainForm.WindowState = FormWindowState.Normal
                 End If
-
-                Me.MainForm.Show()
-                Me.MainForm.Activate()
             End If
 
             FormHelper.OpenRequestedFormIfAny()

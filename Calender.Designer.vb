@@ -25,6 +25,7 @@ Partial Class CalenderF
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CalenderF))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Huvud = New System.Windows.Forms.Button()
         Me.Ver = New System.Windows.Forms.GroupBox()
@@ -79,7 +80,7 @@ Partial Class CalenderF
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.Location = New System.Drawing.Point(9, 92)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.Name = "DataGridView1"
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
@@ -202,7 +203,7 @@ Partial Class CalenderF
         '
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Location = New System.Drawing.Point(9, 400)
-        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.RowHeadersWidth = 51
         Me.DataGridView2.RowTemplate.Height = 24
@@ -273,7 +274,7 @@ Partial Class CalenderF
         '
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView3.Location = New System.Drawing.Point(705, 85)
-        Me.DataGridView3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView3.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.RowHeadersWidth = 51
         Me.DataGridView3.RowTemplate.Height = 24
@@ -297,7 +298,7 @@ Partial Class CalenderF
         '
         Me.CheckedListBox1.FormattingEnabled = True
         Me.CheckedListBox1.Location = New System.Drawing.Point(727, 622)
-        Me.CheckedListBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckedListBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckedListBox1.Name = "CheckedListBox1"
         Me.CheckedListBox1.Size = New System.Drawing.Size(170, 124)
         Me.CheckedListBox1.TabIndex = 407
@@ -332,7 +333,7 @@ Partial Class CalenderF
         '
         Me.CheckedListBox2.FormattingEnabled = True
         Me.CheckedListBox2.Location = New System.Drawing.Point(943, 622)
-        Me.CheckedListBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckedListBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckedListBox2.Name = "CheckedListBox2"
         Me.CheckedListBox2.Size = New System.Drawing.Size(170, 124)
         Me.CheckedListBox2.TabIndex = 409
@@ -426,7 +427,8 @@ Partial Class CalenderF
         Me.Controls.Add(Me.Ver)
         Me.Controls.Add(Me.Huvud)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "CalenderF"
         Me.Text = "CalenderF"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

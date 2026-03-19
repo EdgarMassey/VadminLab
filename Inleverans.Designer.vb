@@ -653,7 +653,7 @@ Partial Class InleveransF
         'LeverantörRegisterToolStripMenuItem
         '
         Me.LeverantörRegisterToolStripMenuItem.Name = "LeverantörRegisterToolStripMenuItem"
-        Me.LeverantörRegisterToolStripMenuItem.Size = New System.Drawing.Size(117, 24)
+        Me.LeverantörRegisterToolStripMenuItem.Size = New System.Drawing.Size(131, 24)
         Me.LeverantörRegisterToolStripMenuItem.Text = "Leverantör register"
         '
         'Label17
@@ -730,6 +730,7 @@ Partial Class InleveransF
         Me.Controls.Add(Me.AvslutaK)
         Me.Controls.Add(Me.Huvud)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "InleveransF"
         Me.Text = "Inleveranser"

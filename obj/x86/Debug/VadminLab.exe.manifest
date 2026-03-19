@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VadminLab.exe" size="1405440">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VadminLab.exe" size="6550016">
       <assemblyIdentity name="VadminLab" version="1.6.7.2" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>lnslj1GitoxS4EAZPaObO8+6n1dWnSXjAY03edO5ziU=</dsig:DigestValue>
+        <dsig:DigestValue>MCcN8DOaQOkBH9FgFWQzp7hQzLft1oAIWZcNpxKSyhg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -81,13 +81,13 @@
       <dsig:DigestValue>2f465VMdryMD3edLala7BaaDae06NUGzF+NHiIfksG8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="VadminLab.exe.config" size="1365">
+  <file name="VadminLab.exe.config" size="1643">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>2taXh7FWnN4PthH3NSehGgBk8IKbWfJZF5pSsftINus=</dsig:DigestValue>
+      <dsig:DigestValue>Ho76riKREu5oD/pLduwQsj/X2KQUUoQpAtzSSbYxElo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="VadminLAB.ico" size="270398">

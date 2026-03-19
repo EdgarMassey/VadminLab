@@ -22,6 +22,7 @@ Partial Class BehorighetF
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BehorighetF))
         Me.Spara = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Ver = New System.Windows.Forms.GroupBox()
@@ -272,6 +273,7 @@ Partial Class BehorighetF
         Me.Controls.Add(Me.Ver)
         Me.Controls.Add(Me.AvslutaK)
         Me.Controls.Add(Me.Huvud)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "BehorighetF"
         Me.Text = "BehörighetsRegister"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

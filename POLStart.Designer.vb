@@ -22,6 +22,7 @@ Partial Class POLstartF
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(POLstartF))
         Me.Ver = New System.Windows.Forms.GroupBox()
         Me.Gnamn = New System.Windows.Forms.Label()
         Me.KlientIdl = New System.Windows.Forms.Label()
@@ -49,51 +50,45 @@ Partial Class POLstartF
         Me.Ver.Controls.Add(Me.datum)
         Me.Ver.Controls.Add(Me.Versionl)
         Me.Ver.ForeColor = System.Drawing.Color.Gray
-        Me.Ver.Location = New System.Drawing.Point(26, 758)
-        Me.Ver.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Ver.Location = New System.Drawing.Point(17, 493)
         Me.Ver.Name = "Ver"
-        Me.Ver.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Ver.Size = New System.Drawing.Size(247, 93)
+        Me.Ver.Size = New System.Drawing.Size(165, 60)
         Me.Ver.TabIndex = 324
         Me.Ver.TabStop = False
         Me.Ver.Text = "Version"
         '
         'Gnamn
         '
-        Me.Gnamn.Location = New System.Drawing.Point(14, 88)
-        Me.Gnamn.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Gnamn.Location = New System.Drawing.Point(9, 57)
         Me.Gnamn.Name = "Gnamn"
-        Me.Gnamn.Size = New System.Drawing.Size(273, 20)
+        Me.Gnamn.Size = New System.Drawing.Size(182, 13)
         Me.Gnamn.TabIndex = 17
         Me.Gnamn.Text = "Företagsnamn"
         Me.Gnamn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'KlientIdl
         '
-        Me.KlientIdl.Location = New System.Drawing.Point(9, 20)
-        Me.KlientIdl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.KlientIdl.Location = New System.Drawing.Point(6, 13)
         Me.KlientIdl.Name = "KlientIdl"
-        Me.KlientIdl.Size = New System.Drawing.Size(278, 20)
+        Me.KlientIdl.Size = New System.Drawing.Size(185, 13)
         Me.KlientIdl.TabIndex = 4
         Me.KlientIdl.Text = "Klientid"
         Me.KlientIdl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'odbcsource
         '
-        Me.odbcsource.Location = New System.Drawing.Point(9, 65)
-        Me.odbcsource.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.odbcsource.Location = New System.Drawing.Point(6, 42)
         Me.odbcsource.Name = "odbcsource"
-        Me.odbcsource.Size = New System.Drawing.Size(278, 20)
+        Me.odbcsource.Size = New System.Drawing.Size(185, 13)
         Me.odbcsource.TabIndex = 3
         Me.odbcsource.Text = "Odbcsource"
         Me.odbcsource.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'databas
         '
-        Me.databas.Location = New System.Drawing.Point(18, 40)
-        Me.databas.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.databas.Location = New System.Drawing.Point(12, 26)
         Me.databas.Name = "databas"
-        Me.databas.Size = New System.Drawing.Size(278, 20)
+        Me.databas.Size = New System.Drawing.Size(185, 13)
         Me.databas.TabIndex = 2
         Me.databas.Text = "Databas"
         Me.databas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -101,30 +96,27 @@ Partial Class POLstartF
         'datum
         '
         Me.datum.AutoSize = True
-        Me.datum.Location = New System.Drawing.Point(180, 0)
-        Me.datum.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.datum.Location = New System.Drawing.Point(120, 0)
         Me.datum.Name = "datum"
-        Me.datum.Size = New System.Drawing.Size(57, 20)
+        Me.datum.Size = New System.Drawing.Size(38, 13)
         Me.datum.TabIndex = 1
         Me.datum.Text = "Datum"
         '
         'Versionl
         '
         Me.Versionl.AutoSize = True
-        Me.Versionl.Location = New System.Drawing.Point(33, 25)
-        Me.Versionl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Versionl.Location = New System.Drawing.Point(22, 16)
         Me.Versionl.Name = "Versionl"
-        Me.Versionl.Size = New System.Drawing.Size(0, 20)
+        Me.Versionl.Size = New System.Drawing.Size(0, 13)
         Me.Versionl.TabIndex = 0
         '
         'Huvud
         '
         Me.Huvud.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Huvud.ForeColor = System.Drawing.Color.Maroon
-        Me.Huvud.Location = New System.Drawing.Point(331, 0)
-        Me.Huvud.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Huvud.Location = New System.Drawing.Point(221, 0)
         Me.Huvud.Name = "Huvud"
-        Me.Huvud.Size = New System.Drawing.Size(623, 38)
+        Me.Huvud.Size = New System.Drawing.Size(415, 25)
         Me.Huvud.TabIndex = 325
         Me.Huvud.Text = "POL start"
         Me.Huvud.UseVisualStyleBackColor = True
@@ -134,68 +126,67 @@ Partial Class POLstartF
         Me.AvslutaB.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.AvslutaB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AvslutaB.ForeColor = System.Drawing.Color.Maroon
-        Me.AvslutaB.Location = New System.Drawing.Point(1323, 823)
-        Me.AvslutaB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.AvslutaB.Location = New System.Drawing.Point(882, 535)
         Me.AvslutaB.Name = "AvslutaB"
-        Me.AvslutaB.Size = New System.Drawing.Size(114, 33)
+        Me.AvslutaB.Size = New System.Drawing.Size(76, 21)
         Me.AvslutaB.TabIndex = 373
         Me.AvslutaB.Text = "Avsluta"
         Me.AvslutaB.UseVisualStyleBackColor = True
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.KomponenterToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(1731, 36)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 1, 0, 1)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1154, 24)
         Me.MenuStrip1.TabIndex = 374
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'KomponenterToolStripMenuItem
         '
         Me.KomponenterToolStripMenuItem.Name = "KomponenterToolStripMenuItem"
-        Me.KomponenterToolStripMenuItem.Size = New System.Drawing.Size(233, 31)
+        Me.KomponenterToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.KomponenterToolStripMenuItem.Text = "Komponenter/Leverntörer"
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(852, 90)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.DataGridView1.Location = New System.Drawing.Point(568, 58)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(564, 298)
+        Me.DataGridView1.Size = New System.Drawing.Size(376, 194)
         Me.DataGridView1.TabIndex = 375
         '
         'Label13
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(1018, 65)
-        Me.Label13.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label13.Location = New System.Drawing.Point(679, 42)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(325, 29)
+        Me.Label13.Size = New System.Drawing.Size(223, 20)
         Me.Label13.TabIndex = 495
         Me.Label13.Text = "Inneliggande Beställningar"
         '
         'POLstartF
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1731, 1069)
+        Me.ClientSize = New System.Drawing.Size(1154, 690)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.AvslutaB)
         Me.Controls.Add(Me.Huvud)
         Me.Controls.Add(Me.Ver)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Name = "POLstartF"
         Me.Text = "PolStart"
         Me.Ver.ResumeLayout(False)

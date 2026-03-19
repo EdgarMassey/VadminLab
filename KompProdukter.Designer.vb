@@ -22,6 +22,7 @@ Partial Class ProduktKomponenterF
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProduktKomponenterF))
         Me.Huvud = New System.Windows.Forms.Button()
         Me.Ver = New System.Windows.Forms.GroupBox()
         Me.Gnamn = New System.Windows.Forms.Label()
@@ -493,6 +494,7 @@ Partial Class ProduktKomponenterF
         Me.Controls.Add(Me.AvslutaB)
         Me.Controls.Add(Me.Ver)
         Me.Controls.Add(Me.Huvud)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Name = "ProduktKomponenterF"
         Me.Text = "Produkt Komponenter"

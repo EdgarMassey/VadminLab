@@ -22,6 +22,7 @@ Partial Class AnteckningarF
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AnteckningarF))
         Me.Huvud = New System.Windows.Forms.Button()
         Me.Ver = New System.Windows.Forms.GroupBox()
         Me.Gnamn = New System.Windows.Forms.Label()
@@ -341,6 +342,7 @@ Partial Class AnteckningarF
         Me.Controls.Add(Me.AvslutaK)
         Me.Controls.Add(Me.Ver)
         Me.Controls.Add(Me.Huvud)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "AnteckningarF"
         Me.Text = "Anteckningar"
         Me.Ver.ResumeLayout(False)

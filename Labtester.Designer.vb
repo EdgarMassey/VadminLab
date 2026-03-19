@@ -166,10 +166,10 @@ Partial Class LabHanteringF
         Me.Huvud.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Huvud.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Huvud.ForeColor = System.Drawing.Color.Maroon
-        Me.Huvud.Location = New System.Drawing.Point(345, 21)
-        Me.Huvud.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.Huvud.Location = New System.Drawing.Point(259, 17)
+        Me.Huvud.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Huvud.Name = "Huvud"
-        Me.Huvud.Size = New System.Drawing.Size(621, 51)
+        Me.Huvud.Size = New System.Drawing.Size(466, 41)
         Me.Huvud.TabIndex = 277
         Me.Huvud.Text = "ProvArkiv"
         Me.Huvud.UseVisualStyleBackColor = False
@@ -178,60 +178,60 @@ Partial Class LabHanteringF
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(725, 88)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label5.Location = New System.Drawing.Point(544, 72)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(72, 18)
+        Me.Label5.Size = New System.Drawing.Size(61, 15)
         Me.Label5.TabIndex = 398
         Me.Label5.Text = "Ansvarig"
         '
         'BatchnrTB
         '
         Me.BatchnrTB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BatchnrTB.Location = New System.Drawing.Point(565, 116)
-        Me.BatchnrTB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.BatchnrTB.Location = New System.Drawing.Point(424, 94)
+        Me.BatchnrTB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.BatchnrTB.Name = "BatchnrTB"
-        Me.BatchnrTB.Size = New System.Drawing.Size(121, 24)
+        Me.BatchnrTB.Size = New System.Drawing.Size(92, 21)
         Me.BatchnrTB.TabIndex = 395
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(591, 90)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label3.Location = New System.Drawing.Point(443, 73)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(66, 18)
+        Me.Label3.Size = New System.Drawing.Size(56, 15)
         Me.Label3.TabIndex = 394
         Me.Label3.Text = "Batchnr"
         '
         'DatumTB
         '
         Me.DatumTB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DatumTB.Location = New System.Drawing.Point(27, 115)
-        Me.DatumTB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.DatumTB.Location = New System.Drawing.Point(20, 93)
+        Me.DatumTB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DatumTB.Name = "DatumTB"
-        Me.DatumTB.Size = New System.Drawing.Size(152, 24)
+        Me.DatumTB.Size = New System.Drawing.Size(115, 21)
         Me.DatumTB.TabIndex = 393
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(53, 90)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label2.Location = New System.Drawing.Point(40, 73)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(57, 18)
+        Me.Label2.Size = New System.Drawing.Size(49, 15)
         Me.Label2.TabIndex = 392
         Me.Label2.Text = "Datum"
         '
         'ProduktnamnTB
         '
         Me.ProduktnamnTB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ProduktnamnTB.Location = New System.Drawing.Point(572, 672)
-        Me.ProduktnamnTB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.ProduktnamnTB.Location = New System.Drawing.Point(429, 546)
+        Me.ProduktnamnTB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ProduktnamnTB.Name = "ProduktnamnTB"
-        Me.ProduktnamnTB.Size = New System.Drawing.Size(455, 24)
+        Me.ProduktnamnTB.Size = New System.Drawing.Size(342, 21)
         Me.ProduktnamnTB.TabIndex = 391
         Me.ProduktnamnTB.Visible = False
         '
@@ -239,10 +239,10 @@ Partial Class LabHanteringF
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(688, 647)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label1.Location = New System.Drawing.Point(516, 526)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(116, 18)
+        Me.Label1.Size = New System.Drawing.Size(98, 15)
         Me.Label1.TabIndex = 390
         Me.Label1.Text = "Produkt Namn"
         Me.Label1.Visible = False
@@ -251,10 +251,10 @@ Partial Class LabHanteringF
         '
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(253, 90)
-        Me.Label26.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label26.Location = New System.Drawing.Point(190, 73)
+        Me.Label26.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(72, 18)
+        Me.Label26.Size = New System.Drawing.Size(60, 15)
         Me.Label26.TabIndex = 388
         Me.Label26.Text = "Produkt "
         '
@@ -262,10 +262,10 @@ Partial Class LabHanteringF
         '
         Me.SparaB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SparaB.ForeColor = System.Drawing.Color.Maroon
-        Me.SparaB.Location = New System.Drawing.Point(603, 898)
-        Me.SparaB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.SparaB.Location = New System.Drawing.Point(452, 730)
+        Me.SparaB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.SparaB.Name = "SparaB"
-        Me.SparaB.Size = New System.Drawing.Size(157, 39)
+        Me.SparaB.Size = New System.Drawing.Size(118, 32)
         Me.SparaB.TabIndex = 403
         Me.SparaB.Text = "Spara nytt"
         Me.SparaB.UseVisualStyleBackColor = True
@@ -275,10 +275,10 @@ Partial Class LabHanteringF
         '
         Me.RaderaB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RaderaB.ForeColor = System.Drawing.Color.Maroon
-        Me.RaderaB.Location = New System.Drawing.Point(881, 898)
-        Me.RaderaB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.RaderaB.Location = New System.Drawing.Point(661, 730)
+        Me.RaderaB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RaderaB.Name = "RaderaB"
-        Me.RaderaB.Size = New System.Drawing.Size(115, 39)
+        Me.RaderaB.Size = New System.Drawing.Size(86, 32)
         Me.RaderaB.TabIndex = 402
         Me.RaderaB.Text = "Radera"
         Me.RaderaB.UseVisualStyleBackColor = True
@@ -287,10 +287,10 @@ Partial Class LabHanteringF
         '
         Me.AvslutaK.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AvslutaK.ForeColor = System.Drawing.Color.Maroon
-        Me.AvslutaK.Location = New System.Drawing.Point(1560, 932)
-        Me.AvslutaK.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.AvslutaK.Location = New System.Drawing.Point(1170, 757)
+        Me.AvslutaK.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.AvslutaK.Name = "AvslutaK"
-        Me.AvslutaK.Size = New System.Drawing.Size(180, 46)
+        Me.AvslutaK.Size = New System.Drawing.Size(135, 37)
         Me.AvslutaK.TabIndex = 404
         Me.AvslutaK.Text = "Avsluta"
         Me.AvslutaK.UseVisualStyleBackColor = True
@@ -302,20 +302,20 @@ Partial Class LabHanteringF
         Me.Provtext1L.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Provtext1L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Provtext1L.ForeColor = System.Drawing.Color.Black
-        Me.Provtext1L.Location = New System.Drawing.Point(431, 196)
-        Me.Provtext1L.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Provtext1L.Location = New System.Drawing.Point(323, 159)
+        Me.Provtext1L.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Provtext1L.Name = "Provtext1L"
-        Me.Provtext1L.Size = New System.Drawing.Size(176, 32)
+        Me.Provtext1L.Size = New System.Drawing.Size(132, 26)
         Me.Provtext1L.TabIndex = 407
         Me.Provtext1L.Text = " "
         '
         'Varde1TB
         '
         Me.Varde1TB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Varde1TB.Location = New System.Drawing.Point(326, 196)
-        Me.Varde1TB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.Varde1TB.Location = New System.Drawing.Point(244, 159)
+        Me.Varde1TB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Varde1TB.Name = "Varde1TB"
-        Me.Varde1TB.Size = New System.Drawing.Size(82, 27)
+        Me.Varde1TB.Size = New System.Drawing.Size(62, 23)
         Me.Varde1TB.TabIndex = 406
         Me.Varde1TB.Text = " "
         Me.Varde1TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -326,21 +326,21 @@ Partial Class LabHanteringF
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TestRegisterToolStripMenuItem, Me.LabprodukterToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(1903, 28)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1426, 25)
         Me.MenuStrip1.TabIndex = 408
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'TestRegisterToolStripMenuItem
         '
         Me.TestRegisterToolStripMenuItem.Name = "TestRegisterToolStripMenuItem"
-        Me.TestRegisterToolStripMenuItem.Size = New System.Drawing.Size(110, 24)
+        Me.TestRegisterToolStripMenuItem.Size = New System.Drawing.Size(98, 21)
         Me.TestRegisterToolStripMenuItem.Text = "Prov Register"
         '
         'LabprodukterToolStripMenuItem
         '
         Me.LabprodukterToolStripMenuItem.Name = "LabprodukterToolStripMenuItem"
-        Me.LabprodukterToolStripMenuItem.Size = New System.Drawing.Size(116, 24)
+        Me.LabprodukterToolStripMenuItem.Size = New System.Drawing.Size(104, 21)
         Me.LabprodukterToolStripMenuItem.Text = "NM produkter"
         '
         'PrintDialog1
@@ -364,19 +364,19 @@ Partial Class LabHanteringF
         Me.Provtext2L.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Provtext2L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Provtext2L.ForeColor = System.Drawing.Color.Black
-        Me.Provtext2L.Location = New System.Drawing.Point(431, 249)
-        Me.Provtext2L.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Provtext2L.Location = New System.Drawing.Point(323, 202)
+        Me.Provtext2L.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Provtext2L.Name = "Provtext2L"
-        Me.Provtext2L.Size = New System.Drawing.Size(176, 32)
+        Me.Provtext2L.Size = New System.Drawing.Size(132, 26)
         Me.Provtext2L.TabIndex = 411
         '
         'Varde2TB
         '
         Me.Varde2TB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Varde2TB.Location = New System.Drawing.Point(326, 254)
-        Me.Varde2TB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.Varde2TB.Location = New System.Drawing.Point(244, 206)
+        Me.Varde2TB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Varde2TB.Name = "Varde2TB"
-        Me.Varde2TB.Size = New System.Drawing.Size(82, 27)
+        Me.Varde2TB.Size = New System.Drawing.Size(62, 23)
         Me.Varde2TB.TabIndex = 410
         Me.Varde2TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -387,20 +387,20 @@ Partial Class LabHanteringF
         Me.Provtext4L.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Provtext4L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Provtext4L.ForeColor = System.Drawing.Color.Black
-        Me.Provtext4L.Location = New System.Drawing.Point(431, 348)
-        Me.Provtext4L.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Provtext4L.Location = New System.Drawing.Point(323, 283)
+        Me.Provtext4L.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Provtext4L.Name = "Provtext4L"
-        Me.Provtext4L.Size = New System.Drawing.Size(176, 32)
+        Me.Provtext4L.Size = New System.Drawing.Size(132, 26)
         Me.Provtext4L.TabIndex = 417
         Me.Provtext4L.Text = " "
         '
         'Varde4TB
         '
         Me.Varde4TB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Varde4TB.Location = New System.Drawing.Point(326, 353)
-        Me.Varde4TB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.Varde4TB.Location = New System.Drawing.Point(244, 287)
+        Me.Varde4TB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Varde4TB.Name = "Varde4TB"
-        Me.Varde4TB.Size = New System.Drawing.Size(82, 27)
+        Me.Varde4TB.Size = New System.Drawing.Size(62, 23)
         Me.Varde4TB.TabIndex = 416
         Me.Varde4TB.Text = " "
         Me.Varde4TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -412,19 +412,19 @@ Partial Class LabHanteringF
         Me.Provtext3L.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Provtext3L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Provtext3L.ForeColor = System.Drawing.Color.Black
-        Me.Provtext3L.Location = New System.Drawing.Point(431, 299)
-        Me.Provtext3L.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Provtext3L.Location = New System.Drawing.Point(323, 243)
+        Me.Provtext3L.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Provtext3L.Name = "Provtext3L"
-        Me.Provtext3L.Size = New System.Drawing.Size(176, 32)
+        Me.Provtext3L.Size = New System.Drawing.Size(132, 26)
         Me.Provtext3L.TabIndex = 414
         '
         'Varde3TB
         '
         Me.Varde3TB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Varde3TB.Location = New System.Drawing.Point(326, 301)
-        Me.Varde3TB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.Varde3TB.Location = New System.Drawing.Point(244, 245)
+        Me.Varde3TB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Varde3TB.Name = "Varde3TB"
-        Me.Varde3TB.Size = New System.Drawing.Size(82, 27)
+        Me.Varde3TB.Size = New System.Drawing.Size(62, 23)
         Me.Varde3TB.TabIndex = 413
         Me.Varde3TB.Text = " "
         Me.Varde3TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -436,20 +436,20 @@ Partial Class LabHanteringF
         Me.Provtext8L.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Provtext8L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Provtext8L.ForeColor = System.Drawing.Color.Black
-        Me.Provtext8L.Location = New System.Drawing.Point(431, 539)
-        Me.Provtext8L.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Provtext8L.Location = New System.Drawing.Point(323, 438)
+        Me.Provtext8L.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Provtext8L.Name = "Provtext8L"
-        Me.Provtext8L.Size = New System.Drawing.Size(176, 32)
+        Me.Provtext8L.Size = New System.Drawing.Size(132, 26)
         Me.Provtext8L.TabIndex = 429
         Me.Provtext8L.Text = " "
         '
         'Varde8TB
         '
         Me.Varde8TB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Varde8TB.Location = New System.Drawing.Point(326, 542)
-        Me.Varde8TB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.Varde8TB.Location = New System.Drawing.Point(244, 440)
+        Me.Varde8TB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Varde8TB.Name = "Varde8TB"
-        Me.Varde8TB.Size = New System.Drawing.Size(82, 27)
+        Me.Varde8TB.Size = New System.Drawing.Size(62, 23)
         Me.Varde8TB.TabIndex = 428
         Me.Varde8TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -460,19 +460,19 @@ Partial Class LabHanteringF
         Me.Provtext7L.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Provtext7L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Provtext7L.ForeColor = System.Drawing.Color.Black
-        Me.Provtext7L.Location = New System.Drawing.Point(431, 494)
-        Me.Provtext7L.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Provtext7L.Location = New System.Drawing.Point(323, 401)
+        Me.Provtext7L.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Provtext7L.Name = "Provtext7L"
-        Me.Provtext7L.Size = New System.Drawing.Size(176, 32)
+        Me.Provtext7L.Size = New System.Drawing.Size(132, 26)
         Me.Provtext7L.TabIndex = 426
         '
         'Varde7TB
         '
         Me.Varde7TB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Varde7TB.Location = New System.Drawing.Point(328, 491)
-        Me.Varde7TB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.Varde7TB.Location = New System.Drawing.Point(246, 399)
+        Me.Varde7TB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Varde7TB.Name = "Varde7TB"
-        Me.Varde7TB.Size = New System.Drawing.Size(80, 27)
+        Me.Varde7TB.Size = New System.Drawing.Size(61, 23)
         Me.Varde7TB.TabIndex = 425
         Me.Varde7TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -483,19 +483,19 @@ Partial Class LabHanteringF
         Me.Provtext6L.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Provtext6L.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Provtext6L.ForeColor = System.Drawing.Color.Black
-        Me.Provtext6L.Location = New System.Drawing.Point(431, 448)
-        Me.Provtext6L.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Provtext6L.Location = New System.Drawing.Point(323, 364)
+        Me.Provtext6L.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Provtext6L.Name = "Provtext6L"
-        Me.Provtext6L.Size = New System.Drawing.Size(176, 32)
+        Me.Provtext6L.Size = New System.Drawing.Size(132, 26)
         Me.Provtext6L.TabIndex = 423
         '
         'Varde6TB
         '
         Me.Varde6TB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Varde6TB.Location = New System.Drawing.Point(326, 443)
-        Me.Varde6TB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.Varde6TB.Location = New System.Drawing.Point(244, 360)
+        Me.Varde6TB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Varde6TB.Name = "Varde6TB"
-        Me.Varde6TB.Size = New System.Drawing.Size(82, 27)
+        Me.Varde6TB.Size = New System.Drawing.Size(62, 23)
         Me.Varde6TB.TabIndex = 422
         Me.Varde6TB.Text = " "
         Me.Varde6TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -507,19 +507,19 @@ Partial Class LabHanteringF
         Me.Provtext5L.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Provtext5L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Provtext5L.ForeColor = System.Drawing.Color.Black
-        Me.Provtext5L.Location = New System.Drawing.Point(431, 394)
-        Me.Provtext5L.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Provtext5L.Location = New System.Drawing.Point(323, 320)
+        Me.Provtext5L.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Provtext5L.Name = "Provtext5L"
-        Me.Provtext5L.Size = New System.Drawing.Size(176, 32)
+        Me.Provtext5L.Size = New System.Drawing.Size(132, 26)
         Me.Provtext5L.TabIndex = 420
         '
         'Varde5TB
         '
         Me.Varde5TB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Varde5TB.Location = New System.Drawing.Point(326, 397)
-        Me.Varde5TB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.Varde5TB.Location = New System.Drawing.Point(244, 323)
+        Me.Varde5TB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Varde5TB.Name = "Varde5TB"
-        Me.Varde5TB.Size = New System.Drawing.Size(82, 27)
+        Me.Varde5TB.Size = New System.Drawing.Size(62, 23)
         Me.Varde5TB.TabIndex = 419
         Me.Varde5TB.Text = " "
         Me.Varde5TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -528,10 +528,10 @@ Partial Class LabHanteringF
         '
         Me.NollaB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NollaB.ForeColor = System.Drawing.Color.Maroon
-        Me.NollaB.Location = New System.Drawing.Point(603, 743)
-        Me.NollaB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.NollaB.Location = New System.Drawing.Point(452, 604)
+        Me.NollaB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.NollaB.Name = "NollaB"
-        Me.NollaB.Size = New System.Drawing.Size(157, 39)
+        Me.NollaB.Size = New System.Drawing.Size(118, 32)
         Me.NollaB.TabIndex = 430
         Me.NollaB.Text = "Nollställa"
         Me.NollaB.UseVisualStyleBackColor = True
@@ -539,21 +539,21 @@ Partial Class LabHanteringF
         'KommentsTB
         '
         Me.KommentsTB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.KommentsTB.Location = New System.Drawing.Point(15, 702)
-        Me.KommentsTB.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.KommentsTB.Location = New System.Drawing.Point(11, 570)
+        Me.KommentsTB.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.KommentsTB.Multiline = True
         Me.KommentsTB.Name = "KommentsTB"
-        Me.KommentsTB.Size = New System.Drawing.Size(540, 175)
+        Me.KommentsTB.Size = New System.Drawing.Size(406, 143)
         Me.KommentsTB.TabIndex = 431
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(14, 679)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label4.Location = New System.Drawing.Point(10, 552)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(191, 20)
+        Me.Label4.Size = New System.Drawing.Size(165, 17)
         Me.Label4.TabIndex = 432
         Me.Label4.Text = "Produkt Kommentarer"
         '
@@ -561,10 +561,10 @@ Partial Class LabHanteringF
         '
         Me.ProduktIDCB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ProduktIDCB.FormattingEnabled = True
-        Me.ProduktIDCB.Location = New System.Drawing.Point(200, 113)
-        Me.ProduktIDCB.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ProduktIDCB.Location = New System.Drawing.Point(150, 92)
+        Me.ProduktIDCB.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ProduktIDCB.Name = "ProduktIDCB"
-        Me.ProduktIDCB.Size = New System.Drawing.Size(344, 26)
+        Me.ProduktIDCB.Size = New System.Drawing.Size(259, 23)
         Me.ProduktIDCB.TabIndex = 434
         '
         'Prov7L
@@ -574,10 +574,10 @@ Partial Class LabHanteringF
         Me.Prov7L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Prov7L.ForeColor = System.Drawing.Color.Maroon
         Me.Prov7L.FormattingEnabled = True
-        Me.Prov7L.Location = New System.Drawing.Point(47, 493)
-        Me.Prov7L.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Prov7L.Location = New System.Drawing.Point(35, 401)
+        Me.Prov7L.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Prov7L.Name = "Prov7L"
-        Me.Prov7L.Size = New System.Drawing.Size(243, 29)
+        Me.Prov7L.Size = New System.Drawing.Size(183, 24)
         Me.Prov7L.TabIndex = 435
         '
         'Prov6L
@@ -587,10 +587,10 @@ Partial Class LabHanteringF
         Me.Prov6L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Prov6L.ForeColor = System.Drawing.Color.Maroon
         Me.Prov6L.FormattingEnabled = True
-        Me.Prov6L.Location = New System.Drawing.Point(47, 443)
-        Me.Prov6L.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Prov6L.Location = New System.Drawing.Point(35, 360)
+        Me.Prov6L.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Prov6L.Name = "Prov6L"
-        Me.Prov6L.Size = New System.Drawing.Size(243, 29)
+        Me.Prov6L.Size = New System.Drawing.Size(183, 24)
         Me.Prov6L.TabIndex = 436
         '
         'Prov5L
@@ -600,10 +600,10 @@ Partial Class LabHanteringF
         Me.Prov5L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Prov5L.ForeColor = System.Drawing.Color.Maroon
         Me.Prov5L.FormattingEnabled = True
-        Me.Prov5L.Location = New System.Drawing.Point(47, 397)
-        Me.Prov5L.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Prov5L.Location = New System.Drawing.Point(35, 323)
+        Me.Prov5L.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Prov5L.Name = "Prov5L"
-        Me.Prov5L.Size = New System.Drawing.Size(243, 29)
+        Me.Prov5L.Size = New System.Drawing.Size(183, 24)
         Me.Prov5L.TabIndex = 437
         '
         'Prov4L
@@ -613,10 +613,10 @@ Partial Class LabHanteringF
         Me.Prov4L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Prov4L.ForeColor = System.Drawing.Color.Maroon
         Me.Prov4L.FormattingEnabled = True
-        Me.Prov4L.Location = New System.Drawing.Point(47, 352)
-        Me.Prov4L.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Prov4L.Location = New System.Drawing.Point(35, 286)
+        Me.Prov4L.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Prov4L.Name = "Prov4L"
-        Me.Prov4L.Size = New System.Drawing.Size(243, 29)
+        Me.Prov4L.Size = New System.Drawing.Size(183, 24)
         Me.Prov4L.TabIndex = 438
         '
         'Prov3L
@@ -626,10 +626,10 @@ Partial Class LabHanteringF
         Me.Prov3L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Prov3L.ForeColor = System.Drawing.Color.Maroon
         Me.Prov3L.FormattingEnabled = True
-        Me.Prov3L.Location = New System.Drawing.Point(47, 301)
-        Me.Prov3L.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Prov3L.Location = New System.Drawing.Point(35, 245)
+        Me.Prov3L.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Prov3L.Name = "Prov3L"
-        Me.Prov3L.Size = New System.Drawing.Size(243, 29)
+        Me.Prov3L.Size = New System.Drawing.Size(183, 24)
         Me.Prov3L.TabIndex = 439
         '
         'Prov2L
@@ -639,10 +639,10 @@ Partial Class LabHanteringF
         Me.Prov2L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Prov2L.ForeColor = System.Drawing.Color.Maroon
         Me.Prov2L.FormattingEnabled = True
-        Me.Prov2L.Location = New System.Drawing.Point(41, 247)
-        Me.Prov2L.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Prov2L.Location = New System.Drawing.Point(31, 201)
+        Me.Prov2L.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Prov2L.Name = "Prov2L"
-        Me.Prov2L.Size = New System.Drawing.Size(249, 29)
+        Me.Prov2L.Size = New System.Drawing.Size(188, 24)
         Me.Prov2L.TabIndex = 440
         '
         'Prov1L
@@ -652,10 +652,10 @@ Partial Class LabHanteringF
         Me.Prov1L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Prov1L.ForeColor = System.Drawing.Color.Maroon
         Me.Prov1L.FormattingEnabled = True
-        Me.Prov1L.Location = New System.Drawing.Point(41, 196)
-        Me.Prov1L.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Prov1L.Location = New System.Drawing.Point(31, 159)
+        Me.Prov1L.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Prov1L.Name = "Prov1L"
-        Me.Prov1L.Size = New System.Drawing.Size(249, 29)
+        Me.Prov1L.Size = New System.Drawing.Size(188, 24)
         Me.Prov1L.TabIndex = 441
         '
         'Prov8L
@@ -665,20 +665,20 @@ Partial Class LabHanteringF
         Me.Prov8L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Prov8L.ForeColor = System.Drawing.Color.Maroon
         Me.Prov8L.FormattingEnabled = True
-        Me.Prov8L.Location = New System.Drawing.Point(47, 537)
-        Me.Prov8L.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Prov8L.Location = New System.Drawing.Point(35, 436)
+        Me.Prov8L.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Prov8L.Name = "Prov8L"
-        Me.Prov8L.Size = New System.Drawing.Size(243, 29)
+        Me.Prov8L.Size = New System.Drawing.Size(183, 24)
         Me.Prov8L.TabIndex = 442
         '
         'ErsattaB
         '
         Me.ErsattaB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ErsattaB.ForeColor = System.Drawing.Color.Maroon
-        Me.ErsattaB.Location = New System.Drawing.Point(597, 847)
-        Me.ErsattaB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.ErsattaB.Location = New System.Drawing.Point(448, 688)
+        Me.ErsattaB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ErsattaB.Name = "ErsattaB"
-        Me.ErsattaB.Size = New System.Drawing.Size(157, 39)
+        Me.ErsattaB.Size = New System.Drawing.Size(118, 32)
         Me.ErsattaB.TabIndex = 443
         Me.ErsattaB.Text = "Spara"
         Me.ErsattaB.UseVisualStyleBackColor = True
@@ -687,29 +687,31 @@ Partial Class LabHanteringF
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(1291, 214)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.DataGridView1.Location = New System.Drawing.Point(968, 174)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.DataGridView1.Size = New System.Drawing.Size(500, 379)
+        Me.DataGridView1.Size = New System.Drawing.Size(375, 308)
         Me.DataGridView1.TabIndex = 400
         '
         'P1
         '
         Me.P1.AutoSize = True
-        Me.P1.Location = New System.Drawing.Point(651, 679)
+        Me.P1.Location = New System.Drawing.Point(488, 552)
+        Me.P1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.P1.Name = "P1"
-        Me.P1.Size = New System.Drawing.Size(16, 16)
+        Me.P1.Size = New System.Drawing.Size(16, 13)
         Me.P1.TabIndex = 444
         Me.P1.Text = "..."
         '
         'NP1
         '
         Me.NP1.AutoSize = True
-        Me.NP1.Location = New System.Drawing.Point(12, 207)
+        Me.NP1.Location = New System.Drawing.Point(9, 168)
+        Me.NP1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.NP1.Name = "NP1"
-        Me.NP1.Size = New System.Drawing.Size(14, 16)
+        Me.NP1.Size = New System.Drawing.Size(13, 13)
         Me.NP1.TabIndex = 445
         Me.NP1.Text = "1"
         '
@@ -717,9 +719,10 @@ Partial Class LabHanteringF
         '
         Me.NP2.AutoSize = True
         Me.NP2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NP2.Location = New System.Drawing.Point(11, 252)
+        Me.NP2.Location = New System.Drawing.Point(8, 205)
+        Me.NP2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.NP2.Name = "NP2"
-        Me.NP2.Size = New System.Drawing.Size(18, 20)
+        Me.NP2.Size = New System.Drawing.Size(16, 17)
         Me.NP2.TabIndex = 446
         Me.NP2.Text = "2"
         '
@@ -727,9 +730,10 @@ Partial Class LabHanteringF
         '
         Me.NP3.AutoSize = True
         Me.NP3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NP3.Location = New System.Drawing.Point(11, 305)
+        Me.NP3.Location = New System.Drawing.Point(8, 248)
+        Me.NP3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.NP3.Name = "NP3"
-        Me.NP3.Size = New System.Drawing.Size(18, 20)
+        Me.NP3.Size = New System.Drawing.Size(16, 17)
         Me.NP3.TabIndex = 447
         Me.NP3.Text = "3"
         '
@@ -737,9 +741,10 @@ Partial Class LabHanteringF
         '
         Me.NP4.AutoSize = True
         Me.NP4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NP4.Location = New System.Drawing.Point(11, 352)
+        Me.NP4.Location = New System.Drawing.Point(8, 286)
+        Me.NP4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.NP4.Name = "NP4"
-        Me.NP4.Size = New System.Drawing.Size(18, 20)
+        Me.NP4.Size = New System.Drawing.Size(16, 17)
         Me.NP4.TabIndex = 448
         Me.NP4.Text = "4"
         '
@@ -747,9 +752,10 @@ Partial Class LabHanteringF
         '
         Me.NP5.AutoSize = True
         Me.NP5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NP5.Location = New System.Drawing.Point(11, 402)
+        Me.NP5.Location = New System.Drawing.Point(8, 327)
+        Me.NP5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.NP5.Name = "NP5"
-        Me.NP5.Size = New System.Drawing.Size(18, 20)
+        Me.NP5.Size = New System.Drawing.Size(16, 17)
         Me.NP5.TabIndex = 449
         Me.NP5.Text = "5"
         '
@@ -757,9 +763,10 @@ Partial Class LabHanteringF
         '
         Me.NP6.AutoSize = True
         Me.NP6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NP6.Location = New System.Drawing.Point(11, 448)
+        Me.NP6.Location = New System.Drawing.Point(8, 364)
+        Me.NP6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.NP6.Name = "NP6"
-        Me.NP6.Size = New System.Drawing.Size(18, 20)
+        Me.NP6.Size = New System.Drawing.Size(16, 17)
         Me.NP6.TabIndex = 450
         Me.NP6.Text = "6"
         '
@@ -767,9 +774,10 @@ Partial Class LabHanteringF
         '
         Me.NP7.AutoSize = True
         Me.NP7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NP7.Location = New System.Drawing.Point(11, 495)
+        Me.NP7.Location = New System.Drawing.Point(8, 402)
+        Me.NP7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.NP7.Name = "NP7"
-        Me.NP7.Size = New System.Drawing.Size(18, 20)
+        Me.NP7.Size = New System.Drawing.Size(16, 17)
         Me.NP7.TabIndex = 451
         Me.NP7.Text = "7"
         '
@@ -777,38 +785,36 @@ Partial Class LabHanteringF
         '
         Me.NP8.AutoSize = True
         Me.NP8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NP8.Location = New System.Drawing.Point(11, 535)
+        Me.NP8.Location = New System.Drawing.Point(8, 435)
+        Me.NP8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.NP8.Name = "NP8"
-        Me.NP8.Size = New System.Drawing.Size(18, 20)
+        Me.NP8.Size = New System.Drawing.Size(16, 17)
         Me.NP8.TabIndex = 452
         Me.NP8.Text = "8"
         '
         'Sokbegrepp
         '
-        Me.Sokbegrepp.Location = New System.Drawing.Point(1693, 50)
-        Me.Sokbegrepp.Margin = New System.Windows.Forms.Padding(4)
+        Me.Sokbegrepp.Location = New System.Drawing.Point(1270, 41)
         Me.Sokbegrepp.Name = "Sokbegrepp"
-        Me.Sokbegrepp.Size = New System.Drawing.Size(143, 22)
+        Me.Sokbegrepp.Size = New System.Drawing.Size(108, 20)
         Me.Sokbegrepp.TabIndex = 457
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(1709, 28)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(1282, 23)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(95, 17)
+        Me.Label6.Size = New System.Drawing.Size(75, 13)
         Me.Label6.TabIndex = 456
         Me.Label6.Text = "Sökbegrepp"
         '
         'StatusRB
         '
         Me.StatusRB.AutoSize = True
-        Me.StatusRB.Location = New System.Drawing.Point(1693, 132)
-        Me.StatusRB.Margin = New System.Windows.Forms.Padding(4)
+        Me.StatusRB.Location = New System.Drawing.Point(1270, 107)
         Me.StatusRB.Name = "StatusRB"
-        Me.StatusRB.Size = New System.Drawing.Size(65, 20)
+        Me.StatusRB.Size = New System.Drawing.Size(55, 17)
         Me.StatusRB.TabIndex = 455
         Me.StatusRB.Text = "Status"
         Me.StatusRB.UseVisualStyleBackColor = True
@@ -818,10 +824,9 @@ Partial Class LabHanteringF
         '
         Me.ProduktKodRB.AutoSize = True
         Me.ProduktKodRB.Checked = True
-        Me.ProduktKodRB.Location = New System.Drawing.Point(1693, 103)
-        Me.ProduktKodRB.Margin = New System.Windows.Forms.Padding(4)
+        Me.ProduktKodRB.Location = New System.Drawing.Point(1270, 84)
         Me.ProduktKodRB.Name = "ProduktKodRB"
-        Me.ProduktKodRB.Size = New System.Drawing.Size(98, 20)
+        Me.ProduktKodRB.Size = New System.Drawing.Size(81, 17)
         Me.ProduktKodRB.TabIndex = 454
         Me.ProduktKodRB.TabStop = True
         Me.ProduktKodRB.Text = "ProduktKod"
@@ -830,20 +835,18 @@ Partial Class LabHanteringF
         'BatchnrRB
         '
         Me.BatchnrRB.AutoSize = True
-        Me.BatchnrRB.Location = New System.Drawing.Point(1693, 76)
-        Me.BatchnrRB.Margin = New System.Windows.Forms.Padding(4)
+        Me.BatchnrRB.Location = New System.Drawing.Point(1270, 62)
         Me.BatchnrRB.Name = "BatchnrRB"
-        Me.BatchnrRB.Size = New System.Drawing.Size(73, 20)
+        Me.BatchnrRB.Size = New System.Drawing.Size(62, 17)
         Me.BatchnrRB.TabIndex = 453
         Me.BatchnrRB.Text = "Batchnr"
         Me.BatchnrRB.UseVisualStyleBackColor = True
         '
         'FromDatumTB
         '
-        Me.FromDatumTB.Location = New System.Drawing.Point(1499, 50)
-        Me.FromDatumTB.Margin = New System.Windows.Forms.Padding(4)
+        Me.FromDatumTB.Location = New System.Drawing.Point(1124, 41)
         Me.FromDatumTB.Name = "FromDatumTB"
-        Me.FromDatumTB.Size = New System.Drawing.Size(127, 22)
+        Me.FromDatumTB.Size = New System.Drawing.Size(96, 20)
         Me.FromDatumTB.TabIndex = 459
         Me.FromDatumTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -851,10 +854,9 @@ Partial Class LabHanteringF
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(1507, 28)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(1130, 23)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(110, 17)
+        Me.Label7.Size = New System.Drawing.Size(86, 13)
         Me.Label7.TabIndex = 458
         Me.Label7.Text = "Fr.o.m. Datum"
         '
@@ -862,10 +864,10 @@ Partial Class LabHanteringF
         '
         Me.SokB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SokB.ForeColor = System.Drawing.Color.Maroon
-        Me.SokB.Location = New System.Drawing.Point(1693, 162)
-        Me.SokB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.SokB.Location = New System.Drawing.Point(1270, 132)
+        Me.SokB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.SokB.Name = "SokB"
-        Me.SokB.Size = New System.Drawing.Size(75, 30)
+        Me.SokB.Size = New System.Drawing.Size(56, 24)
         Me.SokB.TabIndex = 461
         Me.SokB.Text = "Sök"
         Me.SokB.UseVisualStyleBackColor = True
@@ -874,10 +876,10 @@ Partial Class LabHanteringF
         '
         Me.NyB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NyB.ForeColor = System.Drawing.Color.Maroon
-        Me.NyB.Location = New System.Drawing.Point(603, 795)
-        Me.NyB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.NyB.Location = New System.Drawing.Point(452, 646)
+        Me.NyB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.NyB.Name = "NyB"
-        Me.NyB.Size = New System.Drawing.Size(157, 39)
+        Me.NyB.Size = New System.Drawing.Size(118, 32)
         Me.NyB.TabIndex = 463
         Me.NyB.Text = "Ny"
         Me.NyB.UseVisualStyleBackColor = True
@@ -887,10 +889,10 @@ Partial Class LabHanteringF
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(43, 167)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label8.Location = New System.Drawing.Point(32, 136)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(91, 20)
+        Me.Label8.Size = New System.Drawing.Size(79, 17)
         Me.Label8.TabIndex = 466
         Me.Label8.Text = "Testnamn"
         '
@@ -899,10 +901,10 @@ Partial Class LabHanteringF
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(341, 167)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label9.Location = New System.Drawing.Point(256, 136)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(58, 20)
+        Me.Label9.Size = New System.Drawing.Size(51, 17)
         Me.Label9.TabIndex = 467
         Me.Label9.Text = "Värde"
         '
@@ -911,10 +913,10 @@ Partial Class LabHanteringF
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(855, 167)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label10.Location = New System.Drawing.Point(641, 136)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(76, 20)
+        Me.Label10.Size = New System.Drawing.Size(67, 17)
         Me.Label10.TabIndex = 468
         Me.Label10.Text = "Färgkod"
         '
@@ -923,10 +925,10 @@ Partial Class LabHanteringF
         Me.FKod1CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
         Me.FKod1CB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FKod1CB.FormattingEnabled = True
-        Me.FKod1CB.Location = New System.Drawing.Point(850, 196)
-        Me.FKod1CB.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.FKod1CB.Location = New System.Drawing.Point(638, 159)
+        Me.FKod1CB.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.FKod1CB.Name = "FKod1CB"
-        Me.FKod1CB.Size = New System.Drawing.Size(97, 29)
+        Me.FKod1CB.Size = New System.Drawing.Size(74, 24)
         Me.FKod1CB.TabIndex = 484
         Me.FKod1CB.Visible = False
         '
@@ -935,10 +937,10 @@ Partial Class LabHanteringF
         Me.FKod2CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
         Me.FKod2CB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FKod2CB.FormattingEnabled = True
-        Me.FKod2CB.Location = New System.Drawing.Point(850, 252)
-        Me.FKod2CB.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.FKod2CB.Location = New System.Drawing.Point(638, 205)
+        Me.FKod2CB.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.FKod2CB.Name = "FKod2CB"
-        Me.FKod2CB.Size = New System.Drawing.Size(97, 29)
+        Me.FKod2CB.Size = New System.Drawing.Size(74, 24)
         Me.FKod2CB.TabIndex = 485
         Me.FKod2CB.Visible = False
         '
@@ -947,10 +949,10 @@ Partial Class LabHanteringF
         Me.FKod4CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
         Me.FKod4CB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FKod4CB.FormattingEnabled = True
-        Me.FKod4CB.Location = New System.Drawing.Point(850, 349)
-        Me.FKod4CB.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.FKod4CB.Location = New System.Drawing.Point(638, 284)
+        Me.FKod4CB.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.FKod4CB.Name = "FKod4CB"
-        Me.FKod4CB.Size = New System.Drawing.Size(97, 29)
+        Me.FKod4CB.Size = New System.Drawing.Size(74, 24)
         Me.FKod4CB.TabIndex = 487
         Me.FKod4CB.Visible = False
         '
@@ -959,10 +961,10 @@ Partial Class LabHanteringF
         Me.FKod3CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
         Me.FKod3CB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FKod3CB.FormattingEnabled = True
-        Me.FKod3CB.Location = New System.Drawing.Point(850, 302)
-        Me.FKod3CB.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.FKod3CB.Location = New System.Drawing.Point(638, 245)
+        Me.FKod3CB.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.FKod3CB.Name = "FKod3CB"
-        Me.FKod3CB.Size = New System.Drawing.Size(97, 29)
+        Me.FKod3CB.Size = New System.Drawing.Size(74, 24)
         Me.FKod3CB.TabIndex = 486
         Me.FKod3CB.Visible = False
         '
@@ -971,10 +973,10 @@ Partial Class LabHanteringF
         Me.FKod6CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
         Me.FKod6CB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FKod6CB.FormattingEnabled = True
-        Me.FKod6CB.Location = New System.Drawing.Point(850, 445)
-        Me.FKod6CB.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.FKod6CB.Location = New System.Drawing.Point(638, 362)
+        Me.FKod6CB.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.FKod6CB.Name = "FKod6CB"
-        Me.FKod6CB.Size = New System.Drawing.Size(97, 29)
+        Me.FKod6CB.Size = New System.Drawing.Size(74, 24)
         Me.FKod6CB.TabIndex = 489
         Me.FKod6CB.Visible = False
         '
@@ -983,10 +985,10 @@ Partial Class LabHanteringF
         Me.FKod5CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
         Me.FKod5CB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FKod5CB.FormattingEnabled = True
-        Me.FKod5CB.Location = New System.Drawing.Point(850, 395)
-        Me.FKod5CB.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.FKod5CB.Location = New System.Drawing.Point(638, 321)
+        Me.FKod5CB.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.FKod5CB.Name = "FKod5CB"
-        Me.FKod5CB.Size = New System.Drawing.Size(97, 29)
+        Me.FKod5CB.Size = New System.Drawing.Size(74, 24)
         Me.FKod5CB.TabIndex = 488
         Me.FKod5CB.Visible = False
         '
@@ -995,10 +997,10 @@ Partial Class LabHanteringF
         Me.FKod8CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
         Me.FKod8CB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FKod8CB.FormattingEnabled = True
-        Me.FKod8CB.Location = New System.Drawing.Point(850, 542)
-        Me.FKod8CB.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.FKod8CB.Location = New System.Drawing.Point(638, 440)
+        Me.FKod8CB.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.FKod8CB.Name = "FKod8CB"
-        Me.FKod8CB.Size = New System.Drawing.Size(97, 29)
+        Me.FKod8CB.Size = New System.Drawing.Size(74, 24)
         Me.FKod8CB.TabIndex = 491
         Me.FKod8CB.Visible = False
         '
@@ -1007,10 +1009,10 @@ Partial Class LabHanteringF
         Me.FKod7CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
         Me.FKod7CB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FKod7CB.FormattingEnabled = True
-        Me.FKod7CB.Location = New System.Drawing.Point(850, 496)
-        Me.FKod7CB.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.FKod7CB.Location = New System.Drawing.Point(638, 403)
+        Me.FKod7CB.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.FKod7CB.Name = "FKod7CB"
-        Me.FKod7CB.Size = New System.Drawing.Size(97, 29)
+        Me.FKod7CB.Size = New System.Drawing.Size(74, 24)
         Me.FKod7CB.TabIndex = 490
         Me.FKod7CB.Visible = False
         '
@@ -1018,10 +1020,10 @@ Partial Class LabHanteringF
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(1260, 612)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label12.Location = New System.Drawing.Point(945, 497)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(46, 20)
+        Me.Label12.Size = New System.Drawing.Size(40, 17)
         Me.Label12.TabIndex = 493
         Me.Label12.Text = "Test"
         Me.Label12.Visible = False
@@ -1030,20 +1032,20 @@ Partial Class LabHanteringF
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(1355, 187)
-        Me.Label13.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label13.Location = New System.Drawing.Point(1016, 152)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(93, 20)
+        Me.Label13.Size = New System.Drawing.Size(81, 17)
         Me.Label13.TabIndex = 494
         Me.Label13.Text = "Provas nu"
         '
         'ProdKodTB
         '
         Me.ProdKodTB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ProdKodTB.Location = New System.Drawing.Point(1385, 636)
-        Me.ProdKodTB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.ProdKodTB.Location = New System.Drawing.Point(1039, 517)
+        Me.ProdKodTB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ProdKodTB.Name = "ProdKodTB"
-        Me.ProdKodTB.Size = New System.Drawing.Size(111, 24)
+        Me.ProdKodTB.Size = New System.Drawing.Size(84, 21)
         Me.ProdKodTB.TabIndex = 496
         Me.ProdKodTB.Text = "Alla"
         Me.ProdKodTB.Visible = False
@@ -1052,10 +1054,10 @@ Partial Class LabHanteringF
         '
         Me.ProdKodL.AutoSize = True
         Me.ProdKodL.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ProdKodL.Location = New System.Drawing.Point(1383, 610)
-        Me.ProdKodL.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.ProdKodL.Location = New System.Drawing.Point(1037, 496)
+        Me.ProdKodL.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.ProdKodL.Name = "ProdKodL"
-        Me.ProdKodL.Size = New System.Drawing.Size(97, 18)
+        Me.ProdKodL.Size = New System.Drawing.Size(81, 15)
         Me.ProdKodL.TabIndex = 497
         Me.ProdKodL.Text = "ProduktKod"
         Me.ProdKodL.Visible = False
@@ -1063,10 +1065,10 @@ Partial Class LabHanteringF
         'BatchTB
         '
         Me.BatchTB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BatchTB.Location = New System.Drawing.Point(1504, 636)
-        Me.BatchTB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.BatchTB.Location = New System.Drawing.Point(1128, 517)
+        Me.BatchTB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.BatchTB.Name = "BatchTB"
-        Me.BatchTB.Size = New System.Drawing.Size(100, 24)
+        Me.BatchTB.Size = New System.Drawing.Size(76, 21)
         Me.BatchTB.TabIndex = 498
         Me.BatchTB.Text = "Alla"
         Me.BatchTB.Visible = False
@@ -1075,10 +1077,10 @@ Partial Class LabHanteringF
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(1531, 610)
-        Me.Label14.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label14.Location = New System.Drawing.Point(1148, 496)
+        Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(51, 18)
+        Me.Label14.Size = New System.Drawing.Size(43, 15)
         Me.Label14.TabIndex = 499
         Me.Label14.Text = "Batch"
         Me.Label14.Visible = False
@@ -1087,10 +1089,10 @@ Partial Class LabHanteringF
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(1640, 612)
-        Me.Label15.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label15.Location = New System.Drawing.Point(1230, 497)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(70, 18)
+        Me.Label15.Size = New System.Drawing.Size(59, 15)
         Me.Label15.TabIndex = 500
         Me.Label15.Text = "Färgkod"
         Me.Label15.Visible = False
@@ -1098,10 +1100,10 @@ Partial Class LabHanteringF
         'FargkodJamTB
         '
         Me.FargkodJamTB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FargkodJamTB.Location = New System.Drawing.Point(1628, 636)
-        Me.FargkodJamTB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.FargkodJamTB.Location = New System.Drawing.Point(1221, 517)
+        Me.FargkodJamTB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.FargkodJamTB.Name = "FargkodJamTB"
-        Me.FargkodJamTB.Size = New System.Drawing.Size(100, 24)
+        Me.FargkodJamTB.Size = New System.Drawing.Size(76, 21)
         Me.FargkodJamTB.TabIndex = 501
         Me.FargkodJamTB.Text = "Alla"
         Me.FargkodJamTB.Visible = False
@@ -1109,21 +1111,21 @@ Partial Class LabHanteringF
         'DataGridView2
         '
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(1075, 672)
-        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.DataGridView2.Location = New System.Drawing.Point(806, 546)
+        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.RowHeadersWidth = 51
-        Me.DataGridView2.Size = New System.Drawing.Size(775, 249)
+        Me.DataGridView2.Size = New System.Drawing.Size(581, 202)
         Me.DataGridView2.TabIndex = 492
         '
         'Label16
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(1040, 636)
-        Me.Label16.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label16.Location = New System.Drawing.Point(780, 517)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(78, 20)
+        Me.Label16.Size = New System.Drawing.Size(66, 17)
         Me.Label16.TabIndex = 502
         Me.Label16.Text = "Statistik"
         '
@@ -1131,10 +1133,10 @@ Partial Class LabHanteringF
         '
         Me.SokSammanB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SokSammanB.ForeColor = System.Drawing.Color.Maroon
-        Me.SokSammanB.Location = New System.Drawing.Point(1757, 610)
-        Me.SokSammanB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.SokSammanB.Location = New System.Drawing.Point(1318, 496)
+        Me.SokSammanB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.SokSammanB.Name = "SokSammanB"
-        Me.SokSammanB.Size = New System.Drawing.Size(61, 25)
+        Me.SokSammanB.Size = New System.Drawing.Size(46, 20)
         Me.SokSammanB.TabIndex = 503
         Me.SokSammanB.Text = "Sök"
         Me.SokSammanB.UseVisualStyleBackColor = True
@@ -1146,20 +1148,20 @@ Partial Class LabHanteringF
         Me.TestnamnTB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TestnamnTB.ForeColor = System.Drawing.Color.Maroon
         Me.TestnamnTB.FormattingEnabled = True
-        Me.TestnamnTB.Location = New System.Drawing.Point(1212, 636)
-        Me.TestnamnTB.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TestnamnTB.Location = New System.Drawing.Point(909, 517)
+        Me.TestnamnTB.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TestnamnTB.Name = "TestnamnTB"
-        Me.TestnamnTB.Size = New System.Drawing.Size(151, 26)
+        Me.TestnamnTB.Size = New System.Drawing.Size(114, 23)
         Me.TestnamnTB.TabIndex = 504
         Me.TestnamnTB.Visible = False
         '
         'ResultatRegTB
         '
         Me.ResultatRegTB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ResultatRegTB.Location = New System.Drawing.Point(1223, 87)
-        Me.ResultatRegTB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.ResultatRegTB.Location = New System.Drawing.Point(917, 71)
+        Me.ResultatRegTB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ResultatRegTB.Name = "ResultatRegTB"
-        Me.ResultatRegTB.Size = New System.Drawing.Size(108, 24)
+        Me.ResultatRegTB.Size = New System.Drawing.Size(82, 21)
         Me.ResultatRegTB.TabIndex = 506
         Me.ResultatRegTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ResultatRegTB.Visible = False
@@ -1169,10 +1171,10 @@ Partial Class LabHanteringF
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Cooper Black", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.Black
-        Me.Label17.Location = New System.Drawing.Point(1237, 66)
-        Me.Label17.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label17.Location = New System.Drawing.Point(928, 54)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(71, 17)
+        Me.Label17.Size = New System.Drawing.Size(57, 14)
         Me.Label17.TabIndex = 505
         Me.Label17.Text = "Batchnr"
         Me.Label17.Visible = False
@@ -1182,10 +1184,10 @@ Partial Class LabHanteringF
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.Black
-        Me.Label18.Location = New System.Drawing.Point(1112, 21)
-        Me.Label18.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label18.Location = New System.Drawing.Point(834, 17)
+        Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(343, 35)
+        Me.Label18.Size = New System.Drawing.Size(277, 27)
         Me.Label18.TabIndex = 507
         Me.Label18.Text = "Resultat Registrering"
         Me.Label18.Visible = False
@@ -1194,10 +1196,10 @@ Partial Class LabHanteringF
         '
         Me.StatusTB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StatusTB.FormattingEnabled = True
-        Me.StatusTB.Location = New System.Drawing.Point(715, 115)
-        Me.StatusTB.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.StatusTB.Location = New System.Drawing.Point(536, 93)
+        Me.StatusTB.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.StatusTB.Name = "StatusTB"
-        Me.StatusTB.Size = New System.Drawing.Size(125, 28)
+        Me.StatusTB.Size = New System.Drawing.Size(95, 25)
         Me.StatusTB.TabIndex = 509
         '
         'PagoendeCB
@@ -1205,10 +1207,10 @@ Partial Class LabHanteringF
         Me.PagoendeCB.AutoSize = True
         Me.PagoendeCB.Checked = True
         Me.PagoendeCB.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.PagoendeCB.Location = New System.Drawing.Point(1499, 91)
-        Me.PagoendeCB.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PagoendeCB.Location = New System.Drawing.Point(1124, 74)
+        Me.PagoendeCB.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.PagoendeCB.Name = "PagoendeCB"
-        Me.PagoendeCB.Size = New System.Drawing.Size(137, 20)
+        Me.PagoendeCB.Size = New System.Drawing.Size(110, 17)
         Me.PagoendeCB.TabIndex = 510
         Me.PagoendeCB.Text = "Endast pågående"
         Me.PagoendeCB.UseVisualStyleBackColor = True
@@ -1217,10 +1219,10 @@ Partial Class LabHanteringF
         '
         Me.BatchSokB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BatchSokB.ForeColor = System.Drawing.Color.Maroon
-        Me.BatchSokB.Location = New System.Drawing.Point(1223, 114)
-        Me.BatchSokB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.BatchSokB.Location = New System.Drawing.Point(917, 93)
+        Me.BatchSokB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.BatchSokB.Name = "BatchSokB"
-        Me.BatchSokB.Size = New System.Drawing.Size(108, 30)
+        Me.BatchSokB.Size = New System.Drawing.Size(81, 24)
         Me.BatchSokB.TabIndex = 511
         Me.BatchSokB.Text = "Sök"
         Me.BatchSokB.UseVisualStyleBackColor = True
@@ -1233,10 +1235,10 @@ Partial Class LabHanteringF
         Me.Info1L.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Info1L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Info1L.ForeColor = System.Drawing.Color.Black
-        Me.Info1L.Location = New System.Drawing.Point(985, 191)
-        Me.Info1L.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Info1L.Location = New System.Drawing.Point(739, 155)
+        Me.Info1L.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Info1L.Name = "Info1L"
-        Me.Info1L.Size = New System.Drawing.Size(141, 32)
+        Me.Info1L.Size = New System.Drawing.Size(106, 26)
         Me.Info1L.TabIndex = 513
         Me.Info1L.Text = " "
         Me.Info1L.Visible = False
@@ -1246,10 +1248,10 @@ Partial Class LabHanteringF
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.Black
-        Me.Label21.Location = New System.Drawing.Point(1006, 162)
-        Me.Label21.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label21.Location = New System.Drawing.Point(754, 132)
+        Me.Label21.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(98, 20)
+        Me.Label21.Size = New System.Drawing.Size(85, 17)
         Me.Label21.TabIndex = 515
         Me.Label21.Text = "Provmetod"
         '
@@ -1260,10 +1262,10 @@ Partial Class LabHanteringF
         Me.Info2l.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Info2l.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Info2l.ForeColor = System.Drawing.Color.Black
-        Me.Info2l.Location = New System.Drawing.Point(985, 249)
-        Me.Info2l.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Info2l.Location = New System.Drawing.Point(739, 202)
+        Me.Info2l.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Info2l.Name = "Info2l"
-        Me.Info2l.Size = New System.Drawing.Size(142, 32)
+        Me.Info2l.Size = New System.Drawing.Size(106, 26)
         Me.Info2l.TabIndex = 517
         Me.Info2l.Text = " "
         Me.Info2l.Visible = False
@@ -1275,10 +1277,10 @@ Partial Class LabHanteringF
         Me.Info3L.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Info3L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Info3L.ForeColor = System.Drawing.Color.Black
-        Me.Info3L.Location = New System.Drawing.Point(985, 296)
-        Me.Info3L.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Info3L.Location = New System.Drawing.Point(739, 240)
+        Me.Info3L.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Info3L.Name = "Info3L"
-        Me.Info3L.Size = New System.Drawing.Size(141, 32)
+        Me.Info3L.Size = New System.Drawing.Size(106, 26)
         Me.Info3L.TabIndex = 519
         Me.Info3L.Text = " "
         Me.Info3L.Visible = False
@@ -1290,10 +1292,10 @@ Partial Class LabHanteringF
         Me.Info4L.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Info4L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Info4L.ForeColor = System.Drawing.Color.Black
-        Me.Info4L.Location = New System.Drawing.Point(985, 351)
-        Me.Info4L.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Info4L.Location = New System.Drawing.Point(739, 285)
+        Me.Info4L.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Info4L.Name = "Info4L"
-        Me.Info4L.Size = New System.Drawing.Size(141, 32)
+        Me.Info4L.Size = New System.Drawing.Size(106, 26)
         Me.Info4L.TabIndex = 521
         Me.Info4L.Text = " "
         Me.Info4L.Visible = False
@@ -1305,10 +1307,10 @@ Partial Class LabHanteringF
         Me.Info5L.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Info5L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Info5L.ForeColor = System.Drawing.Color.Black
-        Me.Info5L.Location = New System.Drawing.Point(985, 400)
-        Me.Info5L.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Info5L.Location = New System.Drawing.Point(739, 325)
+        Me.Info5L.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Info5L.Name = "Info5L"
-        Me.Info5L.Size = New System.Drawing.Size(142, 32)
+        Me.Info5L.Size = New System.Drawing.Size(106, 26)
         Me.Info5L.TabIndex = 523
         Me.Info5L.Text = " "
         Me.Info5L.Visible = False
@@ -1320,10 +1322,10 @@ Partial Class LabHanteringF
         Me.Info6L.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Info6L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Info6L.ForeColor = System.Drawing.Color.Black
-        Me.Info6L.Location = New System.Drawing.Point(985, 445)
-        Me.Info6L.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Info6L.Location = New System.Drawing.Point(739, 362)
+        Me.Info6L.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Info6L.Name = "Info6L"
-        Me.Info6L.Size = New System.Drawing.Size(142, 32)
+        Me.Info6L.Size = New System.Drawing.Size(106, 26)
         Me.Info6L.TabIndex = 525
         Me.Info6L.Text = " "
         Me.Info6L.Visible = False
@@ -1335,10 +1337,10 @@ Partial Class LabHanteringF
         Me.Info7L.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Info7L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Info7L.ForeColor = System.Drawing.Color.Black
-        Me.Info7L.Location = New System.Drawing.Point(985, 495)
-        Me.Info7L.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Info7L.Location = New System.Drawing.Point(739, 402)
+        Me.Info7L.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Info7L.Name = "Info7L"
-        Me.Info7L.Size = New System.Drawing.Size(142, 32)
+        Me.Info7L.Size = New System.Drawing.Size(106, 26)
         Me.Info7L.TabIndex = 527
         Me.Info7L.Text = " "
         Me.Info7L.Visible = False
@@ -1350,10 +1352,10 @@ Partial Class LabHanteringF
         Me.Info8L.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Info8L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Info8L.ForeColor = System.Drawing.Color.Black
-        Me.Info8L.Location = New System.Drawing.Point(985, 542)
-        Me.Info8L.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Info8L.Location = New System.Drawing.Point(739, 440)
+        Me.Info8L.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Info8L.Name = "Info8L"
-        Me.Info8L.Size = New System.Drawing.Size(142, 32)
+        Me.Info8L.Size = New System.Drawing.Size(106, 26)
         Me.Info8L.TabIndex = 529
         Me.Info8L.Text = " "
         Me.Info8L.Visible = False
@@ -1361,10 +1363,10 @@ Partial Class LabHanteringF
         'EditeringsbarCB
         '
         Me.EditeringsbarCB.AutoSize = True
-        Me.EditeringsbarCB.Location = New System.Drawing.Point(23, 592)
-        Me.EditeringsbarCB.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.EditeringsbarCB.Location = New System.Drawing.Point(17, 481)
+        Me.EditeringsbarCB.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.EditeringsbarCB.Name = "EditeringsbarCB"
-        Me.EditeringsbarCB.Size = New System.Drawing.Size(109, 20)
+        Me.EditeringsbarCB.Size = New System.Drawing.Size(87, 17)
         Me.EditeringsbarCB.TabIndex = 530
         Me.EditeringsbarCB.Text = "Editeringsbar"
         Me.EditeringsbarCB.UseVisualStyleBackColor = True
@@ -1373,10 +1375,10 @@ Partial Class LabHanteringF
         '
         Me.Jam1B.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Jam1B.ForeColor = System.Drawing.Color.Maroon
-        Me.Jam1B.Location = New System.Drawing.Point(1152, 194)
-        Me.Jam1B.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.Jam1B.Location = New System.Drawing.Point(864, 158)
+        Me.Jam1B.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Jam1B.Name = "Jam1B"
-        Me.Jam1B.Size = New System.Drawing.Size(83, 30)
+        Me.Jam1B.Size = New System.Drawing.Size(62, 24)
         Me.Jam1B.TabIndex = 531
         Me.Jam1B.Text = "Jämför"
         Me.Jam1B.UseVisualStyleBackColor = True
@@ -1386,10 +1388,10 @@ Partial Class LabHanteringF
         '
         Me.Jam2B.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Jam2B.ForeColor = System.Drawing.Color.Maroon
-        Me.Jam2B.Location = New System.Drawing.Point(1152, 247)
-        Me.Jam2B.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.Jam2B.Location = New System.Drawing.Point(864, 201)
+        Me.Jam2B.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Jam2B.Name = "Jam2B"
-        Me.Jam2B.Size = New System.Drawing.Size(83, 30)
+        Me.Jam2B.Size = New System.Drawing.Size(62, 24)
         Me.Jam2B.TabIndex = 532
         Me.Jam2B.Text = "Jämför"
         Me.Jam2B.UseVisualStyleBackColor = True
@@ -1399,10 +1401,10 @@ Partial Class LabHanteringF
         '
         Me.Jam3B.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Jam3B.ForeColor = System.Drawing.Color.Maroon
-        Me.Jam3B.Location = New System.Drawing.Point(1152, 296)
-        Me.Jam3B.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.Jam3B.Location = New System.Drawing.Point(864, 240)
+        Me.Jam3B.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Jam3B.Name = "Jam3B"
-        Me.Jam3B.Size = New System.Drawing.Size(83, 30)
+        Me.Jam3B.Size = New System.Drawing.Size(62, 24)
         Me.Jam3B.TabIndex = 533
         Me.Jam3B.Text = "Jämför"
         Me.Jam3B.UseVisualStyleBackColor = True
@@ -1412,10 +1414,10 @@ Partial Class LabHanteringF
         '
         Me.Jam4B.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Jam4B.ForeColor = System.Drawing.Color.Maroon
-        Me.Jam4B.Location = New System.Drawing.Point(1152, 351)
-        Me.Jam4B.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.Jam4B.Location = New System.Drawing.Point(864, 285)
+        Me.Jam4B.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Jam4B.Name = "Jam4B"
-        Me.Jam4B.Size = New System.Drawing.Size(83, 30)
+        Me.Jam4B.Size = New System.Drawing.Size(62, 24)
         Me.Jam4B.TabIndex = 534
         Me.Jam4B.Text = "Jämför"
         Me.Jam4B.UseVisualStyleBackColor = True
@@ -1425,10 +1427,10 @@ Partial Class LabHanteringF
         '
         Me.Jam5B.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Jam5B.ForeColor = System.Drawing.Color.Maroon
-        Me.Jam5B.Location = New System.Drawing.Point(1152, 397)
-        Me.Jam5B.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.Jam5B.Location = New System.Drawing.Point(864, 323)
+        Me.Jam5B.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Jam5B.Name = "Jam5B"
-        Me.Jam5B.Size = New System.Drawing.Size(83, 30)
+        Me.Jam5B.Size = New System.Drawing.Size(62, 24)
         Me.Jam5B.TabIndex = 535
         Me.Jam5B.Text = "Jämför"
         Me.Jam5B.UseVisualStyleBackColor = True
@@ -1438,10 +1440,10 @@ Partial Class LabHanteringF
         '
         Me.Jam6B.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Jam6B.ForeColor = System.Drawing.Color.Maroon
-        Me.Jam6B.Location = New System.Drawing.Point(1152, 450)
-        Me.Jam6B.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.Jam6B.Location = New System.Drawing.Point(864, 366)
+        Me.Jam6B.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Jam6B.Name = "Jam6B"
-        Me.Jam6B.Size = New System.Drawing.Size(83, 30)
+        Me.Jam6B.Size = New System.Drawing.Size(62, 24)
         Me.Jam6B.TabIndex = 536
         Me.Jam6B.Text = "Jämför"
         Me.Jam6B.UseVisualStyleBackColor = True
@@ -1451,10 +1453,10 @@ Partial Class LabHanteringF
         '
         Me.Jam7B.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Jam7B.ForeColor = System.Drawing.Color.Maroon
-        Me.Jam7B.Location = New System.Drawing.Point(1152, 495)
-        Me.Jam7B.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.Jam7B.Location = New System.Drawing.Point(864, 402)
+        Me.Jam7B.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Jam7B.Name = "Jam7B"
-        Me.Jam7B.Size = New System.Drawing.Size(83, 30)
+        Me.Jam7B.Size = New System.Drawing.Size(62, 24)
         Me.Jam7B.TabIndex = 537
         Me.Jam7B.Text = "Jämför"
         Me.Jam7B.UseVisualStyleBackColor = True
@@ -1464,10 +1466,10 @@ Partial Class LabHanteringF
         '
         Me.Jam8B.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Jam8B.ForeColor = System.Drawing.Color.Maroon
-        Me.Jam8B.Location = New System.Drawing.Point(1152, 539)
-        Me.Jam8B.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.Jam8B.Location = New System.Drawing.Point(864, 438)
+        Me.Jam8B.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Jam8B.Name = "Jam8B"
-        Me.Jam8B.Size = New System.Drawing.Size(83, 30)
+        Me.Jam8B.Size = New System.Drawing.Size(62, 24)
         Me.Jam8B.TabIndex = 538
         Me.Jam8B.Text = "Jämför"
         Me.Jam8B.UseVisualStyleBackColor = True
@@ -1479,20 +1481,20 @@ Partial Class LabHanteringF
         'TestTB
         '
         Me.TestTB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TestTB.Location = New System.Drawing.Point(1597, 114)
-        Me.TestTB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.TestTB.Location = New System.Drawing.Point(1198, 93)
+        Me.TestTB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TestTB.Name = "TestTB"
-        Me.TestTB.Size = New System.Drawing.Size(28, 24)
+        Me.TestTB.Size = New System.Drawing.Size(22, 21)
         Me.TestTB.TabIndex = 539
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(1496, 119)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label11.Location = New System.Drawing.Point(1122, 97)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(101, 16)
+        Me.Label11.Size = New System.Drawing.Size(79, 13)
         Me.Label11.TabIndex = 540
         Me.Label11.Text = "Uppdateras om"
         '
@@ -1501,30 +1503,30 @@ Partial Class LabHanteringF
         Me.ProvstatusCB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ProvstatusCB.FormattingEnabled = True
         Me.ProvstatusCB.Items.AddRange(New Object() {"Pågående", "Godkänd", "Underkänd", "Omarbetas"})
-        Me.ProvstatusCB.Location = New System.Drawing.Point(845, 116)
-        Me.ProvstatusCB.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ProvstatusCB.Location = New System.Drawing.Point(634, 94)
+        Me.ProvstatusCB.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ProvstatusCB.Name = "ProvstatusCB"
-        Me.ProvstatusCB.Size = New System.Drawing.Size(125, 28)
+        Me.ProvstatusCB.Size = New System.Drawing.Size(95, 25)
         Me.ProvstatusCB.TabIndex = 541
         '
         'Label19
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(856, 90)
-        Me.Label19.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label19.Location = New System.Drawing.Point(642, 73)
+        Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(91, 18)
+        Me.Label19.Size = New System.Drawing.Size(75, 15)
         Me.Label19.TabIndex = 542
         Me.Label19.Text = "ProvStatus"
         '
         'ProvSenasteTB
         '
         Me.ProvSenasteTB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ProvSenasteTB.Location = New System.Drawing.Point(978, 117)
-        Me.ProvSenasteTB.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.ProvSenasteTB.Location = New System.Drawing.Point(734, 95)
+        Me.ProvSenasteTB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ProvSenasteTB.Name = "ProvSenasteTB"
-        Me.ProvSenasteTB.Size = New System.Drawing.Size(148, 24)
+        Me.ProvSenasteTB.Size = New System.Drawing.Size(112, 21)
         Me.ProvSenasteTB.TabIndex = 543
         Me.ProvSenasteTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -1532,10 +1534,10 @@ Partial Class LabHanteringF
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(976, 90)
-        Me.Label20.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label20.Location = New System.Drawing.Point(732, 73)
+        Me.Label20.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(150, 18)
+        Me.Label20.Size = New System.Drawing.Size(130, 15)
         Me.Label20.TabIndex = 544
         Me.Label20.Text = "SenastUppdatering"
         '
@@ -1544,10 +1546,10 @@ Partial Class LabHanteringF
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.Color.Black
-        Me.Label22.Location = New System.Drawing.Point(24, 639)
-        Me.Label22.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label22.Location = New System.Drawing.Point(18, 519)
+        Me.Label22.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(394, 18)
+        Me.Label22.Size = New System.Drawing.Size(324, 15)
         Me.Label22.TabIndex = 545
         Me.Label22.Text = "Om Testnamn finns i ljusröd visas  en kommentar vid klick!"
         '
@@ -1556,10 +1558,10 @@ Partial Class LabHanteringF
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.ForeColor = System.Drawing.Color.Black
-        Me.Label23.Location = New System.Drawing.Point(427, 167)
-        Me.Label23.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label23.Location = New System.Drawing.Point(320, 136)
+        Me.Label23.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(167, 20)
+        Me.Label23.Size = New System.Drawing.Size(145, 17)
         Me.Label23.TabIndex = 546
         Me.Label23.Text = "Enhet/Provkriterier"
         '
@@ -1570,10 +1572,10 @@ Partial Class LabHanteringF
         Me.MaxMin1L.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.MaxMin1L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MaxMin1L.ForeColor = System.Drawing.Color.Black
-        Me.MaxMin1L.Location = New System.Drawing.Point(642, 195)
-        Me.MaxMin1L.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.MaxMin1L.Location = New System.Drawing.Point(482, 158)
+        Me.MaxMin1L.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaxMin1L.Name = "MaxMin1L"
-        Me.MaxMin1L.Size = New System.Drawing.Size(179, 32)
+        Me.MaxMin1L.Size = New System.Drawing.Size(134, 26)
         Me.MaxMin1L.TabIndex = 547
         Me.MaxMin1L.Visible = False
         '
@@ -1582,10 +1584,10 @@ Partial Class LabHanteringF
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.ForeColor = System.Drawing.Color.Black
-        Me.Label24.Location = New System.Drawing.Point(650, 167)
-        Me.Label24.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label24.Location = New System.Drawing.Point(488, 136)
+        Me.Label24.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(79, 20)
+        Me.Label24.Size = New System.Drawing.Size(66, 17)
         Me.Label24.TabIndex = 548
         Me.Label24.Text = "Max/min"
         '
@@ -1596,10 +1598,10 @@ Partial Class LabHanteringF
         Me.Maxmin2l.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Maxmin2l.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Maxmin2l.ForeColor = System.Drawing.Color.Black
-        Me.Maxmin2l.Location = New System.Drawing.Point(642, 249)
-        Me.Maxmin2l.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Maxmin2l.Location = New System.Drawing.Point(482, 202)
+        Me.Maxmin2l.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Maxmin2l.Name = "Maxmin2l"
-        Me.Maxmin2l.Size = New System.Drawing.Size(173, 32)
+        Me.Maxmin2l.Size = New System.Drawing.Size(130, 26)
         Me.Maxmin2l.TabIndex = 549
         Me.Maxmin2l.Visible = False
         '
@@ -1610,10 +1612,10 @@ Partial Class LabHanteringF
         Me.Maxmin3l.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Maxmin3l.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Maxmin3l.ForeColor = System.Drawing.Color.Black
-        Me.Maxmin3l.Location = New System.Drawing.Point(642, 298)
-        Me.Maxmin3l.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Maxmin3l.Location = New System.Drawing.Point(482, 242)
+        Me.Maxmin3l.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Maxmin3l.Name = "Maxmin3l"
-        Me.Maxmin3l.Size = New System.Drawing.Size(173, 32)
+        Me.Maxmin3l.Size = New System.Drawing.Size(130, 26)
         Me.Maxmin3l.TabIndex = 550
         Me.Maxmin3l.Visible = False
         '
@@ -1624,10 +1626,10 @@ Partial Class LabHanteringF
         Me.Maxmin4l.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Maxmin4l.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Maxmin4l.ForeColor = System.Drawing.Color.Black
-        Me.Maxmin4l.Location = New System.Drawing.Point(642, 346)
-        Me.Maxmin4l.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Maxmin4l.Location = New System.Drawing.Point(482, 281)
+        Me.Maxmin4l.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Maxmin4l.Name = "Maxmin4l"
-        Me.Maxmin4l.Size = New System.Drawing.Size(173, 32)
+        Me.Maxmin4l.Size = New System.Drawing.Size(130, 26)
         Me.Maxmin4l.TabIndex = 551
         Me.Maxmin4l.Visible = False
         '
@@ -1638,10 +1640,10 @@ Partial Class LabHanteringF
         Me.Maxmin5l.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Maxmin5l.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Maxmin5l.ForeColor = System.Drawing.Color.Black
-        Me.Maxmin5l.Location = New System.Drawing.Point(636, 394)
-        Me.Maxmin5l.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Maxmin5l.Location = New System.Drawing.Point(477, 320)
+        Me.Maxmin5l.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Maxmin5l.Name = "Maxmin5l"
-        Me.Maxmin5l.Size = New System.Drawing.Size(179, 32)
+        Me.Maxmin5l.Size = New System.Drawing.Size(134, 26)
         Me.Maxmin5l.TabIndex = 552
         Me.Maxmin5l.Visible = False
         '
@@ -1652,10 +1654,10 @@ Partial Class LabHanteringF
         Me.Maxmin6l.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Maxmin6l.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Maxmin6l.ForeColor = System.Drawing.Color.Black
-        Me.Maxmin6l.Location = New System.Drawing.Point(636, 443)
-        Me.Maxmin6l.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Maxmin6l.Location = New System.Drawing.Point(477, 360)
+        Me.Maxmin6l.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Maxmin6l.Name = "Maxmin6l"
-        Me.Maxmin6l.Size = New System.Drawing.Size(179, 32)
+        Me.Maxmin6l.Size = New System.Drawing.Size(134, 26)
         Me.Maxmin6l.TabIndex = 553
         Me.Maxmin6l.Visible = False
         '
@@ -1666,10 +1668,10 @@ Partial Class LabHanteringF
         Me.MaxMin7L.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.MaxMin7L.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MaxMin7L.ForeColor = System.Drawing.Color.Black
-        Me.MaxMin7L.Location = New System.Drawing.Point(636, 491)
-        Me.MaxMin7L.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.MaxMin7L.Location = New System.Drawing.Point(477, 399)
+        Me.MaxMin7L.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaxMin7L.Name = "MaxMin7L"
-        Me.MaxMin7L.Size = New System.Drawing.Size(179, 32)
+        Me.MaxMin7L.Size = New System.Drawing.Size(134, 26)
         Me.MaxMin7L.TabIndex = 554
         Me.MaxMin7L.Visible = False
         '
@@ -1680,21 +1682,21 @@ Partial Class LabHanteringF
         Me.Maxmin8l.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Maxmin8l.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Maxmin8l.ForeColor = System.Drawing.Color.Black
-        Me.Maxmin8l.Location = New System.Drawing.Point(636, 544)
-        Me.Maxmin8l.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Maxmin8l.Location = New System.Drawing.Point(477, 442)
+        Me.Maxmin8l.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Maxmin8l.Name = "Maxmin8l"
-        Me.Maxmin8l.Size = New System.Drawing.Size(179, 32)
+        Me.Maxmin8l.Size = New System.Drawing.Size(134, 26)
         Me.Maxmin8l.TabIndex = 555
         Me.Maxmin8l.Visible = False
         '
         'LabHanteringF
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.AutoSize = True
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.ClientSize = New System.Drawing.Size(1924, 935)
+        Me.ClientSize = New System.Drawing.Size(1443, 760)
         Me.Controls.Add(Me.Maxmin8l)
         Me.Controls.Add(Me.MaxMin7L)
         Me.Controls.Add(Me.Maxmin6l)
@@ -1821,7 +1823,8 @@ Partial Class LabHanteringF
         Me.Controls.Add(Me.Label26)
         Me.Controls.Add(Me.Huvud)
         Me.ForeColor = System.Drawing.Color.Maroon
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "LabHanteringF"
         Me.Text = "Lab Tester"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

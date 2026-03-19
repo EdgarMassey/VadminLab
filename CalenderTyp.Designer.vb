@@ -22,6 +22,7 @@ Partial Class CalenderTypF
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CalenderTypF))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.SparaB = New System.Windows.Forms.Button()
         Me.TypTB = New System.Windows.Forms.TextBox()
@@ -42,7 +43,7 @@ Partial Class CalenderTypF
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(187, 103)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.Size = New System.Drawing.Size(188, 176)
@@ -64,7 +65,7 @@ Partial Class CalenderTypF
         'TypTB
         '
         Me.TypTB.Location = New System.Drawing.Point(220, 80)
-        Me.TypTB.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TypTB.Margin = New System.Windows.Forms.Padding(2)
         Me.TypTB.Name = "TypTB"
         Me.TypTB.Size = New System.Drawing.Size(126, 20)
         Me.TypTB.TabIndex = 405
@@ -175,7 +176,8 @@ Partial Class CalenderTypF
         Me.Controls.Add(Me.TypTB)
         Me.Controls.Add(Me.SparaB)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "CalenderTypF"
         Me.Text = "CalenderTypAndOwners"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

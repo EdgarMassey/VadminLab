@@ -22,6 +22,7 @@ Partial Class BatchreporterF
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BatchreporterF))
         Me.Ver = New System.Windows.Forms.GroupBox()
         Me.Gnamn = New System.Windows.Forms.Label()
         Me.KlientIdl = New System.Windows.Forms.Label()
@@ -193,7 +194,8 @@ Partial Class BatchreporterF
         Me.Controls.Add(Me.AvslutaB)
         Me.Controls.Add(Me.Huvud)
         Me.Controls.Add(Me.Ver)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "BatchreporterF"
         Me.Text = "Batch reporter"
         Me.Ver.ResumeLayout(False)

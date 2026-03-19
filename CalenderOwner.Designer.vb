@@ -22,6 +22,7 @@ Partial Class CalenderOwnerF
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CalenderOwnerF))
         Me.SparaB = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.RaderaB = New System.Windows.Forms.Button()
@@ -39,10 +40,9 @@ Partial Class CalenderOwnerF
         Me.SparaB.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.SparaB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SparaB.ForeColor = System.Drawing.Color.Maroon
-        Me.SparaB.Location = New System.Drawing.Point(58, 200)
-        Me.SparaB.Margin = New System.Windows.Forms.Padding(4)
+        Me.SparaB.Location = New System.Drawing.Point(44, 162)
         Me.SparaB.Name = "SparaB"
-        Me.SparaB.Size = New System.Drawing.Size(221, 31)
+        Me.SparaB.Size = New System.Drawing.Size(166, 25)
         Me.SparaB.TabIndex = 406
         Me.SparaB.Text = "Spara "
         Me.SparaB.UseVisualStyleBackColor = False
@@ -50,59 +50,55 @@ Partial Class CalenderOwnerF
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(359, 69)
+        Me.DataGridView1.Location = New System.Drawing.Point(269, 56)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.Size = New System.Drawing.Size(250, 216)
+        Me.DataGridView1.Size = New System.Drawing.Size(188, 176)
         Me.DataGridView1.TabIndex = 405
         '
         'RaderaB
         '
         Me.RaderaB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RaderaB.ForeColor = System.Drawing.Color.Maroon
-        Me.RaderaB.Location = New System.Drawing.Point(58, 254)
-        Me.RaderaB.Margin = New System.Windows.Forms.Padding(4)
+        Me.RaderaB.Location = New System.Drawing.Point(44, 206)
         Me.RaderaB.Name = "RaderaB"
-        Me.RaderaB.Size = New System.Drawing.Size(219, 31)
+        Me.RaderaB.Size = New System.Drawing.Size(164, 25)
         Me.RaderaB.TabIndex = 409
         Me.RaderaB.Text = "Radera"
         Me.RaderaB.UseVisualStyleBackColor = True
         '
         'OwnerTB
         '
-        Me.OwnerTB.Location = New System.Drawing.Point(164, 69)
-        Me.OwnerTB.Margin = New System.Windows.Forms.Padding(4)
+        Me.OwnerTB.Location = New System.Drawing.Point(123, 56)
         Me.OwnerTB.Name = "OwnerTB"
-        Me.OwnerTB.Size = New System.Drawing.Size(135, 22)
+        Me.OwnerTB.Size = New System.Drawing.Size(102, 20)
         Me.OwnerTB.TabIndex = 408
         '
         'Label26
         '
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(86, 45)
-        Me.Label26.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label26.Location = New System.Drawing.Point(64, 37)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(52, 20)
+        Me.Label26.Size = New System.Drawing.Size(45, 17)
         Me.Label26.TabIndex = 407
         Me.Label26.Text = "Order"
         '
         'OrderTB
         '
-        Me.OrderTB.Location = New System.Drawing.Point(68, 69)
-        Me.OrderTB.Margin = New System.Windows.Forms.Padding(4)
+        Me.OrderTB.Location = New System.Drawing.Point(51, 56)
         Me.OrderTB.Name = "OrderTB"
-        Me.OrderTB.Size = New System.Drawing.Size(88, 22)
+        Me.OrderTB.Size = New System.Drawing.Size(67, 20)
         Me.OrderTB.TabIndex = 410
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(160, 45)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(120, 37)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(58, 20)
+        Me.Label1.Size = New System.Drawing.Size(49, 17)
         Me.Label1.TabIndex = 411
         Me.Label1.Text = "Owner"
         '
@@ -112,19 +108,18 @@ Partial Class CalenderOwnerF
         Me.AvslutaB.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.AvslutaB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AvslutaB.ForeColor = System.Drawing.Color.Maroon
-        Me.AvslutaB.Location = New System.Drawing.Point(501, 390)
-        Me.AvslutaB.Margin = New System.Windows.Forms.Padding(4)
+        Me.AvslutaB.Location = New System.Drawing.Point(376, 317)
         Me.AvslutaB.Name = "AvslutaB"
-        Me.AvslutaB.Size = New System.Drawing.Size(122, 31)
+        Me.AvslutaB.Size = New System.Drawing.Size(92, 25)
         Me.AvslutaB.TabIndex = 412
         Me.AvslutaB.Text = "Avsluta"
         Me.AvslutaB.UseVisualStyleBackColor = False
         '
         'CalenderOwnerF
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(645, 434)
+        Me.ClientSize = New System.Drawing.Size(484, 353)
         Me.Controls.Add(Me.AvslutaB)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.OrderTB)
@@ -133,6 +128,8 @@ Partial Class CalenderOwnerF
         Me.Controls.Add(Me.Label26)
         Me.Controls.Add(Me.SparaB)
         Me.Controls.Add(Me.DataGridView1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "CalenderOwnerF"
         Me.Text = "CalenderOwner"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

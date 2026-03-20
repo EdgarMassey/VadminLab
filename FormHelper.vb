@@ -40,7 +40,7 @@ Module FormHelper
 
     Public Sub OpenOrActivateFormByName(target As String)
 
-        Select Case StartupRequest.Target.ToUpper()
+        Select Case target.ToUpperInvariant()
 
             Case "LABHANTERINGF"
                 OpenOrActivateForm(Of LabHanteringF)()

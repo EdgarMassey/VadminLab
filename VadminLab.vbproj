@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{FC3498A4-7F0C-4DBD-9BDC-7AD123199515}</ProjectGuid>
+    <ProjectGuid>{8E6E7D2F-4E1A-4C6D-9A37-5A2F9C8B1D44}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <StartupObject>VLAB.My.MyApplication</StartupObject>
     <RootNamespace>VLAB</RootNamespace>

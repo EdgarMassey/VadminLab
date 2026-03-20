@@ -13,7 +13,7 @@ Public Class Foretag
         Dim createdNew As Boolean
         Dim requestedTarget As String = GetTargetFromCommandLine()
 
-        SingleInstanceGuard.AppMutex = New Threading.Mutex(True, "VadminOLFnet_SingleInstance", createdNew)
+        SingleInstanceGuard.AppMutex = New Threading.Mutex(True, "VadminLABnet_SingleInstance", createdNew)
 
         If Not createdNew Then
             If requestedTarget <> "" Then
@@ -26,7 +26,7 @@ Public Class Foretag
 
         StartupRequest.Target = requestedTarget
         PipeServer.StartPipeServer()
-        vernr = "20260319e"
+        vernr = "20260320a"
         Prognamn = "VadminLab2026"
         Dim rect As Rectangle = Screen.PrimaryScreen.WorkingArea
         sokvag = AppDomain.CurrentDomain.BaseDirectory
@@ -138,7 +138,7 @@ Public Class Foretag
                 Exit Sub
             End If
         End If
-        'LabstartF.Show()
+        My.Computer.FileSystem.WriteAllText(sokvag + "LABVersion.cfg", "LABversion=" + vernr + Space(40) + vbCrLf, False)
         'Startmeny.Show()
         labmap = "F:\V2012LabDok\"
         Labdatabasnamn = "NMLab"

@@ -10,17 +10,17 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("VadminOLF2013")> 
+<Assembly: AssemblyTitle("VadminLAB")>
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("MasseyDataKonsult")> 
 <Assembly: AssemblyProduct("Administration")> 
 <Assembly: AssemblyCopyright("Copyright © Vadmin 2012")> 
 <Assembly: AssemblyTrademark("")> 
 
-<Assembly: ComVisible(True)> 
+<Assembly: ComVisible(True)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("48af5a94-3c4f-476a-a82f-c71ae88705b6")> 
+<Assembly: Guid("c2c8f4d7-8c5a-4c2e-9d6f-1b7e3a9f4d21")>
 
 ' Version information for an assembly consists of the following four values:
 '

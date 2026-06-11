@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>bqRMvKDX6PoM9DeLQ5W+y1YG5i5tR9GetJ39pUZa0U8=</dsig:DigestValue>
+        <dsig:DigestValue>XMY8DPwG5P3kcjswunQTG/sSc+lazr6pSZc+cZR2W5k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -63,15 +63,6 @@
       <dsig:DigestValue>G4+Bv3M7sPuJ91Lm2+aZ+0LEVyVoInkQ3Nz8bI5hPhs=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="cabinet.ico" size="50278">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>FIwx+Xjh/ostw+h5emordCZIORWr6GXZLAlpfOXX4Hc=</dsig:DigestValue>
-    </hash>
-  </file>
   <file name="Evernote Brown.ico" size="353118">
     <hash>
       <dsig:Transforms>
@@ -79,6 +70,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>2f465VMdryMD3edLala7BaaDae06NUGzF+NHiIfksG8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="VadminLAB.ico" size="270398">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2rZb30fMjUEtN24Fsyo9gL8JQCZT3OCzwuv+46E3v6I=</dsig:DigestValue>
     </hash>
   </file>
   <file name="VadminLab.exe.config" size="1643">
@@ -90,13 +90,13 @@
       <dsig:DigestValue>Ho76riKREu5oD/pLduwQsj/X2KQUUoQpAtzSSbYxElo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="VadminLAB.ico" size="270398">
+  <file name="cabinet.ico" size="50278">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>2rZb30fMjUEtN24Fsyo9gL8JQCZT3OCzwuv+46E3v6I=</dsig:DigestValue>
+      <dsig:DigestValue>FIwx+Xjh/ostw+h5emordCZIORWr6GXZLAlpfOXX4Hc=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

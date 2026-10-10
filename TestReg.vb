@@ -229,6 +229,11 @@ Public Class TestregF
         Return ds '*** Return DataSet ***'  
         dtAdapter = Nothing
     End Function
+
+    Private Sub TestNamnTB_TextChanged(sender As Object, e As EventArgs) Handles TestNamnTB.TextChanged
+
+    End Sub
+
     Private Sub AvslutaK_Click(sender As Object, e As EventArgs) Handles AvslutaK.Click
         Me.Close()
     End Sub
@@ -289,5 +294,11 @@ Public Class TestregF
         Stdvarde2TB.Text = ""
 
         colorprov = ""
+    End Sub
+
+    Private Sub TestNamnTB_Click(sender As Object, e As EventArgs) Handles TestNamnTB.Click
+        If TestNamnTB.Text = "Viskositet" Then
+            ViskositetF.Show()
+        End If
     End Sub
 End Class

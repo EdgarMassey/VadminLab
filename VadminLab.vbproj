@@ -266,6 +266,12 @@
     <Compile Include="TestReg.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Viskositet.Designer.vb">
+      <DependentUpon>Viskositet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Viskositet.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vists.Designer.vb">
       <DependentUpon>Vists.vb</DependentUpon>
     </Compile>
@@ -346,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TestReg.resx">
       <DependentUpon>TestReg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viskositet.resx">
+      <DependentUpon>Viskositet.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vists.resx">
       <DependentUpon>Vists.vb</DependentUpon>

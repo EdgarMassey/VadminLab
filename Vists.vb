@@ -187,6 +187,10 @@ Public Class VistsF
 
     End Sub
 
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
     Private Sub DatFromTB_KeyUp(sender As Object, e As KeyEventArgs) Handles DatFromTB.KeyUp
         If e.KeyCode = Keys.Enter Then
             CreateDataSet()

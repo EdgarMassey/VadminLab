@@ -90,4 +90,8 @@ Public Class LabstartF
             End Try
         End If
     End Sub
+
+    Private Sub ProduktkoppladeTesterB_Click(sender As Object, e As EventArgs) Handles ProduktkoppladeTesterB.Click
+        ProduktkoppladeTesterF.Show()
+    End Sub
 End Class

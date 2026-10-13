@@ -47,6 +47,7 @@ Partial Class LabstartF
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.ProduktkoppladeTesterB = New System.Windows.Forms.Button()
         Me.Ver.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -60,7 +61,7 @@ Partial Class LabstartF
         Me.Ver.Controls.Add(Me.datum)
         Me.Ver.Controls.Add(Me.Versionl)
         Me.Ver.ForeColor = System.Drawing.Color.Gray
-        Me.Ver.Location = New System.Drawing.Point(10, 327)
+        Me.Ver.Location = New System.Drawing.Point(0, 412)
         Me.Ver.Name = "Ver"
         Me.Ver.Size = New System.Drawing.Size(197, 73)
         Me.Ver.TabIndex = 323
@@ -152,7 +153,7 @@ Partial Class LabstartF
         Me.AvslutaB.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.AvslutaB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AvslutaB.ForeColor = System.Drawing.Color.Maroon
-        Me.AvslutaB.Location = New System.Drawing.Point(478, 369)
+        Me.AvslutaB.Location = New System.Drawing.Point(480, 454)
         Me.AvslutaB.Name = "AvslutaB"
         Me.AvslutaB.Size = New System.Drawing.Size(92, 25)
         Me.AvslutaB.TabIndex = 372
@@ -165,7 +166,7 @@ Partial Class LabstartF
         Me.POLbestB.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.POLbestB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.POLbestB.ForeColor = System.Drawing.Color.Maroon
-        Me.POLbestB.Location = New System.Drawing.Point(133, 116)
+        Me.POLbestB.Location = New System.Drawing.Point(133, 167)
         Me.POLbestB.Name = "POLbestB"
         Me.POLbestB.Size = New System.Drawing.Size(303, 25)
         Me.POLbestB.TabIndex = 374
@@ -178,7 +179,7 @@ Partial Class LabstartF
         Me.BatchreporterB.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BatchreporterB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BatchreporterB.ForeColor = System.Drawing.Color.Maroon
-        Me.BatchreporterB.Location = New System.Drawing.Point(133, 164)
+        Me.BatchreporterB.Location = New System.Drawing.Point(133, 215)
         Me.BatchreporterB.Name = "BatchreporterB"
         Me.BatchreporterB.Size = New System.Drawing.Size(303, 25)
         Me.BatchreporterB.TabIndex = 375
@@ -190,7 +191,7 @@ Partial Class LabstartF
         Me.SpecialrutinerB.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.SpecialrutinerB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SpecialrutinerB.ForeColor = System.Drawing.Color.Maroon
-        Me.SpecialrutinerB.Location = New System.Drawing.Point(133, 295)
+        Me.SpecialrutinerB.Location = New System.Drawing.Point(133, 346)
         Me.SpecialrutinerB.Name = "SpecialrutinerB"
         Me.SpecialrutinerB.Size = New System.Drawing.Size(303, 25)
         Me.SpecialrutinerB.TabIndex = 376
@@ -204,7 +205,7 @@ Partial Class LabstartF
         Me.AnteckB.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.AnteckB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AnteckB.ForeColor = System.Drawing.Color.Maroon
-        Me.AnteckB.Location = New System.Drawing.Point(133, 206)
+        Me.AnteckB.Location = New System.Drawing.Point(133, 257)
         Me.AnteckB.Name = "AnteckB"
         Me.AnteckB.Size = New System.Drawing.Size(303, 25)
         Me.AnteckB.TabIndex = 377
@@ -216,14 +217,14 @@ Partial Class LabstartF
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LocalaInställningarToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(610, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(620, 25)
         Me.MenuStrip1.TabIndex = 378
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'LocalaInställningarToolStripMenuItem
         '
         Me.LocalaInställningarToolStripMenuItem.Name = "LocalaInställningarToolStripMenuItem"
-        Me.LocalaInställningarToolStripMenuItem.Size = New System.Drawing.Size(121, 20)
+        Me.LocalaInställningarToolStripMenuItem.Size = New System.Drawing.Size(131, 21)
         Me.LocalaInställningarToolStripMenuItem.Text = "Locala inställningar"
         '
         'BesokB
@@ -232,7 +233,7 @@ Partial Class LabstartF
         Me.BesokB.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BesokB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BesokB.ForeColor = System.Drawing.Color.Maroon
-        Me.BesokB.Location = New System.Drawing.Point(133, 247)
+        Me.BesokB.Location = New System.Drawing.Point(133, 298)
         Me.BesokB.Name = "BesokB"
         Me.BesokB.Size = New System.Drawing.Size(303, 25)
         Me.BesokB.TabIndex = 379
@@ -253,7 +254,7 @@ Partial Class LabstartF
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(395, 132)
+        Me.Label1.Location = New System.Drawing.Point(395, 183)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(29, 9)
         Me.Label1.TabIndex = 496
@@ -263,7 +264,7 @@ Partial Class LabstartF
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(395, 180)
+        Me.Label2.Location = New System.Drawing.Point(395, 231)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(29, 9)
         Me.Label2.TabIndex = 497
@@ -273,7 +274,7 @@ Partial Class LabstartF
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(395, 222)
+        Me.Label3.Location = New System.Drawing.Point(395, 273)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(29, 9)
         Me.Label3.TabIndex = 498
@@ -283,18 +284,33 @@ Partial Class LabstartF
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(395, 263)
+        Me.Label4.Location = New System.Drawing.Point(395, 314)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(29, 9)
         Me.Label4.TabIndex = 499
         Me.Label4.Text = "LAB 05"
+        '
+        'ProduktkoppladeTesterB
+        '
+        Me.ProduktkoppladeTesterB.BackColor = System.Drawing.Color.Cornsilk
+        Me.ProduktkoppladeTesterB.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ProduktkoppladeTesterB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProduktkoppladeTesterB.ForeColor = System.Drawing.Color.Maroon
+        Me.ProduktkoppladeTesterB.Location = New System.Drawing.Point(133, 115)
+        Me.ProduktkoppladeTesterB.Name = "ProduktkoppladeTesterB"
+        Me.ProduktkoppladeTesterB.Size = New System.Drawing.Size(303, 25)
+        Me.ProduktkoppladeTesterB.TabIndex = 500
+        Me.ProduktkoppladeTesterB.Text = "Produktkopplade tester"
+        Me.ProduktkoppladeTesterB.UseMnemonic = False
+        Me.ProduktkoppladeTesterB.UseVisualStyleBackColor = False
         '
         'LabstartF
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ClientSize = New System.Drawing.Size(610, 423)
+        Me.ClientSize = New System.Drawing.Size(620, 486)
+        Me.Controls.Add(Me.ProduktkoppladeTesterB)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -347,4 +363,5 @@ Partial Class LabstartF
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents ProduktkoppladeTesterB As Button
 End Class

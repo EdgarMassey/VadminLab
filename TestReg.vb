@@ -296,9 +296,5 @@ Public Class TestregF
         colorprov = ""
     End Sub
 
-    Private Sub TestNamnTB_Click(sender As Object, e As EventArgs) Handles TestNamnTB.Click
-        If TestNamnTB.Text = "Viskositet" Then
-            ViskositetF.Show()
-        End If
-    End Sub
+
 End Class

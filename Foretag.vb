@@ -19,14 +19,13 @@ Public Class Foretag
             If requestedTarget <> "" Then
                 PipeClient.SendTargetToRunningInstance(requestedTarget)
             End If
-
             Me.Close()
             Exit Sub
         End If
 
         StartupRequest.Target = requestedTarget
         PipeServer.StartPipeServer()
-        vernr = "20261013a"
+        vernr = "20261014a"
         Prognamn = "VadminLab2026"
         Dim rect As Rectangle = Screen.PrimaryScreen.WorkingArea
         sokvag = AppDomain.CurrentDomain.BaseDirectory

@@ -34,8 +34,10 @@ Partial Class ProduktkoppladeTesterF
         Me.AddMainItemBT = New System.Windows.Forms.Button()
         Me.AvslutaK = New System.Windows.Forms.Button()
         Me.AddSubItemBT = New System.Windows.Forms.Button()
-        Me.ProvmetodTreeView = New System.Windows.Forms.TreeView()
+        Me.ProvmetodGrid = New System.Windows.Forms.DataGridView()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Ver.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Huvud
@@ -162,21 +164,35 @@ Partial Class ProduktkoppladeTesterF
         Me.AddSubItemBT.Text = "Add subitem"
         Me.AddSubItemBT.UseVisualStyleBackColor = True
         '
-        'ProvmetodTreeView
+        'ProvmetodGrid
         '
-        Me.ProvmetodTreeView.AccessibleDescription = "Provmetoder"
-        Me.ProvmetodTreeView.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ProvmetodTreeView.Location = New System.Drawing.Point(153, 54)
-        Me.ProvmetodTreeView.Name = "ProvmetodTreeView"
-        Me.ProvmetodTreeView.Size = New System.Drawing.Size(351, 417)
-        Me.ProvmetodTreeView.TabIndex = 470
+        Me.ProvmetodGrid.AccessibleDescription = "Provmetoder"
+        Me.ProvmetodGrid.AllowUserToAddRows = False
+        Me.ProvmetodGrid.AllowUserToDeleteRows = False
+        Me.ProvmetodGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ProvmetodGrid.Location = New System.Drawing.Point(153, 251)
+        Me.ProvmetodGrid.Name = "ProvmetodGrid"
+        Me.ProvmetodGrid.RowHeadersVisible = False
+        Me.ProvmetodGrid.Size = New System.Drawing.Size(346, 220)
+        Me.ProvmetodGrid.TabIndex = 470
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(217, 54)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.Size = New System.Drawing.Size(183, 128)
+        Me.DataGridView1.TabIndex = 471
         '
         'ProduktkoppladeTesterF
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(683, 569)
-        Me.Controls.Add(Me.ProvmetodTreeView)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.ProvmetodGrid)
         Me.Controls.Add(Me.AddSubItemBT)
         Me.Controls.Add(Me.DeleteProvmetodBT)
         Me.Controls.Add(Me.AddMainItemBT)
@@ -187,6 +203,7 @@ Partial Class ProduktkoppladeTesterF
         Me.Text = "ProduktkoppladeTester"
         Me.Ver.ResumeLayout(False)
         Me.Ver.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -203,5 +220,6 @@ Partial Class ProduktkoppladeTesterF
     Friend WithEvents AddMainItemBT As Button
     Friend WithEvents AvslutaK As Button
     Friend WithEvents AddSubItemBT As Button
-    Friend WithEvents ProvmetodTreeView As TreeView
+    Friend WithEvents ProvmetodGrid As DataGridView
+    Friend WithEvents DataGridView1 As DataGridView
 End Class

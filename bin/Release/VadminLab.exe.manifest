@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VadminLab.exe" size="6565888">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VadminLab.exe" size="6587904">
       <assemblyIdentity name="VadminLab" version="1.6.7.2" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>W3edPYyovjLhGJhdoC2zvYPdr3yi6Ltdt7Pwz84yUMM=</dsig:DigestValue>
+        <dsig:DigestValue>T/n5M964hoCHQPrLnQlF0tMB8Md8uZXvLLrz3VvRs68=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

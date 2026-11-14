@@ -278,7 +278,7 @@ Partial Class TestregF
         Me.ColorCB.AutoSize = True
         Me.ColorCB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ColorCB.Location = New System.Drawing.Point(354, 81)
-        Me.ColorCB.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ColorCB.Margin = New System.Windows.Forms.Padding(2)
         Me.ColorCB.Name = "ColorCB"
         Me.ColorCB.Size = New System.Drawing.Size(112, 21)
         Me.ColorCB.TabIndex = 374
@@ -342,7 +342,7 @@ Partial Class TestregF
         Me.HanteraViscCB.AutoSize = True
         Me.HanteraViscCB.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HanteraViscCB.Location = New System.Drawing.Point(354, 106)
-        Me.HanteraViscCB.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.HanteraViscCB.Margin = New System.Windows.Forms.Padding(2)
         Me.HanteraViscCB.Name = "HanteraViscCB"
         Me.HanteraViscCB.Size = New System.Drawing.Size(145, 21)
         Me.HanteraViscCB.TabIndex = 380
@@ -375,7 +375,7 @@ Partial Class TestregF
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(889, 466)
+        Me.ClientSize = New System.Drawing.Size(900, 542)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.HanteraViscCB)
@@ -401,7 +401,7 @@ Partial Class TestregF
         Me.Controls.Add(Me.Ver)
         Me.Controls.Add(Me.AvslutaK)
         Me.Controls.Add(Me.Huvud)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "TestregF"
         Me.Text = "Test register"
         Me.Ver.ResumeLayout(False)

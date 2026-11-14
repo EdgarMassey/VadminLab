@@ -272,6 +272,12 @@
     <Compile Include="TestReg.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TestRegPerProdukt.Designer.vb">
+  <DependentUpon>TestRegPerProdukt.vb</DependentUpon>
+</Compile>
+    <Compile Include="TestRegPerProdukt.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vists.Designer.vb">
       <DependentUpon>Vists.vb</DependentUpon>
     </Compile>
@@ -356,6 +362,9 @@
     <EmbeddedResource Include="TestReg.resx">
       <DependentUpon>TestReg.vb</DependentUpon>
     </EmbeddedResource>
+   <EmbeddedResource Include="TestRegPerProdukt.resx">
+  <DependentUpon>TestRegPerProdukt.vb</DependentUpon>
+</EmbeddedResource>
     <EmbeddedResource Include="Vists.resx">
       <DependentUpon>Vists.vb</DependentUpon>
     </EmbeddedResource>

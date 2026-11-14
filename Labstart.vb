@@ -92,6 +92,11 @@ Public Class LabstartF
     End Sub
 
     Private Sub ProduktkoppladeTesterB_Click(sender As Object, e As EventArgs) Handles ProduktkoppladeTesterB.Click
-        ProduktkoppladeTesterF.Show()
+        TestregPerProduktF.Show()
+        ' ProduktkoppladeTesterF.Show()
+    End Sub
+
+    Private Sub Huvud_Click(sender As Object, e As EventArgs) Handles Huvud.Click
+        TestregPerProduktF.Show()
     End Sub
 End Class

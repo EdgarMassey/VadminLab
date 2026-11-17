@@ -30,7 +30,15 @@ Public Class TestregPerProduktF
         Gnamn.Text = Firmanamn
         HamptaStdTester()
         nolla()
-
+        SparaSTDTestB.Visible = False
+        RaderafranSTDtestB.Visible = False
+        MoveDownBtn.Visible = True
+        MoveUPBtn.Visible = True
+        InfogaB.Visible = True
+        TabortB.Visible = True
+        ProduktIDL.Visible = True
+        Label6.Visible = True
+        HanteraB.Text = "Till STD testregistret"
 
         DataGridView2.DataSource = CreateDataSet2.Tables(0).DefaultView
 
@@ -177,7 +185,7 @@ Public Class TestregPerProduktF
         strConnString = "DSN=" + odbcsourcer + "; Database=" + Labdatabasnamn + ";Uid=v2000;Pwd=" + odbclosen
         strSQL = "Select * FROM LabtesterPerProdukt "
         strSQL = strSQL + "Where ProduktID = '" + ProduktIDL.Text + "' "
-        strSQL = strSQL + "  order by ProduktID,Provnamn"
+        strSQL = strSQL + "  order by SortOrder"
 
         objConn.ConnectionString = strConnString
         With objCmd
@@ -186,6 +194,7 @@ Public Class TestregPerProduktF
             .CommandType = CommandType.Text
         End With
         dtAdapter.SelectCommand = objCmd
+        ds.Clear()
         dtAdapter.Fill(ds)
         Return ds '*** Return DataSet ***'  
         dtAdapter = Nothing
@@ -242,6 +251,7 @@ slut:
                 MinvärdeTB.Text = (nullhantering(tabel("Minvarde"), "S"))
                 EnhetTB.Text = (nullhantering(tabel("Enhet"), "S"))
                 AnnanInfoTB.Text = (nullhantering(tabel("AnnanInfo"), "S"))
+                ProvkroppTB.Text = (nullhantering(tabel("ProvKropp"), "S"))
                 l = l + 1
             End While
 
@@ -256,6 +266,32 @@ slut:
                 MessageBoxButtons.OK, MessageBoxIcon.Information)
             Exit Sub
         End If
+        If TestnamnCB.Text = "Välj test" Then
+            MessageBox.Show("Ange test namn!", "Information",
+                MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
+        Dim newOrder As Integer
+
+        Dim connectionString As String =
+    "DSN=" & odbcsourcer &
+    "; Database=" & Labdatabasnamn &
+    ";Uid=v2000;Pwd=" & odbclosen
+
+        Using connection As New OdbcConnection(connectionString)
+            connection.Open()
+
+            Using command As New OdbcCommand(
+        "SELECT COALESCE(MAX(SortOrder), 0) + 1 " &
+        "FROM LabtesterPerProdukt WHERE ProduktID = ?", connection)
+
+                command.Parameters.AddWithValue("ProduktID", ProduktIDL.Text)
+
+                newOrder = Convert.ToInt32(command.ExecuteScalar())
+            End Using
+        End Using
+
+
 
         Dim results As DataTable = GetLabtesterByProvnamn(TestnamnCB.Text)
         Dim tolerans As String, Stdvarde2 As String, text As String, info As String
@@ -302,6 +338,11 @@ slut:
         varden = varden + "'" + kommatillpunkt(EnhetTB.Text) + "', "
         falt = falt + "Minvärde, "
         varden = varden + "'" + kommatillpunkt(MinvärdeTB.Text) + "', "
+        falt = falt + "ProvKropp, "
+        varden = varden + "'" + kommatillpunkt(ProvkroppTB.Text) + "', "
+        falt = falt & "SortOrder, "
+
+        varden = varden & newOrder.ToString() & ", "
         falt = falt + "Annaninfo "
         varden = varden + "'" + kommatillpunkt(AnnanInfoTB.Text) + "' "
 
@@ -375,9 +416,10 @@ slut:
         varden = varden + "'" + kommatillpunkt(MaxvärdeTB.Text) + "', "
         falt = falt + "Enhet,"
         varden = varden + "'" + kommatillpunkt(EnhetTB.Text) + "', "
-        falt = falt + "Minvarde
-, "
+        falt = falt + "Minvarde, "
         varden = varden + "'" + kommatillpunkt(MinvärdeTB.Text) + "', "
+        falt = falt + "ProvKropp, "
+        varden = varden + "'" + kommatillpunkt(ProvkroppTB.Text) + "', "
         falt = falt + "Annaninfo "
         varden = varden + "'" + kommatillpunkt(AnnanInfoTB.Text) + "' "
 
@@ -468,6 +510,7 @@ slut:
         r2 = Me.DataGridView1.CurrentRow.Index
         c2 = DataGridView1.CurrentCell.ColumnIndex
         TestnamnCB.Text = nullhantering(DataGridView1.Item(1, r2).Value, "S")
+        ProvkroppTB.Text = nullhantering(DataGridView1.Item(3, r2).Value, "S")
         MetodTB.Text = nullhantering(DataGridView1.Item(4, r2).Value, "S")
         EnhetTB.Text = nullhantering(DataGridView1.Item(5, r2).Value, "S")
         MaxvärdeTB.Text = nullhantering(DataGridView1.Item(7, r2).Value, "S")
@@ -515,11 +558,49 @@ slut:
 
     End Function
 
+    Private Sub MoveUPBtn_Click(sender As Object, e As EventArgs) Handles MoveUPBtn.Click
 
+        MoveSelectedRow(-1) 'Up
+    End Sub
 
+    Private Sub MoveDownBtn_Click(sender As Object, e As EventArgs) Handles MoveDownBtn.Click
+        MoveSelectedRow(1)
+    End Sub
 
-
-
+    Private Sub HanteraB_Click(sender As Object, e As EventArgs) Handles HanteraB.Click
+        If HanteraB.Text = "Till Produktprov registret" Then
+            SparaSTDTestB.Visible = False
+            RaderafranSTDtestB.Visible = False
+            MoveDownBtn.Visible = True
+            MoveUPBtn.Visible = True
+            InfogaB.Visible = True
+            TabortB.Visible = True
+            ProduktIDL.Visible = True
+            Label6.Visible = True
+            DataGridView2.Visible = True
+            DataGridView1.Visible = True
+            AddProduktB.Visible = True
+            RaderaProduktB.Visible = True
+            ProduktIDTB.Visible = True
+            HanteraB.Text = "Till STD testregistret"
+        Else
+            SparaSTDTestB.Visible = True
+            RaderafranSTDtestB.Visible = True
+            MoveDownBtn.Visible = False
+            MoveUPBtn.Visible = False
+            InfogaB.Visible = False
+            TabortB.Visible = False
+            ProduktIDL.Visible = False
+            Label6.Visible = False
+            DataGridView1.DataSource.Table.Rows.Clear()
+            DataGridView2.Visible = False
+            DataGridView1.Visible = False
+            AddProduktB.Visible = False
+            RaderaProduktB.Visible = False
+            ProduktIDTB.Visible = False
+            HanteraB.Text = "Till Produktprov registret"
+        End If
+    End Sub
 
     Private Sub DataGridView2_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellClick
         Dim r2 As Integer, c2 As Integer
@@ -539,17 +620,137 @@ slut:
         MaxvärdeTB.Text = ""
         MinvärdeTB.Text = ""
         AnnanInfoTB.Text = ""
+        ProvkroppTB.Text = ""
 
 
-        If DataGridView1.DataSource IsNot Nothing Then
-            DataGridView1.DataSource.Table.Rows.Clear()
-        End If
 
 
         DataGridView1.DataSource = CreateDataSet.Tables(0).DefaultView
     End Sub
 
-    Private Sub DataGridView2_CellBorderStyleChanged(sender As Object, e As EventArgs) Handles DataGridView2.CellBorderStyleChanged
+    Private Sub MoveSelectedRow(direction As Integer)
+
+        Dim grid As DataGridView = DataGridView1
+
+        If grid.CurrentRow Is Nothing OrElse grid.CurrentRow.IsNewRow Then Return
+
+        grid.EndEdit()
+
+        Dim currentIndex As Integer = grid.CurrentRow.Index
+        Dim targetIndex As Integer = currentIndex + direction
+
+        If targetIndex < 0 OrElse targetIndex >= grid.Rows.Count Then Return
+        If grid.Rows(targetIndex).IsNewRow Then Return
+
+        Dim currentRow As DataGridViewRow = grid.Rows(currentIndex)
+        Dim targetRow As DataGridViewRow = grid.Rows(targetIndex)
+
+        If IsDBNull(currentRow.Cells("SortOrder").Value) OrElse
+           IsDBNull(targetRow.Cells("SortOrder").Value) Then
+
+            MessageBox.Show("Each row needs a SortOrder number first.")
+            Return
+        End If
+
+        Dim currentOrder As Integer =
+            Convert.ToInt32(currentRow.Cells("SortOrder").Value)
+
+        Dim targetOrder As Integer =
+            Convert.ToInt32(targetRow.Cells("SortOrder").Value)
+
+        If currentOrder = targetOrder Then
+            MessageBox.Show("Each row needs a different SortOrder number.")
+            Return
+        End If
+
+        'Keep the original identifiers: SQL Server may change Timestamp on update.
+        Dim currentTimestamp As Object = currentRow.Cells("Timestamp").Value
+        Dim targetTimestamp As Object = targetRow.Cells("Timestamp").Value
+
+        Dim connectionString As String =
+            "DSN=" & odbcsourcer &
+            "; Database=" & Labdatabasnamn &
+            ";Uid=v2000;Pwd=" & odbclosen
+
+        Try
+            Using connection As New OdbcConnection(connectionString)
+                connection.Open()
+
+                Using transaction As OdbcTransaction = connection.BeginTransaction()
+                    Try
+                        UpdateRowOrder(connection, transaction,
+                                       currentTimestamp, targetOrder)
+
+                        UpdateRowOrder(connection, transaction,
+                                       targetTimestamp, currentOrder)
+
+                        transaction.Commit()
+
+                    Catch
+                        transaction.Rollback()
+                        Throw
+                    End Try
+                End Using
+
+                'Reload so the grid also gets the latest Timestamp values.
+                Dim table As New DataTable()
+
+                Using command As New OdbcCommand(
+                    "SELECT * FROM LabtesterPerProdukt " &
+                    "WHERE ProduktID = ? ORDER BY SortOrder", connection)
+
+                    command.Parameters.AddWithValue("ProduktID", ProduktIDL.Text)
+
+                    Using adapter As New OdbcDataAdapter(command)
+                        adapter.Fill(table)
+                    End Using
+                End Using
+
+                grid.DataSource = table
+            End Using
+
+            'Keep the moved row selected.
+            grid.ClearSelection()
+            grid.Rows(targetIndex).Selected = True
+
+            For Each column As DataGridViewColumn In grid.Columns
+                If column.Visible Then
+                    grid.CurrentCell = grid.Rows(targetIndex).Cells(column.Index)
+                    Exit For
+                End If
+            Next
+
+        Catch ex As Exception
+            MessageBox.Show("Could not move the row: " & ex.Message)
+        End Try
+
+    End Sub
+
+
+    Private Sub UpdateRowOrder(connection As OdbcConnection,
+                               transaction As OdbcTransaction,
+                               timestampValue As Object,
+                               newOrder As Integer)
+
+        Using command As New OdbcCommand(
+            "UPDATE LabtesterPerProdukt SET SortOrder = ? " &
+            "WHERE [Timestamp] = ? AND ProduktID = ?",
+            connection, transaction)
+
+            'ODBC parameters must follow the order of the question marks.
+            command.Parameters.Add("SortOrder", OdbcType.Int).Value = newOrder
+            command.Parameters.AddWithValue("Timestamp", timestampValue)
+            command.Parameters.AddWithValue("ProduktID", ProduktIDL.Text)
+
+            If command.ExecuteNonQuery() <> 1 Then
+                Throw New Exception(
+                    "The record has changed or could not be found. Reload the grid.")
+            End If
+        End Using
+
+    End Sub
+
+    Private Sub DataGridView2_BindingContextChanged(sender As Object, e As EventArgs) Handles DataGridView2.BindingContextChanged
 
     End Sub
 End Class

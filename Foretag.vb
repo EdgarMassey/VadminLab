@@ -25,7 +25,7 @@ Public Class Foretag
 
         StartupRequest.Target = requestedTarget
         PipeServer.StartPipeServer()
-        vernr = "20261114a"
+        vernr = "20261117b"
         Prognamn = "VadminLab2026"
         Dim rect As Rectangle = Screen.PrimaryScreen.WorkingArea
         sokvag = AppDomain.CurrentDomain.BaseDirectory

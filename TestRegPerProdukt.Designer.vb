@@ -56,6 +56,11 @@ Partial Class TestregPerProduktF
         Me.RaderafranSTDtestB = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TabortB = New System.Windows.Forms.Button()
+        Me.ProvkroppL = New System.Windows.Forms.Label()
+        Me.ProvkroppTB = New System.Windows.Forms.TextBox()
+        Me.MoveUPBtn = New System.Windows.Forms.Button()
+        Me.MoveDownBtn = New System.Windows.Forms.Button()
+        Me.HanteraB = New System.Windows.Forms.Button()
         Me.Ver.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -145,7 +150,7 @@ Partial Class TestregPerProduktF
         '
         Me.AvslutaK.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AvslutaK.ForeColor = System.Drawing.Color.Maroon
-        Me.AvslutaK.Location = New System.Drawing.Point(881, 780)
+        Me.AvslutaK.Location = New System.Drawing.Point(870, 780)
         Me.AvslutaK.Name = "AvslutaK"
         Me.AvslutaK.Size = New System.Drawing.Size(98, 25)
         Me.AvslutaK.TabIndex = 321
@@ -155,10 +160,10 @@ Partial Class TestregPerProduktF
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(37, 338)
+        Me.DataGridView1.Location = New System.Drawing.Point(37, 374)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.Size = New System.Drawing.Size(931, 332)
+        Me.DataGridView1.Size = New System.Drawing.Size(965, 343)
         Me.DataGridView1.TabIndex = 324
         '
         'Label26
@@ -184,7 +189,7 @@ Partial Class TestregPerProduktF
         'DataGridView2
         '
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(525, 61)
+        Me.DataGridView2.Location = New System.Drawing.Point(572, 53)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
         Me.DataGridView2.RowHeadersWidth = 51
@@ -195,7 +200,7 @@ Partial Class TestregPerProduktF
         '
         Me.AddProduktB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AddProduktB.ForeColor = System.Drawing.Color.Maroon
-        Me.AddProduktB.Location = New System.Drawing.Point(724, 61)
+        Me.AddProduktB.Location = New System.Drawing.Point(771, 53)
         Me.AddProduktB.Name = "AddProduktB"
         Me.AddProduktB.Size = New System.Drawing.Size(98, 25)
         Me.AddProduktB.TabIndex = 472
@@ -214,7 +219,7 @@ Partial Class TestregPerProduktF
         '
         Me.InfogaB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.InfogaB.ForeColor = System.Drawing.Color.Maroon
-        Me.InfogaB.Location = New System.Drawing.Point(60, 290)
+        Me.InfogaB.Location = New System.Drawing.Point(60, 331)
         Me.InfogaB.Name = "InfogaB"
         Me.InfogaB.Size = New System.Drawing.Size(98, 25)
         Me.InfogaB.TabIndex = 475
@@ -225,7 +230,7 @@ Partial Class TestregPerProduktF
         '
         Me.ProduktIDL.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.ProduktIDL.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ProduktIDL.Location = New System.Drawing.Point(525, 210)
+        Me.ProduktIDL.Location = New System.Drawing.Point(572, 202)
         Me.ProduktIDL.Name = "ProduktIDL"
         Me.ProduktIDL.Size = New System.Drawing.Size(172, 25)
         Me.ProduktIDL.TabIndex = 476
@@ -237,7 +242,7 @@ Partial Class TestregPerProduktF
         Me.SparaB.Enabled = False
         Me.SparaB.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SparaB.ForeColor = System.Drawing.Color.Maroon
-        Me.SparaB.Location = New System.Drawing.Point(870, 685)
+        Me.SparaB.Location = New System.Drawing.Point(870, 723)
         Me.SparaB.Name = "SparaB"
         Me.SparaB.Size = New System.Drawing.Size(98, 25)
         Me.SparaB.TabIndex = 477
@@ -320,7 +325,7 @@ Partial Class TestregPerProduktF
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(45, 210)
+        Me.Label5.Location = New System.Drawing.Point(45, 251)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(76, 17)
         Me.Label5.TabIndex = 486
@@ -328,7 +333,7 @@ Partial Class TestregPerProduktF
         '
         'AnnanInfoTB
         '
-        Me.AnnanInfoTB.Location = New System.Drawing.Point(127, 210)
+        Me.AnnanInfoTB.Location = New System.Drawing.Point(127, 251)
         Me.AnnanInfoTB.Multiline = True
         Me.AnnanInfoTB.Name = "AnnanInfoTB"
         Me.AnnanInfoTB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
@@ -339,7 +344,7 @@ Partial Class TestregPerProduktF
         '
         Me.SparaSTDTestB.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SparaSTDTestB.ForeColor = System.Drawing.Color.Maroon
-        Me.SparaSTDTestB.Location = New System.Drawing.Point(326, 58)
+        Me.SparaSTDTestB.Location = New System.Drawing.Point(350, 80)
         Me.SparaSTDTestB.Name = "SparaSTDTestB"
         Me.SparaSTDTestB.Size = New System.Drawing.Size(161, 25)
         Me.SparaSTDTestB.TabIndex = 488
@@ -349,7 +354,7 @@ Partial Class TestregPerProduktF
         'ProduktIDTB
         '
         Me.ProduktIDTB.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ProduktIDTB.Location = New System.Drawing.Point(770, 88)
+        Me.ProduktIDTB.Location = New System.Drawing.Point(817, 80)
         Me.ProduktIDTB.Name = "ProduktIDTB"
         Me.ProduktIDTB.Size = New System.Drawing.Size(128, 22)
         Me.ProduktIDTB.TabIndex = 489
@@ -358,7 +363,7 @@ Partial Class TestregPerProduktF
         '
         Me.RaderaProduktB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RaderaProduktB.ForeColor = System.Drawing.Color.Maroon
-        Me.RaderaProduktB.Location = New System.Drawing.Point(828, 61)
+        Me.RaderaProduktB.Location = New System.Drawing.Point(875, 53)
         Me.RaderaProduktB.Name = "RaderaProduktB"
         Me.RaderaProduktB.Size = New System.Drawing.Size(104, 25)
         Me.RaderaProduktB.TabIndex = 490
@@ -369,7 +374,7 @@ Partial Class TestregPerProduktF
         '
         Me.RaderafranSTDtestB.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RaderafranSTDtestB.ForeColor = System.Drawing.Color.Maroon
-        Me.RaderafranSTDtestB.Location = New System.Drawing.Point(326, 84)
+        Me.RaderafranSTDtestB.Location = New System.Drawing.Point(350, 106)
         Me.RaderafranSTDtestB.Name = "RaderafranSTDtestB"
         Me.RaderafranSTDtestB.Size = New System.Drawing.Size(161, 25)
         Me.RaderafranSTDtestB.TabIndex = 491
@@ -380,7 +385,7 @@ Partial Class TestregPerProduktF
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(553, 192)
+        Me.Label6.Location = New System.Drawing.Point(600, 184)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(102, 17)
         Me.Label6.TabIndex = 492
@@ -390,12 +395,63 @@ Partial Class TestregPerProduktF
         '
         Me.TabortB.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabortB.ForeColor = System.Drawing.Color.Maroon
-        Me.TabortB.Location = New System.Drawing.Point(389, 290)
+        Me.TabortB.Location = New System.Drawing.Point(389, 331)
         Me.TabortB.Name = "TabortB"
         Me.TabortB.Size = New System.Drawing.Size(98, 25)
         Me.TabortB.TabIndex = 493
         Me.TabortB.Text = "Ta bort"
         Me.TabortB.UseVisualStyleBackColor = True
+        '
+        'ProvkroppL
+        '
+        Me.ProvkroppL.AutoSize = True
+        Me.ProvkroppL.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProvkroppL.Location = New System.Drawing.Point(52, 216)
+        Me.ProvkroppL.Name = "ProvkroppL"
+        Me.ProvkroppL.Size = New System.Drawing.Size(73, 17)
+        Me.ProvkroppL.TabIndex = 495
+        Me.ProvkroppL.Text = "Provkropp"
+        '
+        'ProvkroppTB
+        '
+        Me.ProvkroppTB.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProvkroppTB.Location = New System.Drawing.Point(127, 213)
+        Me.ProvkroppTB.Name = "ProvkroppTB"
+        Me.ProvkroppTB.Size = New System.Drawing.Size(92, 22)
+        Me.ProvkroppTB.TabIndex = 494
+        '
+        'MoveUPBtn
+        '
+        Me.MoveUPBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MoveUPBtn.ForeColor = System.Drawing.Color.Maroon
+        Me.MoveUPBtn.Location = New System.Drawing.Point(389, 176)
+        Me.MoveUPBtn.Name = "MoveUPBtn"
+        Me.MoveUPBtn.Size = New System.Drawing.Size(98, 25)
+        Me.MoveUPBtn.TabIndex = 496
+        Me.MoveUPBtn.Text = "Flytta upp"
+        Me.MoveUPBtn.UseVisualStyleBackColor = True
+        '
+        'MoveDownBtn
+        '
+        Me.MoveDownBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MoveDownBtn.ForeColor = System.Drawing.Color.Maroon
+        Me.MoveDownBtn.Location = New System.Drawing.Point(389, 207)
+        Me.MoveDownBtn.Name = "MoveDownBtn"
+        Me.MoveDownBtn.Size = New System.Drawing.Size(98, 25)
+        Me.MoveDownBtn.TabIndex = 497
+        Me.MoveDownBtn.Text = "Flytta ned"
+        Me.MoveDownBtn.UseVisualStyleBackColor = True
+        '
+        'HanteraB
+        '
+        Me.HanteraB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HanteraB.ForeColor = System.Drawing.Color.Maroon
+        Me.HanteraB.Location = New System.Drawing.Point(326, 53)
+        Me.HanteraB.Name = "HanteraB"
+        Me.HanteraB.Size = New System.Drawing.Size(212, 25)
+        Me.HanteraB.TabIndex = 498
+        Me.HanteraB.Text = "Till STD testregistret"
+        Me.HanteraB.UseVisualStyleBackColor = True
         '
         'TestregPerProduktF
         '
@@ -403,6 +459,11 @@ Partial Class TestregPerProduktF
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(1027, 816)
+        Me.Controls.Add(Me.HanteraB)
+        Me.Controls.Add(Me.MoveDownBtn)
+        Me.Controls.Add(Me.MoveUPBtn)
+        Me.Controls.Add(Me.ProvkroppL)
+        Me.Controls.Add(Me.ProvkroppTB)
         Me.Controls.Add(Me.TabortB)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.RaderafranSTDtestB)
@@ -477,4 +538,9 @@ Partial Class TestregPerProduktF
     Friend WithEvents RaderafranSTDtestB As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents TabortB As Button
+    Friend WithEvents ProvkroppL As Label
+    Friend WithEvents ProvkroppTB As TextBox
+    Friend WithEvents MoveUPBtn As Button
+    Friend WithEvents MoveDownBtn As Button
+    Friend WithEvents HanteraB As Button
 End Class
